@@ -77,7 +77,7 @@ const SpeakersAndSponsors = () => {
                   return (
                     <>
                       <div className={`rounded-[20px] z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-0 m-auto`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-3 lg:mx-0">
+                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
                           <div className={`sm:flex lg:block sm:gap-3 ${!service.isEvenNumber ? 'flex-row' : 'flex-row-reverse'}`}>
                             <div className="relative sm:w-[70%] lg:w-full">
                               <Image className="servicePreview w-full h-auto rounded-[20px]" src={service.author} alt={service.name} />
@@ -103,7 +103,7 @@ const SpeakersAndSponsors = () => {
                   return (
                     <>
                       <div className={`rounded-[20px] z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-0 m-auto`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-3 lg:mx-0">
+                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
                           <div className={`sm:flex lg:block sm:gap-3 ${!service.isEvenNumber ? 'flex-row' : 'flex-row-reverse'}`}>
                             <div className={`relative ${service?.markedMobile ? 'sm:w-full' : 'sm:w-[70%]'} lg:w-full`}>
                               <Image className="servicePreview w-full h-auto rounded-[20px]" src={service.author} alt={service.name} />
@@ -128,7 +128,7 @@ const SpeakersAndSponsors = () => {
                   return (
                     <>
                       <div className={`rounded-[20px] z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-0 m-auto`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-3 lg:mx-0">
+                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
                           <div className={`sm:flex lg:block sm:gap-3 ${!service.isEvenNumber ? 'flex-row' : 'flex-row-reverse'}`}>
                             <div className="relative sm:w-[70%] lg:w-full">
                               <Image className={`servicePreview w-full h-auto rounded-[20px]`} src={service.author} alt={service.name} />
@@ -162,7 +162,7 @@ const SpeakersAndSponsors = () => {
               // onClick={() =>navigateTo("/#form")}
             />
         </div>
-        <div id="howitworks" className="SponsorsWrapper relative w-full flex justify-center flex flex-col sm:mt-8 lg:mt-16 m-auto">
+        <div id="howitworks" className="SponsorsWrapper relative w-full flex justify-center flex flex-col sm:mt-8 lg:mt-16 m-auto sm:p-3 lg:p-0">
           <p className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
           Як це працює?
           </p>
@@ -176,10 +176,10 @@ const SpeakersAndSponsors = () => {
                   return (
                     <>
                       <div className={`rounded-[20px] ${!card.isEvenNumber ? 'bg-cardsBtns' : 'bg-backgroundCard border-1 border-borderCard'} z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-8 m-auto sm:mt-3 lg:mt-10`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-3 lg:mx-0">
-                          <div className="p-4 flex flex-col items-center">
-                            <h2 className={`text-center font-bold sm:text-2xl lg:text-3xl mb-4 ${!card.isEvenNumber ? 'text-white' : 'text-primaryColor'}`}>{card.title}</h2>
-                            <Image className="w-full h-auto rounded-[20px] mb-4" src={card.avatar} alt={card.title} />
+                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
+                          <div className="p-1 flex flex-col items-center">
+                            {/* <h2 className={`text-center font-bold sm:text-2xl lg:text-3xl mb-4 ${!card.isEvenNumber ? 'text-white' : 'text-primaryColor'}`}>{card.title}</h2> */}
+                            <Image className="w-full h-auto rounded-[20px] mb-1" src={card.avatar} alt={card.title} />
                             <p className={`text-center sm:text-base lg:text-lg ${!card.isEvenNumber ? 'text-white' : 'text-gray-700'}`}>{card.description}</p>
                           </div>
                         </div>
