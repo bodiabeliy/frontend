@@ -45,7 +45,8 @@ export const DropDownButton = (props:BtnDropDownProps) => {
 
   const selectLanguage = useCallback((code: string, flag: any) => {
     setSelectedLanguage(code);
-    setSelectedFlag(flag);     
+    setSelectedFlag(flag);
+    //  @ts-ignore
     sendData(code);
     closeDropDown();
   }, [sendData, closeDropDown])
