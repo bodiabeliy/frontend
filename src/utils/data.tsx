@@ -3,7 +3,7 @@ import Benefit2 from "../../public/briefcase-fill.svg"
 import Benefit3 from "../../public/award-fill.svg"
 
 import Reels1 from "../../public/Image.png"
-import Reels2 from "../../public/Image-2.png"
+import Reels2 from "../../public/image-2.png"
 import Reels3 from "../../public/Image-3.png"
 import Reels4 from "../../public/Image-4.png"
 import Reels5 from "../../public/Image-5.png"
