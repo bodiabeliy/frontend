@@ -25,50 +25,50 @@ const CountdownTimer = () => {
       return (
         <>
           <div className="flex flex-col items-center sm:w-[45px] lg:w-[100px]">
-            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[60px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
-              <div className="absolute top-8 left-0 right-0 h-[15%] bg-countdownGradient"></div>
-              <div className="absolute bottom-8 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
-              <span className="relative z-10 text-white font-manrope font-bold sm:text-[40px] lg:text-[125px] leading-none">{String(days).padStart(2, '0')[0]}</span>
+            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[140px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
+              <div className="absolute top-4 left-0 right-0 h-[15%] bg-countdownGradient"></div>
+              <div className="absolute bottom-4 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
+              <span className="relative z-10 text-white font-manrope font-bold sm:text-[64px] lg:text-[125px] leading-none">{String(days).padStart(2, '0')[0]}</span>
             </div>
           </div>
 
           <div className="flex flex-col items-center sm:w-[45px] lg:w-[100px]">
-            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[60px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
-              <div className="absolute top-8 left-0 right-0 h-[15%] bg-countdownGradient"></div>
-              <div className="absolute bottom-8 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
-              <span className="relative z-10 text-white font-manrope font-bold sm:text-[40px] lg:text-[125px] leading-none">{String(hours).padStart(2, '0')[1]}</span>
+            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[140px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
+              <div className="absolute top-4 left-0 right-0 h-[15%] bg-countdownGradient"></div>
+              <div className="absolute bottom-4 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
+              <span className="relative z-10 text-white font-manrope font-bold sm:text-[64px] lg:text-[125px] leading-none">{String(hours).padStart(2, '0')[1]}</span>
             </div>
           </div>
 
           <div className="flex flex-col items-center sm:w-[45px] lg:w-[100px]">
-            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[60px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
-              <div className="absolute top-8 left-0 right-0 h-[15%] bg-countdownGradient"></div>
-              <div className="absolute bottom-8 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
-              <span className="relative z-10 text-white font-manrope font-bold sm:text-[40px] lg:text-[125px] leading-none">{String(minutes).padStart(2, '0')[0]}</span>
+            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[140px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
+              <div className="absolute top-4 left-0 right-0 h-[15%] bg-countdownGradient"></div>
+              <div className="absolute bottom-4 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
+              <span className="relative z-10 text-white font-manrope font-bold sm:text-[64px] lg:text-[125px] leading-none">{String(minutes).padStart(2, '0')[0]}</span>
             </div>
           </div>
 
           <div className="flex flex-col items-center sm:w-[45px] lg:w-[100px]">
-            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[60px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
-              <div className="absolute top-8 left-0 right-0 h-[15%] bg-countdownGradient"></div>
-              <div className="absolute bottom-8 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
-              <span className="relative z-10 text-white font-manrope font-bold sm:text-[40px] lg:text-[125px] leading-none">{String(minutes).padStart(2, '0')[1]}</span>
+            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[140px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
+              <div className="absolute top-4 left-0 right-0 h-[15%] bg-countdownGradient"></div>
+              <div className="absolute bottom-4 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
+              <span className="relative z-10 text-white font-manrope font-bold sm:text-[64px] lg:text-[125px] leading-none">{String(minutes).padStart(2, '0')[1]}</span>
             </div>
           </div>
 
           <div className="flex flex-col items-center sm:w-[45px] lg:w-[100px]">
-            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[60px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
-              <div className="absolute top-8 left-0 right-0 h-[15%] bg-countdownGradient"></div>
-              <div className="absolute bottom-8 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
-              <span className="relative z-10 text-white font-manrope font-bold sm:text-[40px] lg:text-[125px] leading-none">{String(seconds).padStart(2, '0')[0]}</span>
+            <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[140px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
+              <div className="absolute top-4 left-0 right-0 h-[15%] bg-countdownGradient"></div>
+              <div className="absolute bottom-4 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
+              <span className="relative z-10 text-white font-manrope font-bold sm:text-[64px] lg:text-[125px] leading-none">{String(seconds).padStart(2, '0')[0]}</span>
             </div>
           </div>
 
           <div className="flex flex-col items-center sm:w-[45px] lg:w-[100px]">
-            <div className="relative rounded-[0px] sm:w-[45px] sm:h-[60px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
-              <div className="absolute top-8 left-0 right-0 h-[15%] bg-countdownGradient"></div>
-              <div className="absolute bottom-8 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
-              <span className="relative z-10 text-white font-manrope font-bold sm:text-[40px] lg:text-[125px] leading-none">{String(seconds).padStart(2, '0')[1]}</span>
+            <div className="relative rounded-[0px] sm:w-[45px] sm:h-[140px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
+              <div className="absolute top-4 left-0 right-0 h-[15%] bg-countdownGradient"></div>
+              <div className="absolute bottom-4 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
+              <span className="relative z-10 text-white font-manrope font-bold sm:text-[64px] lg:text-[125px] leading-none">{String(seconds).padStart(2, '0')[1]}</span>
             </div>
           </div>
         </>
@@ -86,12 +86,12 @@ const CountdownTimer = () => {
             <div className="flex sm:flex-col lg:flex-row sm:flex-nowrap lg:flex-wrap SponsorsCards m-auto justify-between sm:max-w-full lg:max-w-[1300px]">
 
             </div>
-            <h2 className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">Поспішайте!</h2>
+            <h2 className="sm:mt-[-50px] lg:mt-0 sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">Поспішайте!</h2>
             <p className="sm:text-xl lg:text-3xl text-center">Кількість акційних підписок обмежена</p>
             <p className="sm:text-xl lg:text-3xl text-secondaryColor text-center font-extrabold z-50 mt-8">Залишилося <span className="text-white">підписок</span></p>
           </div>
           
-          <div className="relative bg-countdownBg shadow-[0px_0px_100px_rgba(0,0,0,0.4)] rounded-[70px] sm:p-0 lg:p-0 border-[18px] border-white shadow-lg">
+          <div className="relative bg-countdownBg shadow-[0px_0px_100px_rgba(0,0,0,0.4)] sm:rounded-[32px] lg:rounded-[70px] sm:p-0 lg:p-0 sm:border-[8px] lg:border-[18px] border-white shadow-lg">
             <div className="countdown flex sm:gap-2 lg:gap-3 justify-center items-center">
               <Countdown date={"August 13, 2028 18:30:00"} renderer={renderer} />   
                 

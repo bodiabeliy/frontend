@@ -10,6 +10,7 @@ import AboutFigure4 from "@/../public/AboutFigure4.png"
 
 import AboutFigure5 from "@/../public/AboutFigure5.png"
 import AboutFigure6 from "@/../public/AboutFigure6.png"
+import AboutMobileFigure from "@/../public/AboutMobileFigure.png"
 
 
 import "slick-carousel/slick/slick.css";
@@ -42,6 +43,8 @@ const AboutSection = () => {
       <Image className="absolute sm:left-[-30%] lg:left-[-105px] sm:top-[512px] lg:top-[1200px]" src={AboutFigure4} alt={""} />
       <Image className="absolute sm:left-[-30%] lg:left-[-100px] sm:top-[512px] lg:top-[1600px]" src={AboutFigure5} alt={""} />
       <Image className="absolute sm:right-[-30%] lg:right-[-100px] sm:top-[512px] lg:top-[1600px]" src={AboutFigure6} alt={""} />
+
+      <Image className="absolute sm:block lg:hidden left-[-65px] top-[900px] scale-125" src={AboutMobileFigure} alt={""} />
 
 
         <div id="benefits" className="SpeakersWrapper w-full sm:hidden lg:flex justify-center flex flex-col m-auto sm:mt-3 lg:mt-20">

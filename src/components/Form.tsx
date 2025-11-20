@@ -155,7 +155,7 @@ const Form = () => {
                 </div>
               </div>
 
-             <div className="flex gap-10 align-center">
+             <div className="flex sm:flex-col lg:flex-row gap-10 align-center">
                  {/* Submit Button */}
               <ActionButton 
                 onClick={() => EmailSender()} 

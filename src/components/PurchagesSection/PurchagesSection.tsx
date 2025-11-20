@@ -25,9 +25,11 @@ const PurchagesSection = () => {
         {/* <Image className="absolute sm:hidden lg:block sm:left-0 sm:top-0 lg:right-[190px] lg:top-[80%] z-[-1]" src={PurchagesFigure2} alt={""} /> */}
 
         <div id="purchages" className="SponsorsWrapper relative w-full flex justify-center flex flex-col sm:mt-4 lg:mt-2 m-auto">
-          <p className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
+          <p className="sm:hidden lg:block sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
           Ціни на товари після запуску сервісу
           </p>
+        
+        <h2 className="sm:block lg:hidden sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50"> Ціни на товари <span className="text-white">після запуску </span>  сервісу</h2>
           <p className="sm:text-xl lg:text-3xl text-center">
              Прозора система — чесна економія вже з перших замовлень!
           </p>
@@ -55,8 +57,8 @@ const PurchagesSection = () => {
             </div>
              
           </div>
-           <p className="sm:block lg:hidden sm:text-3xl lg:text-5xl text-center font-extrabold z-50">
-                    Отримуй спеціальні ціни на всі товари без виключення після запуску проекту (тільки власники активної підписки матимуть доступ до всіх можливостей та переваг агрегатора)
+           <p className="sm:block lg:hidden sm:text-xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
+                    Отримуй спеціальні ціни на всі товари без виключення після запуску проекту <span className="text-white">(тільки власники активної підписки матимуть доступ до всіх можливостей та переваг агрегатора)</span>
                 </p>
            <ActionButton
               disabled={false}

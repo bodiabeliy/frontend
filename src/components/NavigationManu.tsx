@@ -87,7 +87,7 @@ export const NavigationManu = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="navbarMobile sm:flex md:hidden w-full items-center justify-between">
+        <div className="navbarMobile mt-3 sm:flex md:hidden w-full items-center justify-between">
           {/* Hamburger Menu */}
           <div
             className={`tham tham-e-squeeze tham-w-6 ${
@@ -174,20 +174,18 @@ export const NavigationManu = () => {
             
             {/* Social Icons */}
             <div className="flex gap-6 mt-6 pt-4 justify-start">
-              <Link className="text-[#405DE6] hover:scale-110 transition-transform" href={"https://instagram.com"} target="_blank">
-                <img src={instagram.src} alt="Instagram" width={32} height={32} />
-              </Link>
-              <Link className="text-[#1877F2] hover:scale-110 transition-transform" href={"https://facebook.com"} target="_blank">
-                <img src={facebook.src} alt="Facebook" width={32} height={32} />
-              </Link>
-              <Link className="text-[#0A66C2] hover:scale-110 transition-transform" href={"https://linkedin.com"} target="_blank">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="#0A66C2">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </Link>
-              <Link className="text-[#0088cc] hover:scale-110 transition-transform" href={"https://telegram.org"} target="_blank">
-                <img src={telegram.src} alt="Telegram" width={32} height={32} />
-              </Link>
+               <Link className="bg-white border-2 border-mainColor rounded-full p-2 hover:scale-110 max-h-[40px] max-h-[40px] transition-transform" href={"#about"}>
+              <img src={tiktok.src} alt="TikTok" width={24} height={24} />
+            </Link>
+            <Link className="bg-white border-2 border-mainColor rounded-full p-2 hover:scale-110 max-h-[40px] transition-transform" href={"#benefits"}>
+              <img src={instagram.src} alt="Instagram" width={24} height={24} />
+            </Link>
+            <Link className="bg-white border-2 border-mainColor rounded-full p-2 hover:scale-110 w-[40px] max-h-[40px] transition-transform" href={"#service"}>
+              <img src={facebook.src} className="mt-auto mx-auto" alt="Facebook" width={12} />
+            </Link>
+            <Link className="bg-white border-2 border-mainColor rounded-full p-2 hover:scale-110 max-h-[40px] transition-transform" href={"#pricelist"}>
+              <img src={telegram.src} alt="Telegram" width={24} height={24} />
+            </Link>
             </div>
           </div>
         </div>

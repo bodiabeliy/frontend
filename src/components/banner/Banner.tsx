@@ -4,6 +4,7 @@ import Image from "next/image"
 import { ActionButton } from "../buttons/ActionButton";
 import BannerImage from "@/../public/banner video.png"
 import BannerMobileImage from "@/../public/bannerMobile.png"
+import BannerMobileFigure from "@/../public/BannerMobileFigure.png"
 
 import BannerFigure from "@/../public/banner-figure.png"
 import { useState } from "react";
@@ -20,6 +21,7 @@ const Banner = () => {
     {/* <Modal isModalOpen={isModalOpen} setModalOpen={setIsModalOpen} /> */}
         <div className="bannerContent sm:ml-5 lg:ml-0 lg:max-w-[46%] sm:mt-10 lg:mt-12 sm:ml-4 lg:ml-[0px] sm:text-center lg:text-left sm:w-[335px] lg:w-full">
             <Image className="absolute sm:hidden lg:block sm:left-0 sm:top-0 lg:left-[695px] lg:top-[-96px] z-[-1]" src={BannerFigure} alt={""} />
+            <Image className="absolute sm:block lg:hidden sm:left-[-48px] sm:top-[920px] z-[-1]" src={BannerMobileFigure} alt={""} />
 
             <div className="bannerTitle sm:pl-[5px] lg:pl-0">
                 <p className="authorName sm:text-5xl lg:text-8xl font-black tracking-tight">
