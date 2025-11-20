@@ -1,10 +1,14 @@
-import About from "@/components/About/About";
+import SubscriptionSection from "@/components/SubscriptionSection/SubscriptionSection";
 import PriceList from "@/components/PriceList/PriceList";
-import SpeakersAndSponsors from "@/components/SpeakersAndSponsors/SpeakersAndSponsors";
+import AboutSection from "@/components/AboutSection/AboutSection";
 import Banner from "@/components/banner/Banner";
 import Head from "next/head";
 import Countdown from "../widgets/Countdown/Countdown";
 import Partners from "@/components/Partners/Partners";
+import PurchagesSection from "@/components/PurchagesSection/PurchagesSection";
+import Form  from "@/components/Form";
+import SeekingPartners from "@/components/SeekingPartners/SeekingPartners";
+import HurryUpSection from "@/components/HurryUpSection/HurryUpSection";
 
 
 export default function Home() {
@@ -31,12 +35,15 @@ export default function Home() {
         <Banner />
       </div>
 
-      <SpeakersAndSponsors />
+      <AboutSection />
       <Countdown />
-      <About />
+      <SubscriptionSection />
       <Partners />
+      <PurchagesSection />
+      <Form />
+      <HurryUpSection />
+      <SeekingPartners />
 
-      {/* <Form /> */}
       {/* <PriceList /> */}
     </>
   );

@@ -59,7 +59,7 @@ export const DropDownButton = (props:BtnDropDownProps) => {
         className={` ${props.className} flex items-center gap-2`}
       >
         <Image src={selectedFlag} width={32} height={32} alt={selectedLanguage} className="rounded-full flex-shrink-0" />
-        <span className="sm:text-white lg:text-mainColor sm:font-normal lg:font-semibold sm:text-lg lg:text-sm">{selectedLanguage}</span>
+        <span className="sm:text-white lg:text-mainColor sm:font-normal sm:text-lg lg:text-sm">{selectedLanguage}</span>
       </button>
      
       {isDropDownOpen && (
@@ -68,10 +68,10 @@ export const DropDownButton = (props:BtnDropDownProps) => {
             {languages.map((lang) => (
               <li 
                 key={lang.code}
-                className="flex flex-row items-center p-3 rounded-[10px] hover:bg-overlay sm:text-xl lg:text-2xl cursor-pointer"
+                className="flex flex-row items-center p-3 hover:bg-overlay sm:text-xl lg:text-2xl cursor-pointer"
                 onClick={() => selectLanguage(lang.code, lang.flag)}
               >
-                <Image className=" pr-2" src={lang.flag} width={40} height={40} alt={lang.name} />
+                <Image className=" pr-2 rounded-full" src={lang.flag} width={40} height={40} alt={lang.name} />
                 <p className="text-mainColor">{lang.code}</p>
               </li>
             ))}

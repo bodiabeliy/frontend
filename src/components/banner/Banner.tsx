@@ -43,7 +43,7 @@ const Banner = () => {
                 <ActionButton
                     disabled={false}
                     className={
-                    " relative actionBtn sm:hidden lg:flex bg-secondaryButton w-full sm:p-auto lg:p-0 rounded-[42px] sm:p-3 lg:p-5 sm:mb-4 lg:mb-0 border-2 border-secondaryColor  text-lg font-semibold text-secondaryColor hover:shadow-[0_4px_4px_rgba(49,45,47,0.3)]"
+                    " relative actionBtn sm:hidden lg:flex justify-center bg-secondaryButton w-full sm:p-auto lg:p-0 rounded-[42px] sm:p-3 lg:p-5 sm:mb-4 lg:mb-0 border-2 border-secondaryColor  text-lg font-semibold text-secondaryColor hover:shadow-[0_4px_4px_rgba(49,45,47,0.3)]"
                     }
                     text={"Переглянути Demo"}
                     // onClick={() =>navigateTo("/#form")}

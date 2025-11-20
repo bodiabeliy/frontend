@@ -9,8 +9,8 @@ import Reels4 from "../../public/Image-4.png"
 import Reels5 from "../../public/Image-5.png"
 import Reels6 from "../../public/Image-6.png"
 import Reels7 from "../../public/Image-7.png"
-import Reels8 from "../../public/Image-9.png"
-import Reels9 from "../../public/Image-8.png"
+import Reels8 from "../../public/Image-8.png"
+import Reels9 from "../../public/Image-9.png"
 
 import AboutIcon1 from "../../public/cart.png"
 import AboutIcon2 from "../../public/house-check-fill.svg"
@@ -35,6 +35,16 @@ import SubscribeIcon5 from "../../public/briefcase.svg"
 import Partner1 from "../../public/icon-park-solid_copy-link.svg"
 import Partner2 from "../../public/game-icons_two-coins.svg"
 
+import Purchages1 from "../../public/mockcard.png"
+import Purchages2 from "../../public/mockcard.png"
+import Purchages3 from "../../public/mockcard.png"
+import Purchages4 from "../../public/mockcard.png"
+import Purchages5 from "../../public/mockcard.png"
+import Purchages6 from "../../public/mockcard.png"
+import Purchages7 from "../../public/mockcard.png"
+import Purchages8 from "../../public/mockcard.png"
+import Purchages9 from "../../public/mockcard.png"
+
 export const benefitList =[
     {
         image:Benefit1,
@@ -57,7 +67,6 @@ export const serviceList1 = [
 
 
 export const serviceList2 = [
-  
     {author:Reels4, link:"/", name:"Тисячі екскурсій за спеціальними цінами для підписників платформи", isEvenNumber:false, icon:AboutIcon4},
     {author:Reels5, link:"/", name:"Орендуй авто, замовляй таксі -  значно дешевше з підпискою", isEvenNumber:true, icon:AboutIcon5},
     {author:Reels6, link:"/", name:"Знайомся, подорожуй, відпочивай — підписка відкриває доступ до івентів та нових знайомств", isEvenNumber:false, icon:AboutIcon6},
@@ -148,6 +157,19 @@ export const partnersList =[
         avatar:Partner2
     }
 ]
+
+export const purchagesList = [
+    {author:Purchages1, link:"/", name:"Усе, що ти шукав! Знижки до 70% на будь-який товар на нашому маркетплейсі", isEvenNumber:false, icon:AboutIcon1},
+    {author:Purchages2, link:"/", name:"Найкращі готелі  — за спеціальною ціною тільки для підписників", isEvenNumber:true, icon:AboutIcon2},
+    {author:Purchages3, link:"/", name:"Вечеря в ресторані зі знижкою до 50% з нашим сервісом", isEvenNumber:false, icon:AboutIcon3},
+    {author:Purchages4, link:"/", name:"Тисячі екскурсій за спеціальними цінами для підписників платформи", isEvenNumber:false, icon:AboutIcon4},
+    {author:Purchages5, link:"/", name:"Орендуй авто, замовляй таксі -  значно дешевше з підпискою", isEvenNumber:true, icon:AboutIcon5},
+    {author:Purchages6, link:"/", name:"Знайомся, подорожуй, відпочивай — підписка відкриває доступ до івентів та нових знайомств", isEvenNumber:false, icon:AboutIcon6},
+    {author:Purchages7, link:"/", name:"Орендуй авто, замовляй таксі -  значно дешевше з підпискою", isEvenNumber:true, icon:AboutIcon5},
+    {author:Purchages8, link:"/", name:"Знайомся, подорожуй, відпочивай — підписка відкриває доступ до івентів та нових знайомств", isEvenNumber:false, icon:AboutIcon6},
+]
+
+
 
 export const priceList =[
     {

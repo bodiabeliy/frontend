@@ -48,7 +48,7 @@ export const NavigationManu = () => {
 
         {/* Logo - Desktop */}
         <img
-          className="sm:hidden lg:flex sm:mt-[15px] lg:mt-0 flex-shrink-0"
+          className="sm:hidden lg:flex sm:mt-[15px] ml-16 lg:mt-0 flex-shrink-0"
           src={Logo.src}
           alt="AZAMAZA.COM"
         />
@@ -63,7 +63,7 @@ export const NavigationManu = () => {
               <img src={instagram.src} alt="Instagram" width={24} height={24} />
             </Link>
             <Link className="bg-white rounded-full p-2 hover:scale-110 w-[40px] max-h-[40px] transition-transform" href={"#service"}>
-              <img src={facebook.src} className="mt-auto" alt="Facebook" width={12} />
+              <img src={facebook.src} className="mt-auto mx-auto" alt="Facebook" width={12} />
             </Link>
             <Link className="bg-white rounded-full p-2 hover:scale-110 max-h-[40px] transition-transform" href={"#pricelist"}>
               <img src={telegram.src} alt="Telegram" width={24} height={24} />

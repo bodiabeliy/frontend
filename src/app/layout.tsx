@@ -17,7 +17,7 @@ export default function LocaleLayout({
           <div>
           <NavigationManu />
           {children}
-          {/* <Footer /> */}
+          <Footer />
           </div>
         </div>
         

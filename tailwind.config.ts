@@ -67,14 +67,19 @@ const config: Config = {
       secondaryButton:"rgba(255, 184, 106, 0.3)",
       backgroundCard:"rgba(3, 202, 252, 0.55)",
       borderCard:"rgba(3, 202, 252, 0.1)",
-      countdownBg:"#1E6FFF"
+      countdownBg:"#2B7FFF",
+      formFieldColor:"#BEDBFF",
+      formTextColor:"#6A7282",
+      formBorderColor:"#888A90",
+      footer:"#1447E6"
     },
     backgroundImage: {
 
       primaryButton:"linear-gradient(180deg, rgba(179, 159, 3, 0.99) 0%, #D23108 110.81%)", 
-
+      testBtns:"linear-gradient(95.06deg, #12A5C8 1.83%, #0D5BB5 44.61%, #2B7FFF 76.02%, #0078A4 98.28%);",
       cardsBtns:"linear-gradient(93.28deg, #1CB9DE 0.28%, #316199 100%)",
       secondaryBtns:"linear-gradient(95.06deg, #15D0FC 1.83%, #51A2FF 44.61%, #2B7FFF 76.02%, #0078A4 98.28%)",
+      thirdBtns:"linear-gradient(180deg, #04986C 0%, #08D296 110.81%)",
       countdownGradient:"linear-gradient(180deg, #FFDF20 0%, rgba(255, 223, 32, 0) 100%)"
       // topicsList:"linear-gradient(-180deg, rgba(44, 7, 58, 33) 0%, rgba(75, 210, 253, 35) 75%, rgba(67, 61, 193, 64) 69%, rgba(44, 7, 58, 33) 100%)"
   
