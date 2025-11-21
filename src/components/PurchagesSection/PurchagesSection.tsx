@@ -8,13 +8,14 @@ import PurchagesFigure from "@/../public/static/PurchagesFigure.png"
 import PurchagesFigure2 from "@/../public/static/PurchagesFigure2.png"
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "../LanguageProvider";
+import { useRouter } from "next/navigation";
 
 
 const PurchagesSection = () => {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
   const [isMobile, setIsMobile] = useState(false);
-
+  const router = useRouter()
   useEffect(() => {
     if (window.innerWidth > 600) {
       setIsMobile(!isMobile);
@@ -66,6 +67,7 @@ const PurchagesSection = () => {
                 </p>
            <ActionButton
               disabled={false}
+              onClick={() =>router.push('/price')}
               className={
               "relative bg-primaryButton sm:w-full lg:w-[550px] sm:p-auto sm:mt-4 lg:mt-16 rounded-[30px] mx-auto sm:p-3 lg:p-5 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
               }

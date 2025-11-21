@@ -143,5 +143,50 @@
     "usageTerms": "Terms of Use",
     "writeToUs": "Write to Us",
     "rights": "© All rights reserved Azamaza.com 2024-2025"
+  },
+  "pricePage": {
+    "mainTitle": "Promotional price",
+    "mainTitleHighlight": "only for the first",
+    "mainTitleEnd": "100,000 subscribers",
+    "mainSubtitle": "Subscribe now — and enjoy discounts until 01.01.2027!",
+    "mobileTitle": "Presale subscription packages",
+    "priceAfterLaunch": "Price after launch",
+    "readMore": "Read more",
+    "suitableFor": "Who is it suitable for:",
+    "lite": {
+      "badge": "Lite",
+      "price": "199",
+      "currency": "UAH",
+      "originalPrice": "549 UAH",
+      "button": "Buy at promotional price",
+      "description": "For those who want to try the service with minimal costs",
+      "feature1": "Access to verified services (restaurants, hotels, tours, etc.)",
+      "feature2": "Up to 5 items/orders with discount per month",
+      "feature3": "Email support",
+      "feature4": "Priority at regional launch"
+    },
+    "pro": {
+      "badge": "Pro",
+      "price": "499",
+      "currency": "UAH",
+      "originalPrice": "999 UAH",
+      "button": "Buy at promotional price",
+      "description": "The most optimal solution! This package maximizes possibilities",
+      "feature1": "Unlimited orders in all service categories",
+      "feature2": "Personalized recommendations, priority concierge support",
+      "feature3": "Access to all platform features",
+      "feature4": "Access to new features first"
+    },
+    "elite": {
+      "badge": "Elite",
+      "price": "1399",
+      "currency": "UAH",
+      "originalPrice": "1999 UAH",
+      "button": "Buy at promotional price",
+      "description": "For those who want the best and are ready to pay maximum for VIP platform",
+      "feature1": "Unlimited access without restrictions",
+      "feature2": "Private VIP access (services not available to Lite/Pro)",
+      "feature3": "Additional weekly offers for individual package"
+    }
   }
 }

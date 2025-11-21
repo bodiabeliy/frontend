@@ -51,11 +51,13 @@ export const NavigationManu = () => {
         </div>
 
         {/* Logo - Desktop */}
-        <img
+       <Link href={"/"}>
+         <img
           className="sm:hidden lg:flex sm:mt-[15px] ml-16 lg:mt-0 flex-shrink-0"
           src={Logo.src}
           alt="AZAMAZA.COM"
         />
+       </Link>
 
         {/* Desktop Navigation - Right Side */}
         <div className="navbarDesktop sm:hidden md:block text-mainColor flex-1">

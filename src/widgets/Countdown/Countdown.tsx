@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image"
+
+
 import { ActionButton } from "@/components/buttons/ActionButton";
 import { useEffect, useState } from "react";
 import Countdown from "react-countdown";
@@ -8,18 +10,17 @@ import { useLanguage } from "@/components/LanguageProvider";
 
 import timerFigure1 from "@/../public/static/timerFigure1.png"
 import timerFigure2 from "@/../public/static/timerFigure2.png"
+import { useRouter } from "next/navigation";
 
+interface CountdownTimerProps {
+  isVisible:boolean
+}
 
-const CountdownTimer = () => {
+const CountdownTimer = ({ isVisible }: CountdownTimerProps) => {
+  
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
-   const [counter, setCounter] = useState(60);
-
-  useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 5000);
-  }, [counter]);
-
-  
+  const router = useRouter()
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
       // Render a complete state
@@ -28,7 +29,7 @@ const CountdownTimer = () => {
       // Render a countdown
       return (
         <>
-          <div className="flex flex-col items-center sm:w-[45px] lg:w-[100px]">
+          <div className=" relative flex flex-col items-center sm:w-[45px] lg:w-[100px]">
             <div className="relative rounded-[0px] border-r-4 border-white sm:w-[45px] sm:h-[140px] lg:w-[100px] lg:h-[260px] flex items-center justify-center overflow-hidden  lg:border-r-5 border-white/40">
               <div className="absolute top-4 left-0 right-0 h-[15%] bg-countdownGradient"></div>
               <div className="absolute bottom-4 left-0 right-0 h-[15%] bg-countdownGradient rotate-180"></div>
@@ -81,17 +82,17 @@ const CountdownTimer = () => {
   };
   return (
     <>
-      <div className="countdownWrapper  flex justify-center w-full sm:mt-10 lg:mt-20 sm:mb-10 lg:mb-16">
-      <Image className="absolute sm:hidden lg:block sm:left-0 sm:top-0 lg:left-[-47px] lg:top-[3200px] z-[-1]" src={timerFigure1} alt={""} />
-      <Image className="absolute sm:hidden lg:block sm:top-0 lg:right-[-47px] lg:top-[3200px] z-[-1]" src={timerFigure2} alt={""} />
+      <div className=" relative countdownWrapper  flex justify-center w-full sm:mt-10 lg:mt-20 sm:mb-10 lg:mb-16">
+      <Image className="absolute sm:hidden lg:block sm:left-0 sm:top-0 lg:left-[-150px] lg:top-[-40px] z-[-1]" src={timerFigure1} alt={""} />
+      <Image className="absolute sm:hidden lg:block sm:top-0 lg:right-[-150px] lg:top-[-40px] z-[-1]" src={timerFigure2} alt={""} />
 
         <div className="countdownContent sm:max-w-[95%] lg:max-w-[750px] w-full flex flex-col m-auto">
           <div className="text-center  sm:mb-4 lg:mb-6">
             <div className="flex sm:flex-col lg:flex-row sm:flex-nowrap lg:flex-wrap SponsorsCards m-auto justify-between sm:max-w-full lg:max-w-[1300px]">
 
             </div>
-            <h2 className="sm:mt-[-50px] lg:mt-0 sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">{t('countdown.title')}</h2>
-            <p className="sm:text-xl lg:text-3xl text-center">{t('countdown.subtitle')}</p>
+           {isVisible && <h2 className={` sm:mt-[-50px] lg:mt-0 sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50`}>{t('countdown.title')}</h2>} 
+           {isVisible && <p className="sm:text-xl lg:text-3xl text-center">{t('countdown.subtitle')}</p>}
             <p className="sm:text-xl lg:text-3xl text-secondaryColor text-center font-extrabold z-50 mt-8">{t('countdown.remaining')} <span className="text-white">підписок</span></p>
           </div>
           
@@ -101,14 +102,18 @@ const CountdownTimer = () => {
                 
             </div>
           </div>
-           <ActionButton
+          {
+            isVisible &&  
+            <ActionButton
                   disabled={false}
+                  onClick={() =>router.push('/price')}
                   className={
                   "relative bg-primaryButton sm:w-full lg:w-[550px] sm:p-auto sm:mb-4 lg:mb-0 mt-10 mx-auto rounded-[42px] sm:p-3 lg:p-5 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
                   }
                   text={t('countdown.button')}
                   // onClick={() =>navigateTo("/#form")}
                 />    
+          }
         </div>
         
       </div>

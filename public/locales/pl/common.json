@@ -143,5 +143,50 @@
     "usageTerms": "Warunki użytkowania",
     "writeToUs": "Napisz do nas",
     "rights": "© Wszelkie prawa zastrzeżone Azamaza.com 2024-2025"
+  },
+  "pricePage": {
+    "mainTitle": "Cena promocyjna",
+    "mainTitleHighlight": "tylko dla pierwszych",
+    "mainTitleEnd": "100 000 subskrybentów",
+    "mainSubtitle": "Subskrybuj teraz — i korzystaj ze zniżek do 01.01.2027!",
+    "mobileTitle": "Pakiety przedsprzedażowe subskrypcji",
+    "priceAfterLaunch": "Cena po uruchomieniu",
+    "readMore": "Czytaj więcej",
+    "suitableFor": "Dla kogo to jest:",
+    "lite": {
+      "badge": "Lite",
+      "price": "199",
+      "currency": "hrn",
+      "originalPrice": "549 hrn",
+      "button": "Kup w cenie promocyjnej",
+      "description": "Dla tych, którzy chcą wypróbować usługę przy minimalnych kosztach",
+      "feature1": "Dostęp do zweryfikowanych usług (restauracje, hotele, wycieczki itp.)",
+      "feature2": "Do 5 produktów/zamówień ze zniżką miesięcznie",
+      "feature3": "Wsparcie przez email",
+      "feature4": "Priorytet przy uruchomieniu regionalnym"
+    },
+    "pro": {
+      "badge": "Pro",
+      "price": "499",
+      "currency": "hrn",
+      "originalPrice": "999 hrn",
+      "button": "Kup w cenie promocyjnej",
+      "description": "Najlepszy stosunek cena/możliwości",
+      "feature1": "Pełny dostęp do wszystkich zweryfikowanych usług",
+      "feature2": "Do 30 produktów/zamówień ze zniżkami miesięcznie",
+      "feature3": "Priorytetowe wsparcie",
+      "feature4": "Dostęp do nowych funkcji jako pierwszy"
+    },
+    "elite": {
+      "badge": "Elite",
+      "price": "1399",
+      "currency": "hrn",
+      "originalPrice": "1999 hrn",
+      "button": "Kup w cenie promocyjnej",
+      "description": "Dla tych, którzy chcą więcej i są gotowi wspierać rozwój platformy",
+      "feature1": "Nieograniczona liczba produktów/zamówień ze zniżkami",
+      "feature2": "Bezpośredni dostęp do zamkniętych usług VIP (niedostępnych dla Lite/Pro)",
+      "feature3": "Dodatkowe cotygodniowe kody promocyjne dla popularnych usług"
+    }
   }
 }

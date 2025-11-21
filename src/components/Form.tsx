@@ -10,8 +10,7 @@ import FormFigure from "../../public/static/FormFigure.png"
 
 const Form = () => {
   const { language } = useLanguage();
-  const { t } = useTranslation(language, 'common');
-    
+  const { t } = useTranslation(language, 'common')
   const [email, setEmail] = useState<string>("")
   const [message, setMessage] = useState<string>("")
   const [fullname, setFullName] = useState<string>("")

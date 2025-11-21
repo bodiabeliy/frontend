@@ -45,6 +45,16 @@ import Purchages7 from "../../public/static/mockcard.png"
 import Purchages8 from "../../public/static/mockcard.png"
 import Purchages9 from "../../public/static/mockcard.png"
 
+import FlameIcon from "../../public/static/fire.svg"
+import PackageIcon from "../../public/static/db.svg"
+import EnvilopeIcon from "../../public/static/envelope.svg"
+import GlobeIcon from "../../public/static/globe.svg"
+import HeadSetIcon from "../../public/static/headset.svg"
+import LaptopIcon from "../../public/static/laptop.svg"
+import GemIcon from "../../public/static/gem.svg"
+import CommentIcon from "../../public/static/chat-text.svg"
+
+
 export const benefitList =[
     {
         image:Benefit1,
@@ -167,26 +177,4 @@ export const purchagesList = [
     {author:Purchages6, link:"/", name:"Знайомся, подорожуй, відпочивай — підписка відкриває доступ до івентів та нових знайомств", isEvenNumber:false, icon:AboutIcon6},
     {author:Purchages7, link:"/", name:"Орендуй авто, замовляй таксі -  значно дешевше з підпискою", isEvenNumber:true, icon:AboutIcon5},
     {author:Purchages8, link:"/", name:"Знайомся, подорожуй, відпочивай — підписка відкриває доступ до івентів та нових знайомств", isEvenNumber:false, icon:AboutIcon6},
-]
-
-
-
-export const priceList =[
-    {
-        name:"Індивідуальні заняття",
-        describing:["✅ англійська (А1-В2)", " ✅ французька (А1-В1)"],
-        price:"400 грн/год"
-    },
-    {
-        name:"Парні заняття",
-        describing:["✅ англійська (А1-В2)", " ✅ французька (А1-В1)"],
-        price:"250 грн/год 300 грн/год"
-    },
-    {
-        name:"Групові заняття",
-        describing:["✅ англійська (А1/A2/В1)"],
-        price:"200 грн/год",
-        astrix:"*",
-        details:"час узгоджується"
-    }
 ]

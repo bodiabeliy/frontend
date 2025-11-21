@@ -143,5 +143,50 @@
     "usageTerms": "Conditions d'utilisation",
     "writeToUs": "Écrivez-nous",
     "rights": "© Tous droits réservés Azamaza.com 2024-2025"
+  },
+  "pricePage": {
+    "mainTitle": "Prix promotionnel",
+    "mainTitleHighlight": "uniquement pour les premiers",
+    "mainTitleEnd": "100 000 abonnés",
+    "mainSubtitle": "Abonnez-vous maintenant — et profitez de réductions jusqu'au 01.01.2027!",
+    "mobileTitle": "Forfaits d'abonnement en prévente",
+    "priceAfterLaunch": "Prix après le lancement",
+    "readMore": "En savoir plus",
+    "suitableFor": "Pour qui c'est:",
+    "lite": {
+      "badge": "Lite",
+      "price": "199",
+      "currency": "UAH",
+      "originalPrice": "549 UAH",
+      "button": "Acheter au prix promotionnel",
+      "description": "Pour ceux qui veulent essayer le service avec un coût minimal",
+      "feature1": "Accès aux services vérifiés (restaurants, hôtels, excursions, etc.)",
+      "feature2": "Jusqu'à 5 articles/commandes avec réduction par mois",
+      "feature3": "Support par email",
+      "feature4": "Priorité au lancement régional"
+    },
+    "pro": {
+      "badge": "Pro",
+      "price": "499",
+      "currency": "UAH",
+      "originalPrice": "999 UAH",
+      "button": "Acheter au prix promotionnel",
+      "description": "Meilleur rapport qualité/prix",
+      "feature1": "Accès complet à tous les services vérifiés",
+      "feature2": "Jusqu'à 30 articles/commandes avec réductions mensuellement",
+      "feature3": "Support prioritaire",
+      "feature4": "Accès aux nouvelles fonctionnalités en premier"
+    },
+    "elite": {
+      "badge": "Elite",
+      "price": "1399",
+      "currency": "UAH",
+      "originalPrice": "1999 UAH",
+      "button": "Acheter au prix promotionnel",
+      "description": "Pour ceux qui veulent plus et sont prêts à soutenir le développement de la plateforme",
+      "feature1": "Articles/commandes illimités avec réductions",
+      "feature2": "Accès direct aux services VIP fermés (non disponibles pour Lite/Pro)",
+      "feature3": "Codes promo hebdomadaires supplémentaires pour les services populaires"
+    }
   }
 }

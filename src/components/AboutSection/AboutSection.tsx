@@ -19,10 +19,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 import { ActionButton } from "../buttons/ActionButton";
+import { useRouter } from "next/navigation";
 
 const AboutSection = () => {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
+  const router = useRouter()
   const [isMobile, setIsMobile] = useState(false);
 
   // Get translated data
@@ -149,6 +151,7 @@ const AboutSection = () => {
           </div>
            <ActionButton
               disabled={false}
+              onClick={() => router.push('/price')}
               className={
               "relative bg-primaryButton sm:w-full lg:w-[550px] sm:p-auto sm:mt-4 lg:mt-16 rounded-[42px] mx-auto sm:p-3 lg:p-5 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
               }

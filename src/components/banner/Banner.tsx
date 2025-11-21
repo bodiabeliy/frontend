@@ -8,18 +8,15 @@ import BannerMobileFigure from "@/../public/static/BannerMobileFigure.png"
 
 import BannerFigure from "@/../public/static/banner-figure.png"
 import { useState } from "react";
-import Modal from "../Modal/Modal";
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "../LanguageProvider";
+import { useRouter } from "next/navigation";
 
 const Banner = () => {
     const { language } = useLanguage();
     const { t } = useTranslation(language, 'common');
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const router = useRouter()
 
-    const MoveTo = () => {        
-        setIsModalOpen(true) 
-    }
   return (
     <>
     {/* <Modal isModalOpen={isModalOpen} setModalOpen={setIsModalOpen} /> */}
@@ -40,6 +37,7 @@ const Banner = () => {
             <div className="actionBtnWrapper sm:mt-[5%] sm:pb-[75px] lg:pb-0 lg:mt-2 sm:mb-0 sm:mb-0 lg:mb-10 gap-4 flex sm:flex-col lg:flex-row sm:justify-center lg:justify-between">
                 <ActionButton
                     disabled={false}
+                    onClick={() => router.push('/price')}
                     className={
                     "relative bg-primaryButton w-full sm:p-auto sm:mb-4 lg:mb-0 rounded-[42px] sm:p-3 lg:p-5 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
                     }

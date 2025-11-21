@@ -7,10 +7,13 @@ import SeekingFigure from "../../../public/static/SeekingFigure.png"
 import SeekingFigure2 from "../../../public/static/SeekingFigure2.png"
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "../LanguageProvider";
+import { useRouter } from "next/navigation";
 
 const SeekingPartners = () => {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
+  const router = useRouter()
+
   return (
     <section className="relative w-full sm:mt-10 lg:mt-20 sm:mb-10 lg:mb-20 sm:px-3 lg:px-0">
     <Image className="absolute sm:left-[-30%] lg:left-[-100px] sm:top-[512px] lg:top-[-450px] z-[-1]" src={SeekingFigure} alt={""} /> 
@@ -41,7 +44,7 @@ const SeekingPartners = () => {
             </p>
             <ActionButton
               disabled={false}
-              // onClick={() =>navigate("#form")}
+              onClick={() =>router.push("#form")}
               className="bg-secondaryButton sm:w-full lg:w-[550px] sm:p-4 lg:px-10 lg:py-6 rounded-[42px] text-white font-bold sm:text-lg lg:text-xl hover:shadow-[0_8px_16px_rgba(252,21,93,0.4)] transition-all border-2 border-secondaryColor"
               text={t('seekingPartners.button')}
             />

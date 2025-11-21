@@ -53,9 +53,9 @@ const config: Config = {
     colors: {
       white:"#fff",
       transparent:"transparent",
+      error:"#FF8B16",
 
       secondaryTextColor:"#364153",
-      error:"#FF0000",
       mainOrange:"#eda551",
       overlay:"#e3e3e3",
       darkOrange:"#F2B46C",
@@ -71,7 +71,12 @@ const config: Config = {
       formFieldColor:"#BEDBFF",
       formTextColor:"#6A7282",
       formBorderColor:"#888A90",
-      footer:"#1447E6"
+      footer:"#1447E6",
+      // price
+      cardBadgePro:"#7F22FE",
+      cardBadgeElite:"#E60076",
+      cardPrice:"#FB2C36"
+
     },
     backgroundImage: {
 

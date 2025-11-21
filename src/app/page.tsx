@@ -36,15 +36,13 @@ export default function Home() {
       </div>
 
       <AboutSection />
-      <Countdown />
+      <Countdown  isVisible={true} />
       <SubscriptionSection />
       <Partners />
       <PurchagesSection />
       <Form />
       <HurryUpSection />
       <SeekingPartners />
-
-      {/* <PriceList /> */}
     </>
   );
 }
