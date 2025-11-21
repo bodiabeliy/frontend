@@ -6,6 +6,13 @@ import tiktok from "../../public/static/tiktok.svg"
 import instagram from "../../public/static/instagram.svg"
 import telegram from "../../public/static/telegram.svg"
 import facebook from "../../public/static/Facebook.svg"
+import visa from "../../public/static/visa-logo.png"
+import mastercard from "../../public/static/master card.png"
+import maestro from "../../public/static/maestro.png"
+import paypal from "../../public/static/PayPal.png"
+import gpay from "../../public/static/GooglePay.png"
+import applepay from "../../public/static/ApplePay.png"
+import liqpay from "../../public/static/liqpay-logo-Photoroom 1.png"
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "./LanguageProvider";
 
@@ -15,7 +22,109 @@ export const Footer = () => {
   return (
     <footer className="w-full bg-footer sm:mt-10 lg:mt-20">
       <div className="max-w-[1300px] mx-auto sm:px-4 lg:px-8 sm:py-8 lg:py-12">
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        {/* Mobile Layout */}
+        <div className="lg:hidden flex flex-col items-center text-center space-y-8 px-6">
+          {/* Navigation Links - Mobile */}
+          <nav className="flex flex-col items-center space-y-4 w-full">
+            <Link href="#about" className="text-white text-base font-normal uppercase tracking-wide">
+              {t('navigation.about')}
+            </Link>
+            <Link href="#howitworks" className="text-white text-base font-normal uppercase tracking-wide">
+              {t('navigation.howItWorks')}
+            </Link>
+            <Link href="#service" className="text-white text-base font-normal uppercase tracking-wide">
+              {t('navigation.subscription')}
+            </Link>
+            <Link href="#referral" className="text-white text-base font-normal uppercase tracking-wide">
+              {t('navigation.referral')}
+            </Link>
+            <Link href="#contact" className="text-white text-base font-normal uppercase tracking-wide">
+              {t('footer.writeToUs')}
+            </Link>
+          </nav>
+
+          {/* Social Icons - Mobile */}
+          <div className="flex justify-center gap-4">
+            <Link className="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:scale-110 transition-transform" href={"https://tiktok.com"}>
+              <img src={tiktok.src} alt="TikTok" width={24} height={24} />
+            </Link>
+            <Link className="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:scale-110 transition-transform" href={"https://instagram.com"}>
+              <img src={instagram.src} alt="Instagram" width={24} height={24} />
+            </Link>
+            <Link className="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:scale-110 transition-transform" href={"https://facebook.com"}>
+              <img src={facebook.src} alt="Facebook" width={14} height={14} />
+            </Link>
+            <Link className="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:scale-110 transition-transform" href={"https://telegram.org"}>
+              <img src={telegram.src} alt="Telegram" width={24} height={24} />
+            </Link>
+          </div>
+
+          {/* Contact Info - Mobile */}
+          <div className="text-white text-sm space-y-1">
+            <p>Україна, м.Київ, проспект Оболонський 26</p>
+            <p>Email: azamazaproject@gmail.com</p>
+          </div>
+
+          {/* Payment Methods - Mobile */}
+          <div className="w-full space-y-3">
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-[52px] w-[80px]">
+                <img src={visa.src} alt="VISA" className="h-auto w-full object-contain" />
+              </div>
+              <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-[52px] w-[80px]">
+                <img src={mastercard.src} alt="MasterCard" className="h-auto w-full object-contain" />
+              </div>
+              <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-[52px] w-[80px]">
+                <img src={maestro.src} alt="Maestro" className="h-auto w-full object-contain" />
+              </div>
+              <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-[52px] w-[80px]">
+                <img src={paypal.src} alt="PayPal" className="h-auto w-full object-contain" />
+              </div>
+            </div>
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-[52px] w-[80px]">
+                <img src={gpay.src} alt="Google Pay" className="h-auto w-full object-contain" />
+              </div>
+              <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-[52px] w-[80px]">
+                <img src={applepay.src} alt="Apple Pay" className="h-auto w-full object-contain" />
+              </div>
+              <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center h-[52px] w-[80px]">
+                <img src={liqpay.src} alt="LiqPay" className="h-auto w-full object-contain" />
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Links Grid - Mobile */}
+          <div className="w-full grid grid-cols-2 gap-x-4 gap-y-3 text-white text-xs pt-4">
+            <Link href="/terms" className="text-left underline">
+              {t('footer.usageTerms')}
+            </Link>
+            <Link href="/privacy" className="text-right underline">
+              {t('footer.privacyPolicy')}
+            </Link>
+            <Link href="/privacy" className="text-left underline">
+              {t('footer.privacyPolicy')}
+            </Link>
+            <Link href="/cookies" className="text-right underline">
+              {t('footer.cookiePolicy')}
+            </Link>
+            <Link href="/terms" className="text-left underline">
+              {t('footer.aboutService')}
+            </Link>
+            <Link href="/delivery" className="text-right underline">
+              {t('footer.serviceTerms')}
+            </Link>
+            <Link href="/contact" className="text-left underline">
+              Контактна інформація
+            </Link>
+            <Link href="/about" className="text-right underline">
+              Про сервіс Azamaza
+            </Link>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:grid grid-cols-5 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-white font-bold text-xl mb-4">AZAMAZA.COM</h3>
@@ -28,16 +137,16 @@ export const Footer = () => {
             
             {/* Social Icons */}
             <div className="flex gap-3 mt-6">
-               <Link className="bg-white rounded-full p-2 hover:scale-110 max-h-[40px] max-h-[40px] transition-transform" href={"#about"}>
+               <Link className="bg-white rounded-full p-2 hover:scale-110 max-h-[40px] transition-transform" href={"https://tiktok.com"}>
               <img src={tiktok.src} alt="TikTok" width={24} height={24} />
             </Link>
-            <Link className="bg-white rounded-full p-2 hover:scale-110 max-h-[40px] transition-transform" href={"#benefits"}>
+            <Link className="bg-white rounded-full p-2 hover:scale-110 max-h-[40px] transition-transform" href={"https://instagram.com"}>
               <img src={instagram.src} alt="Instagram" width={24} height={24} />
             </Link>
-            <Link className="bg-white rounded-full p-2 hover:scale-110 w-[40px] max-h-[40px] transition-transform" href={"#service"}>
+            <Link className="bg-white rounded-full p-2 hover:scale-110 w-[40px] max-h-[40px] transition-transform" href={"https://facebook.com"}>
               <img src={facebook.src} className="mt-auto mx-auto" alt="Facebook" width={12} />
             </Link>
-            <Link className="bg-white rounded-full p-2 hover:scale-110 max-h-[40px] transition-transform" href={"#pricelist"}>
+            <Link className="bg-white rounded-full p-2 hover:scale-110 max-h-[40px] transition-transform" href={"https://telegram.org"}>
               <img src={telegram.src} alt="Telegram" width={24} height={24} />
             </Link>
             </div>
@@ -127,8 +236,8 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-white/20 pt-6 text-center">
+        {/* Copyright - Desktop Only */}
+        <div className="hidden lg:block border-t border-white/20 pt-6 text-center">
           <p className="text-white/60 text-sm">
             {t('footer.rights')}
           </p>
