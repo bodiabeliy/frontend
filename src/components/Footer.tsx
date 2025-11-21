@@ -1,12 +1,17 @@
 
+"use client";
 import Logo from "../../public/azamaza.com.svg";
 import Link from "next/link";
 import tiktok from "../../public/tiktok.svg"
 import instagram from "../../public/instagram.svg"
 import telegram from "../../public/telegram.svg"
 import facebook from "../../public/Facebook.svg"
+import { useTranslation } from "@/i18n";
+import { useLanguage } from "./LanguageProvider";
 
 export const Footer = () => {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language, 'common');
   return (
     <footer className="w-full bg-footer sm:mt-10 lg:mt-20">
       <div className="max-w-[1300px] mx-auto sm:px-4 lg:px-8 sm:py-8 lg:py-12">
@@ -15,7 +20,7 @@ export const Footer = () => {
           <div className="lg:col-span-1">
             <h3 className="text-white font-bold text-xl mb-4">AZAMAZA.COM</h3>
             <p className="text-white/80 text-sm mb-4">
-              Україна, м.Київ, проспект Оболонський 26
+              {t('footer.companyInfo')}
             </p>
             <a href="mailto:azamazaproject@gmail.com" className="text-white/80 text-sm hover:text-white">
               azamazaproject@gmail.com
@@ -40,31 +45,31 @@ export const Footer = () => {
 
           {/* Navigation Column 1 */}
           <div className="lg:col-span-1">
-            <h4 className="text-white font-bold text-lg mb-4">Навігація</h4>
+            <h4 className="text-white font-bold text-lg mb-4">{t('footer.navigationTitle')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="#about" className="text-white/80 hover:text-white text-sm">
-                  Про нас
+                  {t('navigation.about')}
                 </Link>
               </li>
               <li>
                 <Link href="#howitworks" className="text-white/80 hover:text-white text-sm">
-                  Як це працює
+                  {t('navigation.howItWorks')}
                 </Link>
               </li>
               <li>
                 <Link href="#service" className="text-white/80 hover:text-white text-sm">
-                  Єдина підписка
+                  {t('navigation.subscription')}
                 </Link>
               </li>
               <li>
                 <Link href="#referral" className="text-white/80 hover:text-white text-sm">
-                  Реферальна програма
+                  {t('navigation.referral')}
                 </Link>
               </li>
               <li>
                 <Link href="#contact" className="text-white/80 hover:text-white text-sm">
-                  Напишіть нам
+                  {t('footer.writeToUs')}
                 </Link>
               </li>
             </ul>
@@ -72,21 +77,21 @@ export const Footer = () => {
 
           {/* Rules Column */}
           <div className="lg:col-span-1">
-            <h4 className="text-white font-bold text-lg mb-4">Правила</h4>
+            <h4 className="text-white font-bold text-lg mb-4">{t('footer.rulesTitle')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/privacy" className="text-white/80 hover:text-white text-sm">
-                  Політика конфіденційності
+                  {t('footer.privacyPolicy')}
                 </Link>
               </li>
               <li>
                 <Link href="/cookies" className="text-white/80 hover:text-white text-sm">
-                  Політика щодо cookie-файлів
+                  {t('footer.cookiePolicy')}
                 </Link>
               </li>
               <li>
                 <Link href="/terms" className="text-white/80 hover:text-white text-sm">
-                  Про сервіс Azamaza
+                  {t('footer.aboutService')}
                 </Link>
               </li>
             </ul>
@@ -94,21 +99,21 @@ export const Footer = () => {
 
           {/* Clients Column */}
           <div className="lg:col-span-1">
-            <h4 className="text-white font-bold text-lg mb-4">Клієнтам</h4>
+            <h4 className="text-white font-bold text-lg mb-4">{t('footer.clientsTitle')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/delivery" className="text-white/80 hover:text-white text-sm">
-                  Умови надання послуг клієнтам
+                  {t('footer.serviceTerms')}
                 </Link>
               </li>
               <li>
                 <Link href="/payment" className="text-white/80 hover:text-white text-sm">
-                  Політика оплати та повернення
+                  {t('footer.paymentPolicy')}
                 </Link>
               </li>
               <li>
                 <Link href="/usage" className="text-white/80 hover:text-white text-sm">
-                  Умови використання
+                  {t('footer.usageTerms')}
                 </Link>
               </li>
             </ul>
@@ -116,7 +121,7 @@ export const Footer = () => {
 
           {/* Contact Column */}
           <div className="lg:col-span-1">
-            <h4 className="text-white font-bold text-lg mb-4">Контакти</h4>
+            <h4 className="text-white font-bold text-lg mb-4">{t('footer.contactTitle')}</h4>
             <p className="text-white/80 text-sm mb-2">azamazaproject@gmail.com</p>
             <p className="text-white/80 text-sm">azamazasupport@gmail.com</p>
           </div>
@@ -125,7 +130,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-white/20 pt-6 text-center">
           <p className="text-white/60 text-sm">
-            © All rights reserved Azamaza.com 2024-2025
+            {t('footer.rights')}
           </p>
         </div>
       </div>

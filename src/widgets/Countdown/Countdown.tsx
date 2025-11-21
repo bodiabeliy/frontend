@@ -3,12 +3,16 @@ import Image from "next/image"
 import { ActionButton } from "@/components/buttons/ActionButton";
 import { useEffect, useState } from "react";
 import Countdown from "react-countdown";
+import { useTranslation } from "@/i18n";
+import { useLanguage } from "@/components/LanguageProvider";
 
 import timerFigure1 from "@/../public/timerFigure1.png"
 import timerFigure2 from "@/../public/timerFigure2.png"
 
 
 const CountdownTimer = () => {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language, 'common');
    const [counter, setCounter] = useState(60);
 
   useEffect(() => {
@@ -86,9 +90,9 @@ const CountdownTimer = () => {
             <div className="flex sm:flex-col lg:flex-row sm:flex-nowrap lg:flex-wrap SponsorsCards m-auto justify-between sm:max-w-full lg:max-w-[1300px]">
 
             </div>
-            <h2 className="sm:mt-[-50px] lg:mt-0 sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">Поспішайте!</h2>
-            <p className="sm:text-xl lg:text-3xl text-center">Кількість акційних підписок обмежена</p>
-            <p className="sm:text-xl lg:text-3xl text-secondaryColor text-center font-extrabold z-50 mt-8">Залишилося <span className="text-white">підписок</span></p>
+            <h2 className="sm:mt-[-50px] lg:mt-0 sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">{t('countdown.title')}</h2>
+            <p className="sm:text-xl lg:text-3xl text-center">{t('countdown.subtitle')}</p>
+            <p className="sm:text-xl lg:text-3xl text-secondaryColor text-center font-extrabold z-50 mt-8">{t('countdown.remaining')} <span className="text-white">підписок</span></p>
           </div>
           
           <div className="relative bg-countdownBg shadow-[0px_0px_100px_rgba(0,0,0,0.4)] sm:rounded-[32px] lg:rounded-[70px] sm:p-0 lg:p-0 sm:border-[8px] lg:border-[18px] border-white shadow-lg">
@@ -102,7 +106,7 @@ const CountdownTimer = () => {
                   className={
                   "relative bg-primaryButton sm:w-full lg:w-[550px] sm:p-auto sm:mb-4 lg:mb-0 mt-10 mx-auto rounded-[42px] sm:p-3 lg:p-5 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
                   }
-                  text={"Підписатися зараз зі знижкою"}
+                  text={t('countdown.button')}
                   // onClick={() =>navigateTo("/#form")}
                 />    
         </div>

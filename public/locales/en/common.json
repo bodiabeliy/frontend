@@ -1,0 +1,147 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "howItWorks": "How It Works",
+    "subscription": "Single Subscription",
+    "referral": "Referral Program",
+    "contact": "Contact Us!",
+    "menu": "Menu"
+  },
+  "banner": {
+    "title": "AZAMAZA",
+    "subtitle": "Ukraine's First Subscription Marketplace-Discounter!",
+    "description1": "Products and services at real wholesale prices - retail!",
+    "description2": "Special offer for the first 100,000 users. Promotional access from just 199 UAH per year.",
+    "button1": "Buy at Promotional Price",
+    "button2": "View Demo"
+  },
+  "aboutSection": {
+    "title": "About Us",
+    "subtitle": "Millions of products with maximum discounts + thousands of various services directly from performers, without commissions, intermediaries and additional costs",
+    "description": "A service that provides maximum discounts on services and products. Tours, photo sessions, restaurants, marketplace, rentals, hotel bookings, transfers, gifts — all in one place",
+    "summary": "Order, rent, buy on the marketplace without unnecessary apps and transitions to third-party resources. A single account for managing all services",
+    "button": "Get discounted access",
+    "howItWorksTitle": "How does it work?"
+  },
+  "countdown": {
+    "title": "Hurry up!",
+    "subtitle": "The number of promotional subscriptions is limited",
+    "remaining": "Remaining",
+    "button": "Subscribe now with a discount"
+  },
+  "subscription": {
+    "title": "Why buy a subscription right now?",
+    "titleMobile": "Why buy a subscription right now?",
+    "subtitle": "You get unlimited access after launch, be the first to test new features and unique opportunities",
+    "button": "View prizes"
+  },
+  "partners": {
+    "title": "Become our partner and get rewarded!",
+    "titleMobile": "Become our partner and get rewarded!",
+    "subtitle": "Share your personal link with others, post it on your social networks and platforms! Get cash rewards for each new subscriber!",
+    "howItWorks": "How does it work?",
+    "button": "Generate link"
+  },
+  "purchases": {
+    "title": "Product prices after service launch",
+    "titleMobile": "Product prices after service launch",
+    "subtitle": "Transparent system — honest savings from the very first orders!",
+    "description": "Get special prices on all products without exception after the project launch (only active subscription holders will have access to all features and advantages of the aggregator)",
+    "descriptionMobile": "Get special prices on all products without exception after the project launch (only active subscription holders will have access to all features and advantages of the aggregator)",
+    "button": "Buy at a discount"
+  },
+  "form": {
+    "title": "Stay in touch with us",
+    "subtitle": "Ask a question or make a suggestion, our manager will respond as soon as possible",
+    "nameLabel": "Enter your name",
+    "namePlaceholder": "John Doe",
+    "emailLabel": "Enter your email",
+    "emailPlaceholder": "johndoe@gmail.com",
+    "messageLabel": "Enter your message",
+    "messagePlaceholder": "Enter message...",
+    "submitButton": "Send message",
+    "checkboxLabel": "I wish to receive notifications about Azamaza platform launch",
+    "emailEmptyError": "Email field must not be empty!",
+    "emailInvalidError": "Please enter a valid email address!"
+  },
+  "hurryUp": {
+    "title": "Don't delay!",
+    "beFirst": "Be First!",
+    "dontMiss": "Don't miss the opportunity!",
+    "subtitle": "The only marketplace that uses a subscription system instead of retail markup",
+    "description": "Pay for subscription once - save constantly! Expect the launch this year!",
+    "button": "Choose a discounted plan"
+  },
+  "seekingPartners": {
+    "title": "We are looking for partners and representatives in regions throughout Ukraine",
+    "subtitle": "Want a ready-made guaranteed and profitable business with predictable and good income - write to us!",
+    "button": "Fill out the form"
+  },
+  "benefits": {
+    "benefit1": "Promotional subscription for the first 100,000 users - join Azamaza and get all services forever",
+    "benefit2": "Investment in the future. One payment. Only 199 hryvnias for unlimited access to the «all-in-one» platform",
+    "benefit3": "Hurry up and join. Limited presale offer valid for the first 100,000 subscribers. Don't overpay later, save now!"
+  },
+  "services": {
+    "service1": "Everything you were looking for! Discounts up to 70% on any product on our marketplace",
+    "service2": "The best hotels — at a special price only for subscribers",
+    "service3": "Dinner at a restaurant with up to 50% discount with our service",
+    "service4": "Thousands of tours at special prices for platform subscribers",
+    "service5": "Rent a car, order a taxi - much cheaper with a subscription",
+    "service6": "Meet, travel, relax — subscription opens access to events and new acquaintances",
+    "service7": "Savings on every kilometer — discounts at gas stations throughout Europe and Ukraine",
+    "service8": "The best photographers — at the lowest price, but only for our members",
+    "service9": "Win iPhones, tablets, trips and other valuable prizes",
+    "finalNote": "Azamaza - not just a platform. It's a service that makes it easy to buy, travel, meet people, get new opportunities and enjoy life"
+  },
+  "howItWorks": {
+    "intro": "With Azamaza you buy not just a subscription, but convenience and savings. Subscription gives you access to the most diverse services on the most favorable terms, as well as the ability to buy goods without retail markup and additional costs",
+    "step1": "You purchase a subscription from 199₴ and become one of 100,000 lucky ones who will get priority access to the platform, its features and unique benefits",
+    "step2": "Project launch - beginning of 2026. Each participant will receive unlimited access to all services, offerings and proposals without restrictions and additional costs until January 1, 2027",
+    "step3": "Everyone who purchases an early access subscription is guaranteed to become participants in a super raffle of valuable prizes (iPhones, tablets, TVs, etc.) from the Azamaza platform!"
+  },
+  "subscriptionBenefits": {
+    "benefit1Title": "Early access = exclusive opportunities",
+    "benefit1Description": "By becoming a participant at the launch stage, you get access to everything:",
+    "benefit1Item1": "Personal discounts",
+    "benefit1Item2": "Access to closed offers",
+    "benefit1Item3": "VIP terms",
+    "benefit2Title": "Guaranteed participation in super raffle",
+    "benefit2Description": "Every early access subscriber automatically participates in the raffle of valuable and unique prizes from Azamaza:",
+    "benefit2Item1": "Electronics, gadgets",
+    "benefit2Item2": "Subscriptions and gifts from partners",
+    "benefit2Item3": "Unexpected bonuses that will pleasantly surprise",
+    "benefit3Title": "Lowest price — only now!",
+    "benefit3Description": "now you can lock in the most favorable price at the start — without risks and overpayments",
+    "benefit4Title": "Platform that changes the rules of the game",
+    "benefit4Description": "Azamaza — is not just a marketplace:",
+    "benefit4Item1": "Verified sellers and services",
+    "benefit4Item2": "Discounts you will really feel",
+    "benefit4Item3": "Smart subscription that pays for itself from the first order",
+    "benefit5Title": "Summary",
+    "benefit5Description": "Buy a subscription now — means win more:",
+    "benefit5Item1": "More benefits",
+    "benefit5Item2": "More privileges",
+    "benefit5Item3": "More opportunities to become part of a great project from the very start"
+  },
+  "partnersData": {
+    "partner1": "With one click - generate and send a personal link to your relatives, friends and other people.",
+    "partner2": "As soon as the referral pays for the subscription, you will receive a cash reward to your account"
+  },
+  "footer": {
+    "companyInfo": "Ukraine, Kyiv, Obolonsky Avenue 26",
+    "navigationTitle": "Navigation",
+    "rulesTitle": "Rules",
+    "clientsTitle": "Clients",
+    "contactTitle": "Contacts",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy",
+    "aboutService": "About Azamaza Service",
+    "serviceTerms": "Terms of Service for Clients",
+    "paymentPolicy": "Payment and Return Policy",
+    "usageTerms": "Terms of Use",
+    "writeToUs": "Write to Us",
+    "rights": "© All rights reserved Azamaza.com 2024-2025"
+  }
+}

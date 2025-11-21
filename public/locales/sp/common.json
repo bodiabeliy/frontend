@@ -1,0 +1,147 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "howItWorks": "Cómo funciona",
+    "subscription": "Suscripción única",
+    "referral": "Programa de referidos",
+    "contact": "¡Escríbenos!",
+    "menu": "Menú"
+  },
+  "banner": {
+    "title": "AZAMAZA",
+    "subtitle": "¡El primer marketplace-descuento por suscripción de Ucrania!",
+    "description1": "¡Productos y servicios a precios realmente mayoristas - al por menor!",
+    "description2": "Oferta especial para los primeros 100,000 usuarios. Acceso promocional desde solo 199 UAH al año.",
+    "button1": "Compra a precio promocional",
+    "button2": "Ver demostración"
+  },
+  "aboutSection": {
+    "title": "Acerca de nosotros",
+    "subtitle": "Millones de productos con descuentos máximos + miles de servicios diversos directamente de los ejecutores, sin comisiones, intermediarios y costos adicionales",
+    "description": "Un servicio que proporciona descuentos máximos en servicios y productos. Tours, sesiones de fotos, restaurantes, marketplace, alquileres, reservas de hotel, transferencias, regalos — todo en un solo lugar",
+    "summary": "Ordena, alquila, compra en el marketplace sin aplicaciones innecesarias y transiciones a recursos de terceros. Una sola cuenta para gestionar todos los servicios",
+    "button": "Obtener acceso con descuento",
+    "howItWorksTitle": "¿Cómo funciona?"
+  },
+  "countdown": {
+    "title": "¡Apresúrate!",
+    "subtitle": "El número de suscripciones promocionales es limitado",
+    "remaining": "Restante",
+    "button": "Suscríbete ahora con descuento"
+  },
+  "subscription": {
+    "title": "¿Por qué comprar una suscripción ahora?",
+    "titleMobile": "¿Por qué comprar una suscripción ahora?",
+    "subtitle": "Obtienes acceso ilimitado después del lanzamiento, sé el primero en probar nuevas funciones y oportunidades únicas",
+    "button": "Ver premios"
+  },
+  "partners": {
+    "title": "¡Conviértete en nuestro socio y recibe recompensas!",
+    "titleMobile": "¡Conviértete en nuestro socio y recibe recompensas!",
+    "subtitle": "¡Comparte tu enlace personal con otros, publícalo en tus redes sociales y plataformas! ¡Recibe recompensas en efectivo por cada nuevo suscriptor!",
+    "howItWorks": "¿Cómo funciona?",
+    "button": "Generar enlace"
+  },
+  "purchases": {
+    "title": "Precios de productos después del lanzamiento del servicio",
+    "titleMobile": "Precios de productos después del lanzamiento del servicio",
+    "subtitle": "¡Sistema transparente — ahorros honestos desde los primeros pedidos!",
+    "description": "Obtén precios especiales en todos los productos sin excepción después del lanzamiento del proyecto (solo los titulares de suscripción activa tendrán acceso a todas las funciones y ventajas del agregador)",
+    "descriptionMobile": "Obtén precios especiales en todos los productos sin excepción después del lanzamiento del proyecto (solo los titulares de suscripción activa tendrán acceso a todas las funciones y ventajas del agregador)",
+    "button": "Comprar con descuento"
+  },
+  "form": {
+    "title": "Mantente en contacto con nosotros",
+    "subtitle": "Haz una pregunta o haz una sugerencia, nuestro gerente responderá lo antes posible",
+    "nameLabel": "Ingresa tu nombre",
+    "namePlaceholder": "Juan Pérez",
+    "emailLabel": "Ingresa tu correo electrónico",
+    "emailPlaceholder": "juanperez@gmail.com",
+    "messageLabel": "Ingresa tu mensaje",
+    "messagePlaceholder": "Ingresa el mensaje...",
+    "submitButton": "Enviar mensaje",
+    "checkboxLabel": "Deseo recibir notificaciones sobre el lanzamiento de la plataforma Azamaza",
+    "emailEmptyError": "¡El campo de correo no debe estar vacío!",
+    "emailInvalidError": "¡Por favor ingresa una dirección de correo válida!"
+  },
+  "hurryUp": {
+    "title": "¡No te demores!",
+    "beFirst": "¡Sé el primero!",
+    "dontMiss": "¡No pierdas la oportunidad!",
+    "subtitle": "El único marketplace que usa un sistema de suscripción en lugar de margen minorista",
+    "description": "¡Paga la suscripción una vez - ahorra constantemente! ¡Espera el lanzamiento este año!",
+    "button": "Elegir plan con descuento"
+  },
+  "seekingPartners": {
+    "title": "Buscamos socios y representantes en regiones de toda Ucrania",
+    "subtitle": "¿Quieres un negocio rentable, garantizado y listo con ingresos predecibles y buenos? ¡Escríbenos!",
+    "button": "Rellena el formulario"
+  },
+  "benefits": {
+    "benefit1": "Suscripción promocional para los primeros 100,000 usuarios: únete a Azamaza y obtén todos los servicios para siempre",
+    "benefit2": "Inversión en el futuro. Un pago. Solo 199 grivnas para acceso ilimitado a la plataforma «todo en uno»",
+    "benefit3": "Date prisa y únete. Oferta de preventa limitada válida para los primeros 100,000 suscriptores. ¡No pagues de más después, ahorra ahora!"
+  },
+  "services": {
+    "service1": "¡Todo lo que estabas buscando! Descuentos de hasta 70% en cualquier producto en nuestro mercado",
+    "service2": "Los mejores hoteles — a precio especial solo para suscriptores",
+    "service3": "Cena en un restaurante con hasta 50% de descuento con nuestro servicio",
+    "service4": "Miles de tours a precios especiales para suscriptores de la plataforma",
+    "service5": "Alquila un coche, pide un taxi — mucho más barato con suscripción",
+    "service6": "Conoce, viaja, relájate — la suscripción abre acceso a eventos y nuevos conocimientos",
+    "service7": "Ahorro en cada kilómetro — descuentos en gasolineras en toda Europa y Ucrania",
+    "service8": "Los mejores fotógrafos — al precio más bajo, pero solo para nuestros miembros",
+    "service9": "Gana iPhones, tablets, viajes y otros premios valiosos",
+    "finalNote": "Azamaza - no es solo una plataforma. Es un servicio que facilita comprar, viajar, conocer gente, obtener nuevas oportunidades y disfrutar de la vida"
+  },
+  "howItWorks": {
+    "intro": "Con Azamaza compras no solo una suscripción, sino comodidad y ahorro. La suscripción te da acceso a los servicios más diversos en las condiciones más favorables, así como la capacidad de comprar productos sin margen minorista y costos adicionales",
+    "step1": "Compras una suscripción desde 199₴ y te conviertes en uno de los 100,000 afortunados que obtendrán acceso prioritario a la plataforma, sus funciones y beneficios únicos",
+    "step2": "Lanzamiento del proyecto - principios de 2026. Cada participante recibirá acceso ilimitado a todos los servicios, ofertas y propuestas sin restricciones ni costos adicionales hasta el 1 de enero de 2027",
+    "step3": "¡Todos los que compren una suscripción de acceso anticipado están garantizados para convertirse en participantes en un súper sorteo de premios valiosos (iPhones, tablets, TVs, etc.) de la plataforma Azamaza!"
+  },
+  "subscriptionBenefits": {
+    "benefit1Title": "Acceso anticipado = oportunidades exclusivas",
+    "benefit1Description": "Al convertirte en participante en la etapa de lanzamiento, obtienes acceso a todo:",
+    "benefit1Item1": "Descuentos personales",
+    "benefit1Item2": "Acceso a ofertas cerradas",
+    "benefit1Item3": "Términos VIP",
+    "benefit2Title": "Participación garantizada en súper sorteo",
+    "benefit2Description": "Cada suscriptor de acceso anticipado participa automáticamente en el sorteo de premios valiosos y únicos de Azamaza:",
+    "benefit2Item1": "Electrónica, gadgets",
+    "benefit2Item2": "Suscripciones y regalos de socios",
+    "benefit2Item3": "Bonos inesperados que te sorprenderán gratamente",
+    "benefit3Title": "¡Precio más bajo — solo ahora!",
+    "benefit3Description": "ahora puedes asegurar el precio más favorable al inicio — sin riesgos ni sobrepagos",
+    "benefit4Title": "Plataforma que cambia las reglas del juego",
+    "benefit4Description": "Azamaza — no es solo un mercado:",
+    "benefit4Item1": "Vendedores y servicios verificados",
+    "benefit4Item2": "Descuentos que realmente sentirás",
+    "benefit4Item3": "Suscripción inteligente que se paga sola desde el primer pedido",
+    "benefit5Title": "Resumen",
+    "benefit5Description": "Comprar una suscripción ahora — significa ganar más:",
+    "benefit5Item1": "Más beneficios",
+    "benefit5Item2": "Más privilegios",
+    "benefit5Item3": "Más oportunidades para formar parte de un gran proyecto desde el inicio"
+  },
+  "partnersData": {
+    "partner1": "Con un clic - genera y envía un enlace personal a tus familiares, amigos y otras personas.",
+    "partner2": "Tan pronto como el referido pague la suscripción, recibirás una recompensa en efectivo en tu cuenta"
+  },
+  "footer": {
+    "companyInfo": "Ucrania, Kiev, Avenida Obolonsky 26",
+    "navigationTitle": "Navegación",
+    "rulesTitle": "Reglas",
+    "clientsTitle": "Clientes",
+    "contactTitle": "Contactos",
+    "privacyPolicy": "Política de privacidad",
+    "cookiePolicy": "Política de cookies",
+    "aboutService": "Sobre el servicio Azamaza",
+    "serviceTerms": "Términos de servicio para clientes",
+    "paymentPolicy": "Política de pago y devolución",
+    "usageTerms": "Términos de uso",
+    "writeToUs": "Escríbenos",
+    "rights": "© Todos los derechos reservados Azamaza.com 2024-2025"
+  }
+}

@@ -6,9 +6,13 @@ import Link from "next/link";
 import { ActionButton } from "../buttons/ActionButton";
 import PurchagesFigure from "@/../public/PurchagesFigure.png"
 import PurchagesFigure2 from "@/../public/PurchagesFigure2.png"
+import { useTranslation } from "@/i18n";
+import { useLanguage } from "../LanguageProvider";
 
 
 const PurchagesSection = () => {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language, 'common');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -26,12 +30,12 @@ const PurchagesSection = () => {
 
         <div id="purchages" className="SponsorsWrapper relative w-full flex justify-center flex flex-col sm:mt-4 lg:mt-2 m-auto">
           <p className="sm:hidden lg:block sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
-          Ціни на товари після запуску сервісу
+          {t('purchases.title')}
           </p>
         
-        <h2 className="sm:block lg:hidden sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50"> Ціни на товари <span className="text-white">після запуску </span>  сервісу</h2>
+        <h2 className="sm:block lg:hidden sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">{t('purchases.titleMobile')}</h2>
           <p className="sm:text-xl lg:text-3xl text-center">
-             Прозора система — чесна економія вже з перших замовлень!
+             {t('purchases.subtitle')}
           </p>
         
           <div className="lg:max-h-full mt-5 lg:ml-0">
@@ -51,21 +55,21 @@ const PurchagesSection = () => {
                   );
                 })}
                <p className="sm:hidden lg:block sm:text-xl lg:text-4xl font-extrabold text-center">
-                    Отримуй спеціальні ціни на всі товари без виключення після запуску проекту (тільки власники активної підписки матимуть доступ до всіх можливостей та переваг агрегатора)
+                    {t('purchases.description')}
                 </p>
               {/* </Slider> */}
             </div>
              
           </div>
            <p className="sm:block lg:hidden sm:text-xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
-                    Отримуй спеціальні ціни на всі товари без виключення після запуску проекту <span className="text-white">(тільки власники активної підписки матимуть доступ до всіх можливостей та переваг агрегатора)</span>
+                    {t('purchases.descriptionMobile')}
                 </p>
            <ActionButton
               disabled={false}
               className={
               "relative bg-primaryButton sm:w-full lg:w-[550px] sm:p-auto sm:mt-4 lg:mt-16 rounded-[30px] mx-auto sm:p-3 lg:p-5 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
               }
-              text={"Придбати по знижці"}
+              text={t('purchases.button')}
               // onClick={() =>navigateTo("/#form")}
             />
         </div>

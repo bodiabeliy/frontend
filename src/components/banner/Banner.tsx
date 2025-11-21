@@ -9,8 +9,12 @@ import BannerMobileFigure from "@/../public/BannerMobileFigure.png"
 import BannerFigure from "@/../public/banner-figure.png"
 import { useState } from "react";
 import Modal from "../Modal/Modal";
+import { useTranslation } from "@/i18n";
+import { useLanguage } from "../LanguageProvider";
 
 const Banner = () => {
+    const { language } = useLanguage();
+    const { t } = useTranslation(language, 'common');
     const [isModalOpen, setIsModalOpen] = useState(false)
 
     const MoveTo = () => {        
@@ -25,13 +29,13 @@ const Banner = () => {
 
             <div className="bannerTitle sm:pl-[5px] lg:pl-0">
                 <p className="authorName sm:text-5xl lg:text-8xl font-black tracking-tight">
-                  AZAMAZA
+                  {t('banner.title')}
                 </p>
             </div>
             <div className="bannerContent serviceInfo lg:relative sm:text-xl lg:text-2xl sm:mt-4 lg:mt-2 sm:pl-[5px] lg:pl-0">
-                <p className="font-extrabold">Перший в Україні маркетплейс-дискаунтер за підпискою!</p> 
-                <p className="text-secondaryColor font-extrabold">Товари та послуги за реально оптовими цінами - у роздріб!</p> 
-                <p className="text-lg">Спеціальна пропозиція для перших 100 000 користувачів. Акційний доступ всього від 199 грн на рік.</p>
+                <p className="font-extrabold">{t('banner.subtitle')}</p> 
+                <p className="text-secondaryColor font-extrabold">{t('banner.description1')}</p> 
+                <p className="text-lg">{t('banner.description2')}</p>
             </div>
             <div className="actionBtnWrapper sm:mt-[5%] sm:pb-[75px] lg:pb-0 lg:mt-2 sm:mb-0 sm:mb-0 lg:mb-10 gap-4 flex sm:flex-col lg:flex-row sm:justify-center lg:justify-between">
                 <ActionButton
@@ -39,7 +43,7 @@ const Banner = () => {
                     className={
                     "relative bg-primaryButton w-full sm:p-auto sm:mb-4 lg:mb-0 rounded-[42px] sm:p-3 lg:p-5 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
                     }
-                    text={"Купити за акційною ціною"}
+                    text={t('banner.button1')}
                     // onClick={() =>navigateTo("/#form")}
                 />
                 <ActionButton
@@ -47,7 +51,7 @@ const Banner = () => {
                     className={
                     " relative actionBtn sm:hidden lg:flex justify-center bg-secondaryButton w-full sm:p-auto lg:p-0 rounded-[42px] sm:p-3 lg:p-5 sm:mb-4 lg:mb-0 border-2 border-secondaryColor  text-lg font-semibold text-secondaryColor hover:shadow-[0_4px_4px_rgba(49,45,47,0.3)]"
                     }
-                    text={"Переглянути Demo"}
+                    text={t('banner.button2')}
                     // onClick={() =>navigateTo("/#form")}
                 />
                 <Image 
@@ -61,7 +65,7 @@ const Banner = () => {
                     className={
                     " relative actionBtn lg:hidden  bg-secondaryButton w-full sm:p-auto lg:p-0 rounded-[42px] sm:p-3 lg:p-5 sm:mb-4 lg:mb-0 border-2 border-secondaryColor  text-lg font-semibold text-secondaryColor hover:shadow-[0_4px_4px_rgba(49,45,47,0.3)]"
                     }
-                    text={"Переглянути Demo"}
+                    text={t('banner.button2')}
                     // onClick={() =>navigateTo("/#form")}
                 />
         </div>

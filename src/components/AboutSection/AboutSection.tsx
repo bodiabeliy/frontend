@@ -2,7 +2,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import { benefitList, howitworksList, serviceList1, serviceList2, serviceList3 } from "@/utils/data";
+import { useTranslation } from "@/i18n";
+import { useLanguage } from "@/components/LanguageProvider";
+import { getBenefitList, getHowItWorksList, getServiceList1, getServiceList2, getServiceList3 } from "@/utils/translatedData";
 import CircleUI from "@/../public/BannerFigure2.png"
 import AboutFigure from "@/../public/AboutFigure2.png"
 import AboutFigure3 from "@/../public/AboutFigure3.png"
@@ -19,7 +21,16 @@ import Link from "next/link";
 import { ActionButton } from "../buttons/ActionButton";
 
 const AboutSection = () => {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language, 'common');
   const [isMobile, setIsMobile] = useState(false);
+
+  // Get translated data
+  const benefitList = getBenefitList(t);
+  const serviceList1 = getServiceList1(t);
+  const serviceList2 = getServiceList2(t);
+  const serviceList3 = getServiceList3(t);
+  const howitworksList = getHowItWorksList(t);
 
   useEffect(() => {
     if (window.innerWidth > 600) {
@@ -79,116 +90,58 @@ const AboutSection = () => {
         </div> 
         <div id="about" className="SponsorsWrapper relative w-full flex justify-center flex flex-col sm:mt-4 lg:mt-16 m-auto">
           <p className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
-          Про нас
+          {t('aboutSection.title')}
           </p>
         
           <div className="lg:max-h-full sm:overflow-y-scroll lg:overflow-y-auto mt-5 sm:flex lg:block  lg:ml-0">
             <div className="flex sm:flex-col lg:flex-row sm:flex-nowrap lg:flex-wrap SponsorsCards m-auto flex sm:flex-col  justify-between sm:max-w-full lg:max-w-[1300px] ">
                 <p className="sm:text-xl lg:text-3xl text-center sm:mb-0 lg:mb-0">
-                  Мільйони товарів з максимальними знижками + тисячі різноманітних послуг напряму від виконавців, без комісій, посередників та додаткових витрат
+                  {t('aboutSection.subtitle')}
                 </p>
-                {serviceList1?.map((about: any) => {
+                {serviceList1?.map((about: any, index: number) => {
                   return (
-                    <>
-                      {/* <div className={`rounded-[20px] z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-0 m-auto`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
-                          <div className={`sm:flex lg:block sm:gap-3 ${!about.isEvenNumber ? 'flex-row' : 'flex-row-reverse'}`}>
-                            <div className="relative sm:w-[70%] lg:w-full">
-                              <Image className="aboutPreview w-full h-auto rounded-[20px]" src={about.author} alt={about.name} />
-                              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b-[20px]">
-                                <p className="text-white text-base font-semibold text-center">{about.name}</p>
-                              </div>
-                            </div>
-                            <div className={`sm:flex lg:hidden items-center justify-center sm:w-[30%] rounded-[20px] bg-cardsBtns sm:h-[100px] sm:self-center ${about?.markedMobile ? "sm:hidden":"sm:flex"}`}>
-                              <Image className="w-[60px] h-[60px]" src={about.icon} alt={about.name} />                                
-                            </div>
-                            <Link className="absolute inset-0" href={about.link}></Link>
-                          </div>
-                        </div>
-                      </div> */}
-                       <div className={`rounded-[20px] bg-testBtns z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-8 m-auto sm:mt-3 lg:mt-10`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
-                          <div className="p-1 flex flex-col items-center">
-                            {/* <h2 className={`text-center font-bold sm:text-2xl lg:text-3xl mb-4 ${!card.isEvenNumber ? 'text-white' : 'text-primaryColor'}`}>{card.title}</h2> */}
-                            <Image className="w-full h-auto rounded-[20px] mb-1" src={about.author} alt={about.title} />
-                            <p className={`text-center sm:text-base lg:text-lg`}>{about.name}</p>
-                          </div>
+                    <div key={index} className={`rounded-[20px] bg-testBtns z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-8 m-auto sm:mt-3 lg:mt-10`}>
+                      <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
+                        <div className="p-1 flex flex-col items-center">
+                          <Image className="w-full h-auto rounded-[20px] mb-1" src={about.author} alt={about.title} />
+                          <p className={`text-center sm:text-base lg:text-lg p-3`}>{about.title}</p>
                         </div>
                       </div>
-                    </>
+                    </div>
                   );
                 })}
                   <p className="sm:text-xl lg:text-3xl text-center sm:max-w-auto lg:max-w-[980px] mx-auto">
-                  Сервіс, що надає максимальні знижки на послуги та товари. Екскурсії, фотосесії, ресторани, маркетплейс, прокат, 
-                  бронювання готелів, трансфери,  подарунки, — усе в одному місці
+                  {t('aboutSection.description')}
                 </p>
-                 {serviceList2?.map((about: any) => {
+                 {serviceList2?.map((about: any, index: number) => {
                   return (
-                    <>
-                      {/* <div className={`rounded-[20px] z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-0 m-auto`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
-                          <div className={`sm:flex lg:block sm:gap-3 ${!about.isEvenNumber ? 'flex-row' : 'flex-row-reverse'}`}>
-                            <div className={`relative ${about?.markedMobile ? 'sm:w-full' : 'sm:w-[70%]'} lg:w-full`}>
-                              <Image className="aboutPreview w-full h-auto rounded-[20px]" src={about.author} alt={about.name} />
-                              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b-[20px]">
-                                <p className="text-white text-base font-semibold text-center">{about.name}</p>
-                              </div>
-                            </div>
-                            <div className={`${about?.markedMobile ? 'sm:hidden' : 'sm:flex'} lg:hidden items-center justify-center sm:w-[30%] rounded-[20px] bg-cardsBtns sm:h-[100px] sm:self-center`}>
-                              <Image className="w-[60px] h-[60px]" src={about.icon} alt={about.name} />                                
-                            </div>
-                            <Link className="absolute inset-0" href={about.link}></Link>
-                          </div>
-                        </div>
-                      </div> */}
-                       <div className={`rounded-[20px] bg-testBtns border-1 border-borderCard'} z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-8 m-auto sm:mt-3 lg:mt-10`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
-                          <div className="p-1 flex flex-col items-center">
-                            {/* <h2 className={`text-center font-bold sm:text-2xl lg:text-3xl mb-4 ${!card.isEvenNumber ? 'text-white' : 'text-primaryColor'}`}>{card.title}</h2> */}
-                            <Image className="w-full h-auto rounded-[20px] mb-1" src={about.author} alt={about.title} />
-                            <p className={`text-center sm:text-base lg:text-lg`}>{about.name}</p>
-                          </div>
+                    <div key={index} className={`rounded-[20px] bg-testBtns border-1 border-borderCard'} z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-8 m-auto sm:mt-3 lg:mt-10`}>
+                      <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
+                        <div className="p-1 flex flex-col items-center">
+                          <Image className="w-full h-auto rounded-[20px] mb-1" src={about.author} alt={about.title} />
+                          <p className={`text-center sm:text-base lg:text-lg p-3`}>{about.title}</p>
                         </div>
                       </div>
-                    </>
+                    </div>
                   );
                 })}
                   <p className="sm:text-xl lg:text-3xl text-center">
-                    Замовляй, орендуй, купуй на маркетплейсі без зайвих додатків та переходів на сторонні ресурси. Єдиний кабінет для управління всіма сервісами
+                    {t('aboutSection.summary')}
                   </p>
-                 {serviceList3?.map((about: any) => {
+                 {serviceList3?.map((about: any, index: number) => {
                   return (
-                    <>
-                      {/* <div className={`rounded-[20px] z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-0 m-auto`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
-                          <div className={`sm:flex lg:block sm:gap-3 ${!about.isEvenNumber ? 'flex-row' : 'flex-row-reverse'}`}>
-                            <div className="relative sm:w-[70%] lg:w-full">
-                              <Image className={`aboutPreview w-full h-auto rounded-[20px]`} src={about.author} alt={about.name} />
-                              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b-[20px]">
-                                <p className="text-white text-base font-semibold text-center">{about.name}</p>
-                              </div>
-                            </div>
-                            <div className={`sm:flex lg:hidden items-center justify-center sm:w-[30%] rounded-[20px] bg-cardsBtns sm:h-[100px] sm:self-center`}>
-                              <Image className={`w-[60px] h-[60px]`} src={about.icon} alt={about.name} />                                
-                            </div>
-                            <Link className="absolute inset-0" href={about.link}></Link>
-                          </div>
-                        </div>
-                      </div> */}
-                       <div className={`rounded-[20px] bg-testBtns border-1 border-borderCard'} z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-8 m-auto sm:mt-3 lg:mt-10`}>
-                        <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
-                          <div className="p-1 flex flex-col items-center">
-                            {/* <h2 className={`text-center font-bold sm:text-2xl lg:text-3xl mb-4 ${!card.isEvenNumber ? 'text-white' : 'text-primaryColor'}`}>{card.title}</h2> */}
-                            <Image className="w-full h-auto rounded-[20px] mb-1" src={about.author} alt={about.title} />
-                            <p className={`text-center sm:text-base lg:text-lg `}>{about.name}</p>
-                          </div>
+                    <div key={index} className={`rounded-[20px] bg-testBtns border-1 border-borderCard'} z-10 p-1 w-full max-w-[420px] sm:mb-8 lg:mb-8 m-auto sm:mt-3 lg:mt-10`}>
+                      <div className="rounded-[20px] flex flex-col justify-center max-w-[420px] relative overflow-hidden sm:mx-0 lg:mx-0">
+                        <div className="p-1 flex flex-col items-center">
+                          <Image className="w-full h-auto rounded-[20px] mb-1" src={about.author} alt={about.title} />
+                          <p className={`text-center sm:text-base lg:text-lg p-3`}>{about.title}</p>
                         </div>
                       </div>
-                    </>
+                    </div>
                   );
                 })}
                 <p className="sm:text-xl lg:text-3xl text-center">
-                    Azamaza - не просто платформа. Це сервіс з яким легко купувати, подорожувати, знайомитись, отримувати нові можливості та насолоджуватись життям
+                    {t('services.finalNote')}
                 </p>
               {/* </Slider> */}
             </div>
@@ -199,19 +152,19 @@ const AboutSection = () => {
               className={
               "relative bg-primaryButton sm:w-full lg:w-[550px] sm:p-auto sm:mt-4 lg:mt-16 rounded-[42px] mx-auto sm:p-3 lg:p-5 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
               }
-              text={"Отримати доступ зі знижкою"}
+              text={t('aboutSection.button')}
               // onClick={() =>navigateTo("/#form")}
             />
         </div>
         <div id="howitworks" className="SponsorsWrapper relative w-full flex justify-center flex flex-col sm:mt-8 lg:mt-16 m-auto sm:p-1 lg:p-0">
           <p className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
-          Як це працює?
+          {t('aboutSection.howItWorksTitle')}
           </p>
         
           <div className="lg:max-h-full sm:overflow-y-scroll lg:overflow-y-auto mt-5 sm:flex lg:block lg:ml-0">
             <div className="flex sm:flex-col lg:flex-row sm:flex-nowrap lg:flex-wrap SponsorsCards m-auto justify-between sm:max-w-full lg:max-w-[1300px]">
                 <p className="sm:text-xl lg:text-3xl text-center">
-                  З Azamaza ви купуєте не просто підписку, а зручність та економію. Підписка дає вам доступ до самих різноманітних послуг на максимально вигідних умовах, а також можливість купувати товари без роздрібної націнки та додаткових витрат
+                  {t('howItWorks.intro')}
                 </p>
                 {howitworksList?.map((card: any) => {                  
                   return (

@@ -4,12 +4,16 @@ import Logo from "../../public/azamaza.com.svg";
 import Link from "next/link";
 import tiktok from "../../public/tiktok.svg"
 import instagram from "../../public/instagram.svg"
+import facebook from "../../public/facebook.svg"
 import telegram from "../../public/telegram.svg"
-import facebook from "../../public/Facebook.svg"
 import { DropDownButton } from "./buttons/DropDownButton";
+import { useTranslation } from "@/i18n";
+import { useLanguage } from "./LanguageProvider";
 
 
 export const NavigationManu = () => {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language, 'common');
   const [opened, setOpened] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
   const [selectedLanguage, setSelectedLanguage] = useState<string>("UKR")
@@ -35,13 +39,13 @@ export const NavigationManu = () => {
         <div className="navbarDesktop sm:hidden md:block text-secondaryTextColor">
           <ul className="flex gap-10 text-lg tracking-navigateLink justify-end pr-10">
             <Link className=" hover:text-white" href={"#about"}>
-              Про нас
+              {t('navigation.about')}
             </Link>
             <Link className=" hover:text-white" href={"#benefits"}>
-              Як це працює
+              {t('navigation.howItWorks')}
             </Link>
             <Link className=" hover:text-white" href={"#service"}>
-              Єдина підписка
+              {t('navigation.subscription')}
             </Link>
           </ul>
         </div>
@@ -123,7 +127,7 @@ export const NavigationManu = () => {
               opened ? "flex" : "hidden"
             } absolute left-4 right-4 top-[70px] bg-white rounded-[20px] flex-col p-6 z-40 shadow-xl`}
           >
-            <h2 className="text-mainColor text-2xl font-bold mb-4 pb-4 border-b border-gray-200">Меню</h2>
+            <h2 className="text-mainColor text-2xl font-bold mb-4 pb-4 border-b border-gray-200">{t('navigation.menu')}</h2>
             <ul className="flex flex-col space-y-1">
               <li className="border-b border-gray-200">
                 <Link 
@@ -131,7 +135,7 @@ export const NavigationManu = () => {
                   href={"#about"} 
                   onClick={() => setOpened(false)}
                 >
-                  Про нас
+                  {t('navigation.about')}
                 </Link>
               </li>
               <li className="border-b border-gray-200">
@@ -140,7 +144,7 @@ export const NavigationManu = () => {
                   href={"#benefits"} 
                   onClick={() => setOpened(false)}
                 >
-                  Як це працює
+                  {t('navigation.howItWorks')}
                 </Link>
               </li>
               <li className="border-b border-gray-200">
@@ -149,7 +153,7 @@ export const NavigationManu = () => {
                   href={"#service"} 
                   onClick={() => setOpened(false)}
                 >
-                  Єдина підписка
+                  {t('navigation.subscription')}
                 </Link>
               </li>
               <li className="border-b border-gray-200">
@@ -158,7 +162,7 @@ export const NavigationManu = () => {
                   href={"#referral"} 
                   onClick={() => setOpened(false)}
                 >
-                  Реферальна програма
+                  {t('navigation.referral')}
                 </Link>
               </li>
               <li className="border-b border-gray-200">
@@ -167,7 +171,7 @@ export const NavigationManu = () => {
                   href={"#contact"} 
                   onClick={() => setOpened(false)}
                 >
-                  Напиши нам!
+                  {t('navigation.contact')}
                 </Link>
               </li>
             </ul>
