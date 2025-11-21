@@ -4,7 +4,7 @@ import Logo from "../../public/static/azamaza.com.svg";
 import Link from "next/link";
 import tiktok from "../../public/static/tiktok.svg"
 import instagram from "../../public/static/instagram.svg"
-import facebook from "../../public/static/facebook.svg"
+import facebook from "../../public/static/Facebook.svg"
 import telegram from "../../public/static/telegram.svg"
 import { DropDownButton } from "./buttons/DropDownButton";
 import { useTranslation } from "@/i18n";
