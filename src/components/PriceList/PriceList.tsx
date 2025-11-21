@@ -5,7 +5,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import laptoPointer from "../../../public/laptop pointer 1.svg"
+import laptoPointer from "../../../public/static/laptop pointer 1.svg"
 
 import { benefitList, priceList } from "@/utils/data";
 import { BouncedLeftArrow } from "../icons/DoubleArrowLeft";

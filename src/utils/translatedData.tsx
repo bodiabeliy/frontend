@@ -1,30 +1,30 @@
 import { TFunction } from 'i18next';
-import Benefit1 from "../../public/clock-fill.svg"
-import Benefit2 from "../../public/briefcase-fill.svg"
-import Benefit3 from "../../public/award-fill.svg"
+import Benefit1 from "../../public/static/clock-fill.svg"
+import Benefit2 from "../../public/static/briefcase-fill.svg"
+import Benefit3 from "../../public/static/award-fill.svg"
 
-import Reels1 from "../../public/Image.png"
-import Reels2 from "../../public/image-2.png"
-import Reels3 from "../../public/Image-3.png"
-import Reels4 from "../../public/Image-4.png"
-import Reels5 from "../../public/Image-5.png"
-import Reels6 from "../../public/Image-6.png"
-import Reels7 from "../../public/Image-7.png"
-import Reels8 from "../../public/Image-8.png"
-import Reels9 from "../../public/Image-9.png"
+import Reels1 from "../../public/static/Image.png"
+import Reels2 from "../../public/static/Image-2.png"
+import Reels3 from "../../public/static/Image-3.png"
+import Reels4 from "../../public/static/Image-4.png"
+import Reels5 from "../../public/static/Image-5.png"
+import Reels6 from "../../public/static/Image-6.png"
+import Reels7 from "../../public/static/Image-7.png"
+import Reels8 from "../../public/static/Image-8.png"
+import Reels9 from "../../public/static/Image-9.png"
 
-import HowItWorks1 from '../../public/Card-1 1.png';
-import HowItWorks2 from '../../public/Card-1 2.png';
-import HowItWorks3 from '../../public/Card-1 3.png';
+import HowItWorks1 from '../../public/static/Card-1 1.png';
+import HowItWorks2 from '../../public/static/Card-1 2.png';
+import HowItWorks3 from '../../public/static/Card-1 3.png';
 
-import SubscribeIcon1 from "../../public/clock-history.svg"
-import SubscribeIcon2 from "../../public/gift.svg"
-import SubscribeIcon3 from "../../public/rocket-takeoff.svg"
-import SubscribeIcon4 from "../../public/fire.svg"
-import SubscribeIcon5 from "../../public/briefcase.svg"
+import SubscribeIcon1 from "../../public/static/clock-history.svg"
+import SubscribeIcon2 from "../../public/static/gift.svg"
+import SubscribeIcon3 from "../../public/static/rocket-takeoff.svg"
+import SubscribeIcon4 from "../../public/static/fire.svg"
+import SubscribeIcon5 from "../../public/static/briefcase.svg"
 
-import Partner1 from "../../public/icon-park-solid_copy-link.svg"
-import Partner2 from "../../public/game-icons_two-coins.svg"
+import Partner1 from "../../public/static/icon-park-solid_copy-link.svg"
+import Partner2 from "../../public/static/game-icons_two-coins.svg"
 
 // Benefits list
 export const getBenefitList = (t: TFunction) => [

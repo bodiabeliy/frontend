@@ -6,8 +6,8 @@ import Countdown from "react-countdown";
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "@/components/LanguageProvider";
 
-import timerFigure1 from "@/../public/timerFigure1.png"
-import timerFigure2 from "@/../public/timerFigure2.png"
+import timerFigure1 from "@/../public/static/timerFigure1.png"
+import timerFigure2 from "@/../public/static/timerFigure2.png"
 
 
 const CountdownTimer = () => {

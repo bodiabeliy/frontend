@@ -3,10 +3,10 @@
 import { useCallback, useState } from "react";
 import { ActionButton } from "./buttons/ActionButton";
 import Image from "next/image";
-import FormImage from "../../public/support-girl.png"
+import FormImage from "../../public/static/support-girl.png"
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "./LanguageProvider";
-import FormFigure from "../../public/FormFigure.png"
+import FormFigure from "../../public/static/FormFigure.png"
 
 const Form = () => {
   const { language } = useLanguage();

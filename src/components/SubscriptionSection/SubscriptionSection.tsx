@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image"
-import SubscriptionSectionImage from "@/../public/aboutFigure.png"
-import SubscriptionSectionFigure from "@/../public/subscribeFigure.png"
-import SubscribeMobileImage from "@/../public/parnterPhones.png"
-import SubscribeMobileFigure from "@/../public/SubscribeMobileFigure.png"
+import SubscriptionSectionImage from "@/../public/static/aboutFigure.png"
+import SubscriptionSectionFigure from "@/../public/static/subscribeFigure.png"
+import SubscribeMobileImage from "@/../public/static/parnterPhones.png"
+import SubscribeMobileFigure from "@/../public/static/SubscribeMobileFigure.png"
 
 import { getSubscribeBenefitList } from "@/utils/translatedData";
 import { ActionButton } from "../buttons/ActionButton";
@@ -21,7 +21,7 @@ const SubscriptionSection = () => {
   
   return (
     <>
-     <div className="max-w-[1200px] text-center justify-center mx-auto  sm:p-3 lg:p-0">
+     <div id="subscribe" className="max-w-[1200px] text-center justify-center mx-auto  sm:p-3 lg:p-0">
           <Image className=" sm:block lg:hidden" src={SubscribeMobileImage} alt={""} />
           <Image className="absolute sm:block lg:hidden top-[6600px] left-0 z-[-1]" src={SubscribeMobileFigure} alt={""} />
           <h2 className="sm:hidden lg:block sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">{t('subscription.title')}</h2>

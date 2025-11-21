@@ -5,14 +5,14 @@ import Slider from "react-slick";
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getBenefitList, getHowItWorksList, getServiceList1, getServiceList2, getServiceList3 } from "@/utils/translatedData";
-import CircleUI from "@/../public/BannerFigure2.png"
-import AboutFigure from "@/../public/AboutFigure2.png"
-import AboutFigure3 from "@/../public/AboutFigure3.png"
-import AboutFigure4 from "@/../public/AboutFigure4.png"
+import CircleUI from "@/../public/static/BannerFigure2.png"
+import AboutFigure from "@/../public/static/AboutFigure2.png"
+import AboutFigure3 from "@/../public/static/AboutFigure3.png"
+import AboutFigure4 from "@/../public/static/AboutFigure4.png"
 
-import AboutFigure5 from "@/../public/AboutFigure5.png"
-import AboutFigure6 from "@/../public/AboutFigure6.png"
-import AboutMobileFigure from "@/../public/AboutMobileFigure.png"
+import AboutFigure5 from "@/../public/static/AboutFigure5.png"
+import AboutFigure6 from "@/../public/static/AboutFigure6.png"
+import AboutMobileFigure from "@/../public/static/AboutMobileFigure.png"
 
 
 import "slick-carousel/slick/slick.css";

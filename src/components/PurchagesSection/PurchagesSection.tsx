@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 import { purchagesList} from "@/utils/data";
 import Link from "next/link";
 import { ActionButton } from "../buttons/ActionButton";
-import PurchagesFigure from "@/../public/PurchagesFigure.png"
-import PurchagesFigure2 from "@/../public/PurchagesFigure2.png"
+import PurchagesFigure from "@/../public/static/PurchagesFigure.png"
+import PurchagesFigure2 from "@/../public/static/PurchagesFigure2.png"
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "../LanguageProvider";
 

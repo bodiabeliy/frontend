@@ -1,11 +1,11 @@
 "use client";
 import { useCallback, useState } from "react";
-import Logo from "../../public/azamaza.com.svg";
+import Logo from "../../public/static/azamaza.com.svg";
 import Link from "next/link";
-import tiktok from "../../public/tiktok.svg"
-import instagram from "../../public/instagram.svg"
-import facebook from "../../public/facebook.svg"
-import telegram from "../../public/telegram.svg"
+import tiktok from "../../public/static/tiktok.svg"
+import instagram from "../../public/static/instagram.svg"
+import facebook from "../../public/static/facebook.svg"
+import telegram from "../../public/static/telegram.svg"
 import { DropDownButton } from "./buttons/DropDownButton";
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "./LanguageProvider";
@@ -41,10 +41,10 @@ export const NavigationManu = () => {
             <Link className=" hover:text-white" href={"#about"}>
               {t('navigation.about')}
             </Link>
-            <Link className=" hover:text-white" href={"#benefits"}>
+            <Link className=" hover:text-white" href={"#howitworks"}>
               {t('navigation.howItWorks')}
             </Link>
-            <Link className=" hover:text-white" href={"#service"}>
+            <Link className=" hover:text-white" href={"#subscribe"}>
               {t('navigation.subscription')}
             </Link>
           </ul>
@@ -141,7 +141,7 @@ export const NavigationManu = () => {
               <li className="border-b border-gray-200">
                 <Link 
                   className="py-3 block text-mainColor hover:text-primaryButton text-lg" 
-                  href={"#benefits"} 
+                  href={"#howitworks"} 
                   onClick={() => setOpened(false)}
                 >
                   {t('navigation.howItWorks')}
@@ -150,7 +150,7 @@ export const NavigationManu = () => {
               <li className="border-b border-gray-200">
                 <Link 
                   className="py-3 block text-mainColor hover:text-primaryButton text-lg" 
-                  href={"#service"} 
+                  href={"#subscribe"} 
                   onClick={() => setOpened(false)}
                 >
                   {t('navigation.subscription')}

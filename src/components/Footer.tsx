@@ -1,11 +1,11 @@
 
 "use client";
-import Logo from "../../public/azamaza.com.svg";
+import Logo from "../../public/static/azamaza.com.svg";
 import Link from "next/link";
-import tiktok from "../../public/tiktok.svg"
-import instagram from "../../public/instagram.svg"
-import telegram from "../../public/telegram.svg"
-import facebook from "../../public/Facebook.svg"
+import tiktok from "../../public/static/tiktok.svg"
+import instagram from "../../public/static/instagram.svg"
+import telegram from "../../public/static/telegram.svg"
+import facebook from "../../public/static/Facebook.svg"
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "./LanguageProvider";
 

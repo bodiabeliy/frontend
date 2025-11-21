@@ -2,11 +2,11 @@
 import Image from "next/image"
 
 import { ActionButton } from "../buttons/ActionButton";
-import BannerImage from "@/../public/banner video.png"
-import BannerMobileImage from "@/../public/bannerMobile.png"
-import BannerMobileFigure from "@/../public/BannerMobileFigure.png"
+import BannerImage from "@/../public/static/banner video.png"
+import BannerMobileImage from "@/../public/static/bannerMobile.png"
+import BannerMobileFigure from "@/../public/static/BannerMobileFigure.png"
 
-import BannerFigure from "@/../public/banner-figure.png"
+import BannerFigure from "@/../public/static/banner-figure.png"
 import { useState } from "react";
 import Modal from "../Modal/Modal";
 import { useTranslation } from "@/i18n";

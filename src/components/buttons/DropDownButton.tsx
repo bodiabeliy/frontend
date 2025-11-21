@@ -1,12 +1,12 @@
 "use client";
 import { BtnDropDownProps } from "@/types";
 import Image from "next/image";
-import ukr from "@/../public/ukr.svg"
-import eng from "@/../public/eng.svg"
-import spa from "@/../public/span.svg"
-import pol from "@/../public/pl.svg"
-import fra from "@/../public/fran.svg"
-import rus from "@/../public/rus.svg"
+import ukr from "@/../public/static/ukr.svg"
+import eng from "@/../public/static/eng.svg"
+import spa from "@/../public/static/span.svg"
+import pol from "@/../public/static/pl.svg"
+import fra from "@/../public/static/fran.svg"
+import rus from "@/../public/static/rus.svg"
 
 import { useRef, useEffect, useState, useCallback } from "react";
 import { useLanguage } from "../LanguageProvider";

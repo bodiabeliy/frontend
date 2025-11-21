@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image"
-import PartnersImage from "@/../public/parnterPhones.png"
-import PartnersFigure from "@/../public/partnerFigure.png"
-import PartnersMobileFigure from "@/../public/partnerMobileFigure.png"
+import PartnersImage from "@/../public/static/parnterPhones.png"
+import PartnersFigure from "@/../public/static/partnerFigure.png"
+import PartnersMobileFigure from "@/../public/static/partnerMobileFigure.png"
 
 import { getPartnersList } from "@/utils/translatedData";
 import { ActionButton } from "../buttons/ActionButton";
