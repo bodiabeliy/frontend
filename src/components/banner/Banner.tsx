@@ -20,7 +20,7 @@ const Banner = () => {
   return (
     <>
     {/* <Modal isModalOpen={isModalOpen} setModalOpen={setIsModalOpen} /> */}
-        <div className="bannerContent sm:ml-5 lg:ml-0 lg:max-w-[46%] sm:mt-10 lg:mt-12 sm:ml-4 lg:ml-[0px] sm:text-center lg:text-left sm:w-[335px] lg:w-full">
+        <div className="bannerContent sm:ml-5 lg:ml-0 lg:max-w-[46%] sm:mt-2 lg:mt-12 sm:ml-4 lg:ml-[0px] sm:text-center lg:text-left sm:w-[335px] lg:w-full">
             <Image className="absolute sm:hidden lg:block sm:left-0 sm:top-0 lg:left-[695px] lg:top-[-96px] z-[-1]" src={BannerFigure} alt={""} />
             <Image className="absolute sm:block lg:hidden sm:left-[-48px] sm:top-[920px] z-[-1]" src={BannerMobileFigure} alt={""} />
 
@@ -30,8 +30,8 @@ const Banner = () => {
                 </p>
             </div>
             <div className="bannerContent serviceInfo lg:relative sm:text-xl lg:text-2xl sm:mt-4 lg:mt-2 sm:pl-[5px] lg:pl-0">
-                <p className="font-extrabold">{t('banner.subtitle')}</p> 
-                <p className="text-secondaryColor font-extrabold">{t('banner.description1')}</p> 
+                <p className="sm:font-bold lg:font-extrabold">{t('banner.subtitle')}</p> 
+                <p className="text-secondaryColor sm:font-bold lg:font-extrabold">{t('banner.description1')}</p> 
                 <p className="text-lg">{t('banner.description2')}</p>
             </div>
             <div className="actionBtnWrapper sm:mt-[5%] sm:pb-[75px] lg:pb-0 lg:mt-2 sm:mb-0 sm:mb-0 lg:mb-10 gap-4 flex sm:flex-col lg:flex-row sm:justify-center lg:justify-between">

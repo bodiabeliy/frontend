@@ -20,13 +20,13 @@ import HowItWorks3 from '../../public/static/Card-1 3.png';
 import SubscribeIcon1 from "../../public/static/clock-history.svg"
 import SubscribeIcon2 from "../../public/static/gift.svg"
 import SubscribeIcon3 from "../../public/static/rocket-takeoff.svg"
-import SubscribeIcon4 from "../../public/static/fire.svg"
+import SubscribeIcon4 from "../../public/static/fire-blue.svg"
 import SubscribeIcon5 from "../../public/static/briefcase.svg"
 
 import Partner1 from "../../public/static/icon-park-solid_copy-link.svg"
 import Partner2 from "../../public/static/game-icons_two-coins.svg"
 
-import FlameIcon from "../../public/static/fire.svg"
+import FlameIcon from "../../public/static/fire-blue.svg"
 import PackageIcon from "../../public/static/db.svg"
 import EnvilopeIcon from "../../public/static/envelope.svg"
 import GlobeIcon from "../../public/static/globe.svg"

@@ -34,7 +34,7 @@ const Partners = () => {
       <Image className="absolute sm:hidden lg:flex lg:right-[-50px]  lg:top-[-150px] z-[-1]" src={PartnersFigure} alt={""} />
       <Image className="absolute sm:block lg:hidden lg:right-[-25px]  lg:top-[-270px] z-[-1]" src={PartnersMobileFigure} alt={""} />
 
-        <div id="partners" className="w-[640px] sm:ml-0 lg:ml-[60px] sm:mt-0 lg:mt-32 z-50">
+        <div id="partners" className="w-[880px] sm:ml-0 lg:ml-[60px] sm:mt-0 lg:mt-32 z-50">
           <div className=" sm:mb-0 lg:mb-0 sm:p-5">
             {partnersList.map((partner, key) => {
               return (

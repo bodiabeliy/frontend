@@ -11,7 +11,7 @@ const HurryUpSection = () => {
   return (
     <section className="relative w-full sm:mt-10 lg:mt-20 sm:mb-10 lg:mb-20 sm:px-3 lg:px-0">
       <div className="max-w-[1300px] mx-auto text-center">
-          <h2 className="sm:text-4xl lg:text-7xl font-extrabold mb-6">
+          <h2 className="sm:text-4xl lg:text-7xl font-extrabold mb-6 uppercase leading-6">
           {t('hurryUp.title')} 
           <br />
           <span className=" text-secondaryColor">

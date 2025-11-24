@@ -197,10 +197,10 @@
       "emailPlaceholder": "Coffe77delivery@gmail.com",
       "continueButton": "Продолжить",
       "loginButton": "Войти в свой аккаунт",
-      "agreementText": "Входя в аккаунт или создавая новый, вы соглашаетесь с нашими",
+      "termsText": "Входя в аккаунт или создавая новый, вы соглашаетесь с нашими",
       "termsLink": "Общими условиями",
-      "privacyLink": "Политикой конфиденциальности",
-      "and": "и"
+      "and": "и",
+      "privacyLink": "Политикой конфиденциальности"
     },
     "createPassword": {
       "title": "Создание пароля",
@@ -208,42 +208,59 @@
       "passwordLabel": "Введите ваш пароль",
       "confirmPasswordLabel": "Введите ваш пароль еще раз",
       "passwordPlaceholder": "43210wer$",
-      "continueButton": "Продолжить"
+      "confirmPasswordPlaceholder": "43210wer$",
+      "continueButton": "Продолжить",
+      "termsText": "Входя в аккаунт или создавая новый, вы соглашаетесь с нашими",
+      "termsLink": "Общими условиями",
+      "and": "и",
+      "privacyLink": "Политикой конфиденциальности"
     },
     "login": {
       "title": "С возвращением!",
       "subtitle": "Чтобы получить доступ к нашим сервисам, войдите или зарегистрируйте свой адрес электронной почты или другие методы",
       "emailLabel": "Адрес электронной почты",
+      "emailPlaceholder": "Coffe77delivery@gmail.com",
       "passwordLabel": "Введите ваш пароль",
+      "passwordPlaceholder": "43210wer$",
       "rememberMe": "Запомнить меня",
       "loginButton": "Войти в свой аккаунт",
       "forgotPassword": "Не можете войти в свой аккаунт?",
-      "agreementText": "Вы ознакомлены и соглашаетесь с"
+      "termsText": "Вы ознакомлены и соглашаетесь с",
+      "termsLink": "Общими условиями",
+      "and": "и",
+      "privacyLink": "Политикой конфиденциальности"
     },
     "contactInfo": {
       "title": "Контактная информация",
       "subtitle": "Для обеспечения безопасности аккаунта нам нужны ваши полное имя и номер телефона",
-      "firstNameLabel": "Введите свое имя и фамилию",
-      "firstNamePlaceholder": "Иван Иванов",
+      "nameLabel": "Введите свое имя и фамилию",
+      "namePlaceholder": "Иван Иванов",
       "nationalityLabel": "Ваша национальность",
       "nationalityPlaceholder": "Русский",
       "phoneLabel": "Введите свой мобильный телефон",
       "phonePlaceholder": "0576547829",
-      "phoneHint": "Когда вы выходите, мы отправим на этот номер код двухфакторной аутентификации",
-      "submitButton": "Создать аккаунт"
+      "twoFactorText": "Когда вы выходите, мы отправим на этот номер код двухфакторной аутентификации",
+      "createAccountButton": "Создать аккаунт",
+      "termsText": "Вы ознакомлены и соглашаетесь с",
+      "termsLink": "Общими условиями",
+      "and": "и",
+      "privacyLink": "Политикой конфиденциальности"
     },
     "recoveryPassword": {
       "title": "Восстановление пароля",
       "subtitle": "Чтобы восстановить пароль, введите свой адрес электронной почты или номер мобильного телефона",
       "inputLabel": "Введите свою электронную почту или мобильный телефон",
+      "inputPlaceholder": "Coffe77delivery@gmail.com",
       "continueButton": "Продолжить"
     },
     "newPassword": {
       "title": "Введите новый пароль",
       "subtitle": "Введите новый пароль, а затем нажмите «Изменить пароль»",
       "passwordLabel": "Введите свой новый пароль",
+      "passwordPlaceholder": "43210wer$",
       "confirmPasswordLabel": "Введите свой пароль еще раз",
-      "changeButton": "Изменить пароль"
+      "confirmPasswordPlaceholder": "43210wer$",
+      "changePasswordButton": "Изменить пароль"
     },
     "smsConfirmation": {
       "title": "Введите код",
@@ -256,7 +273,7 @@
       "continueButton": "Продолжить"
     },
     "footer": {
-      "allRightsReserved": "Все права защищены",
+      "allRights": "Все права защищены",
       "copyright": "Copyright 2025 - Azamaza.com"
     }
   }

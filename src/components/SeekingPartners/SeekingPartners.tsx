@@ -36,7 +36,7 @@ const SeekingPartners = () => {
 
           {/* Content Section */}
           <div className="sm:w-full lg:w-[65%] flex flex-col items-start">
-            <h2 className="sm:text-3xl lg:text-[40px] text-secondaryColor font-bold mb-6">
+            <h2 className="sm:text-3xl lg:text-[40px] text-secondaryColor font-bold mb-6 lg:leading-[3rem]">
               {t('seekingPartners.title')}
             </h2>
             <p className="text-2xl mb-6">

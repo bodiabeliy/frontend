@@ -197,10 +197,10 @@
       "emailPlaceholder": "Coffe77delivery@gmail.com",
       "continueButton": "Continue",
       "loginButton": "Log in to your account",
-      "agreementText": "By logging into an account or creating a new one, you agree to our",
+      "termsText": "By logging into an account or creating a new one, you agree to our",
       "termsLink": "Terms and Conditions",
-      "privacyLink": "Privacy Statement",
-      "and": "and"
+      "and": "and",
+      "privacyLink": "Privacy Statement"
     },
     "createPassword": {
       "title": "Creating a password",
@@ -208,42 +208,59 @@
       "passwordLabel": "Enter your password",
       "confirmPasswordLabel": "Enter your password again",
       "passwordPlaceholder": "43210wer$",
-      "continueButton": "Continue"
+      "confirmPasswordPlaceholder": "43210wer$",
+      "continueButton": "Continue",
+      "termsText": "By logging into an account or creating a new one, you agree to our",
+      "termsLink": "Terms and Conditions",
+      "and": "and",
+      "privacyLink": "Privacy Statement"
     },
     "login": {
       "title": "Welcome back!",
       "subtitle": "To access our services, log in or register your email address or offer methods",
       "emailLabel": "Email address",
+      "emailPlaceholder": "Coffe77delivery@gmail.com",
       "passwordLabel": "Enter your password",
+      "passwordPlaceholder": "43210wer$",
       "rememberMe": "Remember me",
       "loginButton": "Log in to your account",
       "forgotPassword": "Not able to log into your account?",
-      "agreementText": "You have read and agree to"
+      "termsText": "You have read and agree to",
+      "termsLink": "Terms and Conditions",
+      "and": "and",
+      "privacyLink": "Privacy Statement"
     },
     "contactInfo": {
       "title": "Contact information",
       "subtitle": "To ensure account security, we need your full name and phone number",
-      "firstNameLabel": "Enter your first and last name",
-      "firstNamePlaceholder": "John Doe",
+      "nameLabel": "Enter your first and last name",
+      "namePlaceholder": "John Doe",
       "nationalityLabel": "Your nationality",
       "nationalityPlaceholder": "American",
       "phoneLabel": "Enter your mobile phone",
       "phonePlaceholder": "0576547829",
-      "phoneHint": "When you log out, we will send a two-factor authentication code to this number",
-      "submitButton": "Create account"
+      "twoFactorText": "When you log out, we will send a two-factor authentication code to this number",
+      "createAccountButton": "Create account",
+      "termsText": "You have read and agree to",
+      "termsLink": "Terms and Conditions",
+      "and": "and",
+      "privacyLink": "Privacy Statement"
     },
     "recoveryPassword": {
       "title": "Password recovery",
       "subtitle": "To recover your password, enter your email address or mobile phone number",
       "inputLabel": "Enter your email or mobile phone",
+      "inputPlaceholder": "Coffe77delivery@gmail.com",
       "continueButton": "Continue"
     },
     "newPassword": {
       "title": "Enter new password",
       "subtitle": "Enter a new password, then press «Change Password»",
       "passwordLabel": "Enter your new password",
+      "passwordPlaceholder": "43210wer$",
       "confirmPasswordLabel": "Enter your password again",
-      "changeButton": "Change password"
+      "confirmPasswordPlaceholder": "43210wer$",
+      "changePasswordButton": "Change password"
     },
     "smsConfirmation": {
       "title": "Enter code",
@@ -256,7 +273,7 @@
       "continueButton": "Continue"
     },
     "footer": {
-      "allRightsReserved": "All rights reserved",
+      "allRights": "All rights reserved",
       "copyright": "Copyright 2025 - Azamaza.com"
     }
   }
