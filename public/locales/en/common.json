@@ -188,5 +188,76 @@
       "feature2": "Private VIP access (services not available to Lite/Pro)",
       "feature3": "Additional weekly offers for individual package"
     }
+  },
+  "auth": {
+    "createAccount": {
+      "title": "Let's get started",
+      "subtitle": "To access our services, log in or register in a convenient way for you",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "Coffe77delivery@gmail.com",
+      "continueButton": "Continue",
+      "loginButton": "Log in to your account",
+      "agreementText": "By logging into an account or creating a new one, you agree to our",
+      "termsLink": "Terms and Conditions",
+      "privacyLink": "Privacy Statement",
+      "and": "and"
+    },
+    "createPassword": {
+      "title": "Creating a password",
+      "subtitle": "The password must consist of uppercase and lowercase letters and numbers. Length - at least 10 characters",
+      "passwordLabel": "Enter your password",
+      "confirmPasswordLabel": "Enter your password again",
+      "passwordPlaceholder": "43210wer$",
+      "continueButton": "Continue"
+    },
+    "login": {
+      "title": "Welcome back!",
+      "subtitle": "To access our services, log in or register your email address or offer methods",
+      "emailLabel": "Email address",
+      "passwordLabel": "Enter your password",
+      "rememberMe": "Remember me",
+      "loginButton": "Log in to your account",
+      "forgotPassword": "Not able to log into your account?",
+      "agreementText": "You have read and agree to"
+    },
+    "contactInfo": {
+      "title": "Contact information",
+      "subtitle": "To ensure account security, we need your full name and phone number",
+      "firstNameLabel": "Enter your first and last name",
+      "firstNamePlaceholder": "John Doe",
+      "nationalityLabel": "Your nationality",
+      "nationalityPlaceholder": "American",
+      "phoneLabel": "Enter your mobile phone",
+      "phonePlaceholder": "0576547829",
+      "phoneHint": "When you log out, we will send a two-factor authentication code to this number",
+      "submitButton": "Create account"
+    },
+    "recoveryPassword": {
+      "title": "Password recovery",
+      "subtitle": "To recover your password, enter your email address or mobile phone number",
+      "inputLabel": "Enter your email or mobile phone",
+      "continueButton": "Continue"
+    },
+    "newPassword": {
+      "title": "Enter new password",
+      "subtitle": "Enter a new password, then press «Change Password»",
+      "passwordLabel": "Enter your new password",
+      "confirmPasswordLabel": "Enter your password again",
+      "changeButton": "Change password"
+    },
+    "smsConfirmation": {
+      "title": "Enter code",
+      "subtitle": "The code has been sent to your email address or mobile phone number. Enter it in the field below and press «Continue»",
+      "continueButton": "Continue"
+    },
+    "recoverySuccess": {
+      "title": "Password successfully recovered",
+      "subtitle": "Your password has been successfully changed. Now you can log into your account with the new password",
+      "continueButton": "Continue"
+    },
+    "footer": {
+      "allRightsReserved": "All rights reserved",
+      "copyright": "Copyright 2025 - Azamaza.com"
+    }
   }
 }

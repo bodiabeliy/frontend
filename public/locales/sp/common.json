@@ -188,5 +188,76 @@
       "feature2": "Acceso directo a servicios VIP cerrados (no disponibles para Lite/Pro)",
       "feature3": "Códigos promocionales semanales adicionales para servicios populares"
     }
+  },
+  "auth": {
+    "createAccount": {
+      "title": "Empecemos",
+      "subtitle": "Para acceder a nuestros servicios, inicie sesión o regístrese de la manera que le resulte conveniente",
+      "emailLabel": "Dirección de correo electrónico",
+      "emailPlaceholder": "Coffe77delivery@gmail.com",
+      "continueButton": "Continuar",
+      "loginButton": "Iniciar sesión en su cuenta",
+      "agreementText": "Al iniciar sesión o crear una cuenta nueva, acepta nuestros",
+      "termsLink": "Términos y Condiciones",
+      "privacyLink": "Declaración de Privacidad",
+      "and": "y"
+    },
+    "createPassword": {
+      "title": "Creación de contraseña",
+      "subtitle": "La contraseña debe constar de letras mayúsculas y minúsculas y números. Longitud: al menos 10 caracteres",
+      "passwordLabel": "Ingrese su contraseña",
+      "confirmPasswordLabel": "Ingrese su contraseña nuevamente",
+      "passwordPlaceholder": "43210wer$",
+      "continueButton": "Continuar"
+    },
+    "login": {
+      "title": "¡Bienvenido de nuevo!",
+      "subtitle": "Para acceder a nuestros servicios, inicie sesión o registre su dirección de correo electrónico u ofrezca métodos",
+      "emailLabel": "Dirección de correo electrónico",
+      "passwordLabel": "Ingrese su contraseña",
+      "rememberMe": "Recuérdame",
+      "loginButton": "Iniciar sesión en su cuenta",
+      "forgotPassword": "¿No puede iniciar sesión en su cuenta?",
+      "agreementText": "Ha leído y acepta"
+    },
+    "contactInfo": {
+      "title": "Información de contacto",
+      "subtitle": "Para garantizar la seguridad de la cuenta, necesitamos su nombre completo y número de teléfono",
+      "firstNameLabel": "Ingrese su nombre y apellido",
+      "firstNamePlaceholder": "Juan Pérez",
+      "nationalityLabel": "Su nacionalidad",
+      "nationalityPlaceholder": "Español",
+      "phoneLabel": "Ingrese su teléfono móvil",
+      "phonePlaceholder": "0576547829",
+      "phoneHint": "Cuando cierre sesión, enviaremos un código de autenticación de dos factores a este número",
+      "submitButton": "Crear cuenta"
+    },
+    "recoveryPassword": {
+      "title": "Recuperación de contraseña",
+      "subtitle": "Para recuperar su contraseña, ingrese su dirección de correo electrónico o número de teléfono móvil",
+      "inputLabel": "Ingrese su correo electrónico o teléfono móvil",
+      "continueButton": "Continuar"
+    },
+    "newPassword": {
+      "title": "Ingrese nueva contraseña",
+      "subtitle": "Ingrese una nueva contraseña, luego presione «Cambiar contraseña»",
+      "passwordLabel": "Ingrese su nueva contraseña",
+      "confirmPasswordLabel": "Ingrese su contraseña nuevamente",
+      "changeButton": "Cambiar contraseña"
+    },
+    "smsConfirmation": {
+      "title": "Ingrese el código",
+      "subtitle": "El código ha sido enviado a su dirección de correo electrónico o número de teléfono móvil. Ingréselo en el campo a continuación y presione «Continuar»",
+      "continueButton": "Continuar"
+    },
+    "recoverySuccess": {
+      "title": "Contraseña recuperada exitosamente",
+      "subtitle": "Su contraseña se ha cambiado exitosamente. Ahora puede iniciar sesión en su cuenta con la nueva contraseña",
+      "continueButton": "Continuar"
+    },
+    "footer": {
+      "allRightsReserved": "Todos los derechos reservados",
+      "copyright": "Copyright 2025 - Azamaza.com"
+    }
   }
 }

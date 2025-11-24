@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
+import { useRouter } from "next/navigation";
 
 
 interface PriceCardProps {
@@ -39,6 +40,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
 }) => {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
+  const router = useRouter()
   
   const getBadgeStyles = () => {
     switch (tier) {
@@ -95,6 +97,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
       {/* Button */}
       <button
         className={`${getButtonStyles()} w-full font-semibold py-4 rounded-full mb-6 transition-all duration-300 hover:shadow-lg`}
+        onClick={() => router.push('/create-account')}
       >
         {buttonText}
       </button>
@@ -121,7 +124,9 @@ const PriceCard: React.FC<PriceCardProps> = ({
       </div>
 
       {/* Read More Link */}
-      <button className="text-mainColor font-semibold text-center py-3 border-2 border-mainColor rounded-full mt-4 hover:bg-mainColor hover:text-white transition-all duration-300">
+      <button 
+        className="text-mainColor font-semibold text-center py-3 border-2 border-mainColor rounded-full mt-4 hover:bg-mainColor hover:text-white transition-all duration-300"
+      >
         Читати далі
       </button>
     </div>

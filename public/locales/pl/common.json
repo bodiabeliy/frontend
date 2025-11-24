@@ -188,5 +188,76 @@
       "feature2": "Bezpośredni dostęp do zamkniętych usług VIP (niedostępnych dla Lite/Pro)",
       "feature3": "Dodatkowe cotygodniowe kody promocyjne dla popularnych usług"
     }
+  },
+  "auth": {
+    "createAccount": {
+      "title": "Zacznijmy",
+      "subtitle": "Aby uzyskać dostęp do naszych usług, zaloguj się lub zarejestruj w wygodny dla Ciebie sposób",
+      "emailLabel": "Adres e-mail",
+      "emailPlaceholder": "Coffe77delivery@gmail.com",
+      "continueButton": "Kontynuuj",
+      "loginButton": "Zaloguj się na swoje konto",
+      "agreementText": "Logując się na konto lub tworząc nowe, zgadzasz się z naszymi",
+      "termsLink": "Warunkami i Zasadami",
+      "privacyLink": "Polityką Prywatności",
+      "and": "i"
+    },
+    "createPassword": {
+      "title": "Tworzenie hasła",
+      "subtitle": "Hasło musi składać się z wielkich i małych liter oraz cyfr. Długość - co najmniej 10 znaków",
+      "passwordLabel": "Wprowadź swoje hasło",
+      "confirmPasswordLabel": "Wprowadź swoje hasło ponownie",
+      "passwordPlaceholder": "43210wer$",
+      "continueButton": "Kontynuuj"
+    },
+    "login": {
+      "title": "Witaj z powrotem!",
+      "subtitle": "Aby uzyskać dostęp do naszych usług, zaloguj się lub zarejestruj swój adres e-mail lub zaoferuj metody",
+      "emailLabel": "Adres e-mail",
+      "passwordLabel": "Wprowadź swoje hasło",
+      "rememberMe": "Zapamiętaj mnie",
+      "loginButton": "Zaloguj się na swoje konto",
+      "forgotPassword": "Nie możesz zalogować się na swoje konto?",
+      "agreementText": "Przeczytałeś i zgadzasz się z"
+    },
+    "contactInfo": {
+      "title": "Informacje kontaktowe",
+      "subtitle": "Aby zapewnić bezpieczeństwo konta, potrzebujemy Twojego pełnego imienia i numeru telefonu",
+      "firstNameLabel": "Wprowadź swoje imię i nazwisko",
+      "firstNamePlaceholder": "Jan Kowalski",
+      "nationalityLabel": "Twoja narodowość",
+      "nationalityPlaceholder": "Polski",
+      "phoneLabel": "Wprowadź swój telefon komórkowy",
+      "phonePlaceholder": "0576547829",
+      "phoneHint": "Gdy się wylogujesz, wyślemy kod uwierzytelniania dwuskładnikowego na ten numer",
+      "submitButton": "Utwórz konto"
+    },
+    "recoveryPassword": {
+      "title": "Odzyskiwanie hasła",
+      "subtitle": "Aby odzyskać hasło, wprowadź swój adres e-mail lub numer telefonu komórkowego",
+      "inputLabel": "Wprowadź swój e-mail lub telefon komórkowy",
+      "continueButton": "Kontynuuj"
+    },
+    "newPassword": {
+      "title": "Wprowadź nowe hasło",
+      "subtitle": "Wprowadź nowe hasło, następnie naciśnij «Zmień hasło»",
+      "passwordLabel": "Wprowadź swoje nowe hasło",
+      "confirmPasswordLabel": "Wprowadź swoje hasło ponownie",
+      "changeButton": "Zmień hasło"
+    },
+    "smsConfirmation": {
+      "title": "Wprowadź kod",
+      "subtitle": "Kod został wysłany na Twój adres e-mail lub numer telefonu komórkowego. Wprowadź go w polu poniżej i naciśnij «Kontynuuj»",
+      "continueButton": "Kontynuuj"
+    },
+    "recoverySuccess": {
+      "title": "Hasło zostało pomyślnie odzyskane",
+      "subtitle": "Twoje hasło zostało pomyślnie zmienione. Teraz możesz zalogować się na swoje konto z nowym hasłem",
+      "continueButton": "Kontynuuj"
+    },
+    "footer": {
+      "allRightsReserved": "Wszystkie prawa zastrzeżone",
+      "copyright": "Copyright 2025 - Azamaza.com"
+    }
   }
 }

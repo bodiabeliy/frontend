@@ -188,5 +188,76 @@
       "feature2": "Accès direct aux services VIP fermés (non disponibles pour Lite/Pro)",
       "feature3": "Codes promo hebdomadaires supplémentaires pour les services populaires"
     }
+  },
+  "auth": {
+    "createAccount": {
+      "title": "Commençons",
+      "subtitle": "Pour accéder à nos services, connectez-vous ou inscrivez-vous de la manière qui vous convient",
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "Coffe77delivery@gmail.com",
+      "continueButton": "Continuer",
+      "loginButton": "Connectez-vous à votre compte",
+      "agreementText": "En vous connectant à un compte ou en créant un nouveau, vous acceptez nos",
+      "termsLink": "Termes et Conditions",
+      "privacyLink": "Déclaration de Confidentialité",
+      "and": "et"
+    },
+    "createPassword": {
+      "title": "Création d'un mot de passe",
+      "subtitle": "Le mot de passe doit contenir des lettres majuscules et minuscules et des chiffres. Longueur - au moins 10 caractères",
+      "passwordLabel": "Entrez votre mot de passe",
+      "confirmPasswordLabel": "Entrez à nouveau votre mot de passe",
+      "passwordPlaceholder": "43210wer$",
+      "continueButton": "Continuer"
+    },
+    "login": {
+      "title": "Bienvenue de retour !",
+      "subtitle": "Pour accéder à nos services, connectez-vous ou enregistrez votre adresse e-mail ou proposez des méthodes",
+      "emailLabel": "Adresse e-mail",
+      "passwordLabel": "Entrez votre mot de passe",
+      "rememberMe": "Se souvenir de moi",
+      "loginButton": "Connectez-vous à votre compte",
+      "forgotPassword": "Impossible de vous connecter à votre compte ?",
+      "agreementText": "Vous avez lu et acceptez"
+    },
+    "contactInfo": {
+      "title": "Informations de contact",
+      "subtitle": "Pour assurer la sécurité du compte, nous avons besoin de votre nom complet et de votre numéro de téléphone",
+      "firstNameLabel": "Entrez votre prénom et nom",
+      "firstNamePlaceholder": "Jean Dupont",
+      "nationalityLabel": "Votre nationalité",
+      "nationalityPlaceholder": "Français",
+      "phoneLabel": "Entrez votre téléphone mobile",
+      "phonePlaceholder": "0576547829",
+      "phoneHint": "Lorsque vous vous déconnectez, nous enverrons un code d'authentification à deux facteurs à ce numéro",
+      "submitButton": "Créer un compte"
+    },
+    "recoveryPassword": {
+      "title": "Récupération du mot de passe",
+      "subtitle": "Pour récupérer votre mot de passe, entrez votre adresse e-mail ou votre numéro de téléphone mobile",
+      "inputLabel": "Entrez votre e-mail ou téléphone mobile",
+      "continueButton": "Continuer"
+    },
+    "newPassword": {
+      "title": "Entrez un nouveau mot de passe",
+      "subtitle": "Entrez un nouveau mot de passe, puis appuyez sur «Changer le mot de passe»",
+      "passwordLabel": "Entrez votre nouveau mot de passe",
+      "confirmPasswordLabel": "Entrez à nouveau votre mot de passe",
+      "changeButton": "Changer le mot de passe"
+    },
+    "smsConfirmation": {
+      "title": "Entrez le code",
+      "subtitle": "Le code a été envoyé à votre adresse e-mail ou numéro de téléphone mobile. Entrez-le dans le champ ci-dessous et appuyez sur «Continuer»",
+      "continueButton": "Continuer"
+    },
+    "recoverySuccess": {
+      "title": "Mot de passe récupéré avec succès",
+      "subtitle": "Votre mot de passe a été modifié avec succès. Vous pouvez maintenant vous connecter à votre compte avec le nouveau mot de passe",
+      "continueButton": "Continuer"
+    },
+    "footer": {
+      "allRightsReserved": "Tous droits réservés",
+      "copyright": "Copyright 2025 - Azamaza.com"
+    }
   }
 }
