@@ -91,7 +91,7 @@ const AboutSection = () => {
           </div>
         </div> 
         <div id="about" className="SponsorsWrapper relative w-full flex justify-center flex flex-col sm:mt-4 lg:mt-16 m-auto">
-          <p className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
+          <p className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50">
           {t('aboutSection.title')}
           </p>
         
@@ -160,7 +160,7 @@ const AboutSection = () => {
             />
         </div>
         <div id="howitworks" className="SponsorsWrapper relative w-full flex justify-center flex flex-col sm:mt-8 lg:mt-16 m-auto sm:p-1 lg:p-0">
-          <p className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
+          <p className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50">
           {t('aboutSection.howItWorksTitle')}
           </p>
         

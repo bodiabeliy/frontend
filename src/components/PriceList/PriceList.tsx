@@ -80,7 +80,7 @@ const PriceList = () => {
                 </div>
               ) : (
                 <>
-                 <p className="sm:block lg:hidden sm:text-2xl text-secondaryColor text-center font-extrabold z-50 mt-[-40px]">
+                 <p className="sm:block lg:hidden sm:text-2xl text-secondaryColor text-center font-extrabold lg:leading-[32px] z-50 mt-[-40px]">
                     {t('pricePage.mobileTitle')}
                   </p>
                   <p className="sm:block lg:hidden sm:text-xl lg:text-3xl text-center sm:mb-6 lg:mb-6">

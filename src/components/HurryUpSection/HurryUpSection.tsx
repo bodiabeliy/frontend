@@ -14,7 +14,7 @@ const HurryUpSection = () => {
           <h2 className="sm:text-4xl lg:text-7xl font-extrabold mb-6 uppercase leading-6">
           {t('hurryUp.title')} 
           <br />
-          <span className=" text-secondaryColor">
+          <span className=" text-secondaryColor lg:leading-[60px]">
             {t('hurryUp.beFirst')} 
           </span>
           <br />
@@ -25,7 +25,7 @@ const HurryUpSection = () => {
         <p className="sm:text-xl lg:text-3xl font-semibold mb-8">
           {t('hurryUp.subtitle')}
         </p>
-        <p className="sm:text-xl lg:text-3xl text-secondaryColor font-semibold mb-8">
+        <p className="sm:text-xl lg:text-3xl text-secondaryColor font-semibold lg:leading-[40px] mb-8">
           {t('hurryUp.description')}
         </p>
 

@@ -24,10 +24,10 @@ const SubscriptionSection = () => {
      <div id="subscribe" className="max-w-[1200px] text-center justify-center mx-auto  sm:p-3 lg:p-0">
           <Image className=" sm:block lg:hidden" src={SubscribeMobileImage} alt={""} />
           <Image className="absolute sm:block lg:hidden top-[6600px] left-0 z-[-1]" src={SubscribeMobileFigure} alt={""} />
-          <h2 className="sm:hidden lg:block sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">{t('subscription.title')}</h2>
+          <h2 className="sm:hidden lg:block sm:text-3xl lg:text-5xl mb-2 text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50">{t('subscription.title')}</h2>
           <p className="sm:hidden lg:block sm:text-xl lg:text-3xl text-center">{t('subscription.subtitle')}</p>
 
-          <h2 className="sm:block lg:hidden sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">{t('subscription.titleMobile')}</h2>
+          <h2 className="sm:block lg:hidden sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50">{t('subscription.titleMobile')}</h2>
       </div>
       <div className="aboutWrapper relative sm:mt-[-40px] lg:mt-[-100px] flex justify-end mb-20 h-70% sm:m-h-[550px]">
       <Image className="absolute sm:hidden lg:flex lg:left-[-150px]  lg:top-[-360px] lg:scale-50" src={SubscriptionSectionImage} alt={""} />

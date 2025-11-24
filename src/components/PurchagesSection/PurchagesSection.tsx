@@ -30,14 +30,18 @@ const PurchagesSection = () => {
         {/* <Image className="absolute sm:hidden lg:block sm:left-0 sm:top-0 lg:right-[190px] lg:top-[80%] z-[-1]" src={PurchagesFigure2} alt={""} /> */}
 
         <div id="purchages" className="SponsorsWrapper relative w-full flex justify-center flex flex-col sm:mt-4 lg:mt-2 m-auto">
-          <p className="sm:hidden lg:block sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
+          <p className="sm:hidden lg:block sm:text-3xl lg:text-5xl mb-2 text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50">
           {t('purchases.title')}
           </p>
         
-        <h2 className="sm:block lg:hidden sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">{t('purchases.titleMobile')}</h2>
+        <h2 className="sm:block lg:hidden sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50">{t('purchases.titleMobile')}</h2>
           <p className="sm:text-xl lg:text-3xl text-center">
              {t('purchases.subtitle')}
           </p>
+
+          <div className="lg:max-h-full sm:overflow-y-scroll lg:overflow-y-auto mt-5 sm:flex lg:block  lg:ml-0">
+
+          </div>
         
           <div className="lg:max-h-full mt-5 lg:ml-0">
             <div className="sm:grid sm:grid-cols-2 sm:gap-3 lg:flex lg:flex-row lg:flex-wrap SponsorsCards m-auto justify-between sm:max-w-full lg:max-w-[1300px]">
@@ -62,7 +66,7 @@ const PurchagesSection = () => {
             </div>
              
           </div>
-           <p className="sm:block lg:hidden sm:text-xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">
+           <p className="sm:block lg:hidden sm:text-xl lg:text-5xl text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50">
                     {t('purchases.descriptionMobile')}
                 </p>
            <ActionButton

@@ -21,10 +21,10 @@ const Partners = () => {
   return (
     <>
      <div className="max-w-[1300px] text-center justify-center mx-auto  sm:p-2 lg:p-0">
-        <h2 className="sm:hidden lg:flex sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">{t('partners.title')}</h2>
+        <h2 className="sm:hidden lg:flex mb-2 sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50">{t('partners.title')}</h2>
         <p className="sm:hidden lg:flex sm:text-xl lg:text-3xl text-center">{t('partners.subtitle')}</p>
                 
-        <h2 className="sm:block lg:hidden sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold z-50">{t('partners.titleMobile')}</h2>
+        <h2 className="sm:block lg:hidden sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50">{t('partners.titleMobile')}</h2>
         <p className="sm:flex lg:hidden mt-8 sm:text-xl lg:text-3xl text-center">{t('partners.subtitle')}</p>
         <p className="sm:flex lg:hidden justify-center mt-8  sm:text-2xl lg:text-3xl text-center font-bold">{t('partners.howItWorks')}</p>
 

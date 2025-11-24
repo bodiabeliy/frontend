@@ -12,7 +12,7 @@ const Price = () => {
     return ( 
     <>
       <div className="lg:w-[1300px] flex flex-col m-auto">
-          <p className="sm:max-w-auto lg:max-w-[1200px] sm:text-3xl lg:text-6xl text-center text-secondaryColor font-extrabold sm:mt-10 lg:mt-[100px] sm:mb-5">
+          <p className="sm:max-w-auto lg:max-w-[1200px] sm:text-3xl lg:text-6xl text-center text-secondaryColor font-extrabold lg:leading-[72px] sm:mt-10 lg:mt-[100px] sm:mb-5">
           {t('pricePage.mainTitle')} <span className="text-white">{t('pricePage.mainTitleHighlight')}</span> {t('pricePage.mainTitleEnd')}
           </p>
           <p className="sm:hidden lg:block sm:text-xl lg:text-3xl text-center sm:mb-0 lg:mb-6">

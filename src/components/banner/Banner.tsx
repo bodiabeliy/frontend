@@ -31,7 +31,7 @@ const Banner = () => {
             </div>
             <div className="bannerContent serviceInfo lg:relative sm:text-xl lg:text-2xl sm:mt-4 lg:mt-2 sm:pl-[5px] lg:pl-0">
                 <p className="sm:font-bold lg:font-extrabold">{t('banner.subtitle')}</p> 
-                <p className="text-secondaryColor sm:font-bold lg:font-extrabold">{t('banner.description1')}</p> 
+                <p className="text-secondaryColor sm:font-bold lg:font-extrabold lg:leading-[32px]">{t('banner.description1')}</p> 
                 <p className="text-lg">{t('banner.description2')}</p>
             </div>
             <div className="actionBtnWrapper sm:mt-[5%] sm:pb-[75px] lg:pb-0 lg:mt-2 sm:mb-0 sm:mb-0 lg:mb-10 gap-4 flex sm:flex-col lg:flex-row sm:justify-center lg:justify-between">
@@ -47,7 +47,7 @@ const Banner = () => {
                 <ActionButton
                     disabled={false}
                     className={
-                    " relative actionBtn sm:hidden lg:flex justify-center bg-secondaryButton w-full sm:p-auto lg:p-0 rounded-[42px] sm:p-3 lg:p-5 sm:mb-4 lg:mb-0 border-2 border-secondaryColor  text-lg font-semibold text-secondaryColor hover:shadow-[0_4px_4px_rgba(49,45,47,0.3)]"
+                    " relative actionBtn sm:hidden lg:flex justify-center bg-secondaryButton w-full sm:p-auto lg:p-0 rounded-[42px] sm:p-3 lg:p-5 sm:mb-4 lg:mb-0 border-2 border-secondaryColor  text-lg font-semibold text-secondaryColor lg:leading-[24px] hover:shadow-[0_4px_4px_rgba(49,45,47,0.3)]"
                     }
                     text={t('banner.button2')}
                     // onClick={() =>navigateTo("/#form")}
@@ -61,7 +61,7 @@ const Banner = () => {
                 <ActionButton
                     disabled={false}
                     className={
-                    " relative actionBtn lg:hidden  bg-secondaryButton w-full sm:p-auto lg:p-0 rounded-[42px] sm:p-3 lg:p-5 sm:mb-4 lg:mb-0 border-2 border-secondaryColor  text-lg font-semibold text-secondaryColor hover:shadow-[0_4px_4px_rgba(49,45,47,0.3)]"
+                    " relative actionBtn lg:hidden  bg-secondaryButton w-full sm:p-auto lg:p-0 rounded-[42px] sm:p-3 lg:p-5 sm:mb-4 lg:mb-0 border-2 border-secondaryColor  text-lg font-semibold text-secondaryColor lg:leading-[24px] hover:shadow-[0_4px_4px_rgba(49,45,47,0.3)]"
                     }
                     text={t('banner.button2')}
                     // onClick={() =>navigateTo("/#form")}

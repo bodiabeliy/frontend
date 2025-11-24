@@ -91,9 +91,9 @@ const CountdownTimer = ({ isVisible }: CountdownTimerProps) => {
             <div className="flex sm:flex-col lg:flex-row sm:flex-nowrap lg:flex-wrap SponsorsCards m-auto justify-between sm:max-w-full lg:max-w-[1300px]">
 
             </div>
-           {isVisible && <h2 className={` sm:mt-[-50px] lg:mt-0 sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold leading-12 z-50`}>{t('countdown.title')}</h2>} 
+           {isVisible && <h2 className={` sm:mt-[-50px] lg:mt-0 sm:text-4xl lg:text-5xl text-secondaryColor text-center font-extrabold lg:leading-[60px] z-50`}>{t('countdown.title')}</h2>} 
            {isVisible && <p className="sm:text-xl mt-5 lg:text-3xl text-center">{t('countdown.subtitle')}</p>}
-            <p className="sm:text-xl lg:text-3xl text-secondaryColor text-center font-extrabold z-50 mt-8">{t('countdown.remaining')} <span className="text-white">підписок</span></p>
+            <p className="sm:text-xl lg:text-3xl text-secondaryColor text-center font-extrabold lg:leading-[40px] z-50 mt-8">{t('countdown.remaining')} <span className="text-white">підписок</span></p>
           </div>
           
           <div className="relative bg-countdownBg shadow-[0px_0px_100px_rgba(0,0,0,0.4)] sm:rounded-[32px] lg:rounded-[70px] sm:p-0 lg:p-0 sm:border-[8px] lg:border-[18px] border-white shadow-lg">

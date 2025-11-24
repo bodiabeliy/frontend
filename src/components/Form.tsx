@@ -74,7 +74,7 @@ const Form = () => {
         <Image className="absolute sm:left-[-30%] lg:left-[-60px] sm:top-[512px] lg:top-[0px]" src={FormFigure} alt={""} /> 
 
       <div className="max-w-[1300px] mx-auto">
-        <h2 className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold sm:mb-6 lg:mb-8">
+        <h2 className="sm:text-3xl lg:text-5xl text-secondaryColor text-center font-extrabold lg:leading-[60px] sm:mb-6 lg:mb-8">
           {t('form.title')}
         </h2>
         <p className="sm:text-xl lg:text-3xl text-center">
