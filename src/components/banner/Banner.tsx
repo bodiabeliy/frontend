@@ -39,7 +39,7 @@ const Banner = () => {
                     disabled={false}
                     onClick={() => router.push('/price')}
                     className={
-                    "relative bg-primaryButton w-full sm:p-auto sm:mb-4 lg:mb-0 rounded-[42px] sm:p-3 lg:p-5 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
+                    "relative bg-primaryButton w-full sm:p-auto sm:mb-4 lg:mb-0 rounded-[42px] sm:p-3 lg:p-3 text-lg font-semibold hover:shadow-[0_4px_4px_rgba(252,21,93,0.3)]"
                     }
                     text={t('banner.button1')}
                     // onClick={() =>navigateTo("/#form")}
