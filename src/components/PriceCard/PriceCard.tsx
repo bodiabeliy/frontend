@@ -71,7 +71,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
   
 
   return (
-    <div className={`${bgColor} rounded-[24px] shadow-lg p-6 flex flex-col max-w-[360px] w-full h-full min-h-[600px]`}>
+    <div className={`${bgColor} rounded-[24px] shadow-lg p-6 flex flex-col max-w-[380px] w-full h-full min-h-[600px]`}>
       {/* Header */}
       <div className="flex items-center gap-3 mb-4">
         <h3 className="text-2xl font-bold text-mainColor">Azamaza</h3>
@@ -82,14 +82,13 @@ const PriceCard: React.FC<PriceCardProps> = ({
 
       {/* Price */}
       <div className="mb-4">
-       <div className="flex gap-5">
+       <div className="flex">
          <div className="flex items-end gap-2">
           <span className="text-5xl font-bold text-cardPrice">{price}</span>
-          <span className="text-xl font-medium text-cardPrice mb-2">{currency}</span>
         </div>
         <div>
             <p className={`${textColor}`}>{subtitle}</p>
-            <p className={`${textColor}`}>{originalPrice}</p>
+            <p className={`${textColor} line-through`}>{originalPrice}</p>
         </div>
        </div>
       </div>

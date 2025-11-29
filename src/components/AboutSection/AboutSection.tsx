@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "@/components/LanguageProvider";
+import { useCurrency } from "@/contexts/CurrencyContext";
 import { getBenefitList, getHowItWorksList, getServiceList1, getServiceList2, getServiceList3 } from "@/utils/translatedData";
 import CircleUI from "@/../public/static/BannerFigure2.png"
 import AboutFigure from "@/../public/static/AboutFigure2.png"
@@ -24,15 +25,16 @@ import { useRouter } from "next/navigation";
 const AboutSection = () => {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
+  const { replaceInText } = useCurrency();
   const router = useRouter()
   const [isMobile, setIsMobile] = useState(false);
 
   // Get translated data
-  const benefitList = getBenefitList(t);
+  const benefitList = getBenefitList(t, replaceInText);
   const serviceList1 = getServiceList1(t);
   const serviceList2 = getServiceList2(t);
   const serviceList3 = getServiceList3(t);
-  const howitworksList = getHowItWorksList(t);
+  const howitworksList = getHowItWorksList(t, replaceInText);
 
   useEffect(() => {
     if (window.innerWidth > 600) {

@@ -19,7 +19,7 @@
   "aboutSection": {
     "title": "O nas",
     "subtitle": "Miliony produktów z maksymalnymi zniżkami + tysiące różnych usług bezpośrednio od wykonawców, bez prowizji, pośredników i dodatkowych kosztów",
-    "description": "Usługa, która zapewnia maksymalne zniżki na usługi i produkty. Wycieczki, sesje fotograficzne, restauracje, marketplace, wypożyczalnia, rezerwacje hoteli, transfery, prezenty — wszystko w jednym miejscu",
+    "description": "Usługa, która zapewnia maksymalne zniżki na usługi i produkty. Sesje fotograficzne, restauracje, wypożyczalnia, rezerwacje hoteli, transfery, prezenty — wszystko w jednym miejscu",
     "summary": "Zamawiaj, wynajmuj, kupuj na marketplace bez zbędnych aplikacji i przejść do zewnętrznych zasobów. Jedno konto do zarządzania wszystkimi usługami",
     "button": "Uzyskaj dostęp ze zniżką",
     "howItWorksTitle": "Jak to działa?"
@@ -69,7 +69,7 @@
     "title": "Nie zwlekaj!",
     "beFirst": "Bądź pierwszy!",
     "dontMiss": "Nie trać szansy!",
-    "subtitle": "Jedyny marketplace, który używa systemu subskrypcji zamiast marży detalicznej",
+    "subtitle": "Jedyny marketplace, który używa systemu subskrypcji zamiast dodatkowych prowizji",
     "description": "Płać za subskrypcję raz - oszczędzaj stale! Oczekuj uruchomienia w tym roku!",
     "button": "Wybierz plan ze zniżką"
   },
@@ -79,26 +79,26 @@
     "button": "Wypełnij formularz"
   },
   "benefits": {
-    "benefit1": "Promocyjna subskrypcja dla pierwszych 100 000 użytkowników - dołącz do Azamaza i otrzymaj wszystkie usługi na zawsze",
+    "benefit1": "Promocyjna subskrypcja dla pierwszych 100 000 użytkowników - dołącz do Azamaza i otrzymaj wszystkie usługi bez ograniczeń",
     "benefit2": "Inwestycja w przyszłość. Jedna płatność. Tylko 199 hrywien za nieograniczony dostęp do platformy «wszystko w jednym»",
     "benefit3": "Zdążże dołączyć. Ograniczona oferta presale dotyczy pierwszych 100 000 subskrybentów. Nie przepłacaj później, oszczędzaj już teraz!"
   },
   "services": {
-    "service1": "Wszystko, czego szukałeś! Zniżki do 70% na każdy produkt na naszym marketplace",
-    "service2": "Najlepsze hotele — po specjalnej cenie tylko dla subskrybentów",
+    "service1": "Wszystko, czego szukałeś! Zniżki do 70% na każdy produkt na marketplace",
+    "service2": "Najlepsze i zweryfikowane hotele - po specjalnej cenie dla subskrybentów",
     "service3": "Kolacja w restauracji ze zniżką do 50% z naszym serwisem",
     "service4": "Tysiące wycieczek po specjalnych cenach dla subskrybentów platformy",
     "service5": "Wynajmuj auto, zamawiaj taksówkę - znacznie taniej z subskrypcją",
-    "service6": "Poznawaj, podróżuj, odpoczywaj — subskrypcja otwiera dostęp do eventów i nowych znajomości",
-    "service7": "Oszczędność na każdym kilometrze — zniżki na stacjach benzynowych w całej Europie i Ukrainie",
-    "service8": "Najlepsi fotografowie — po najniższej cenie, ale tylko dla swoich",
+    "service6": "Poznawaj, podróżuj, odpoczywaj - subskrypcja otwiera dostęp do nowych spotkań",
+    "service7": "Oszczędność na każdym kilometrze — zniżki na stacjach benzynowych w całej Europie",
+    "service8": "Najlepsi fotografowie — po najniższej cenie, tylko dla swoich",
     "service9": "Wygrywaj iPhone'y, tablety, podróże i inne cenne nagrody",
     "finalNote": "Azamaza - to nie tylko platforma. To serwis, z którym łatwo kupować, podróżować, poznawać ludzi, otrzymywać nowe możliwości i cieszyć się życiem"
   },
   "howItWorks": {
-    "intro": "Z Azamaza kupujesz nie tylko subskrypcję, ale wygodę i oszczędności. Subskrypcja daje ci dostęp do najbardziej różnorodnych usług na maksymalnie korzystnych warunkach, a także możliwość kupowania towarów bez marży detalicznej i dodatkowych kosztów",
-    "step1": "Wykupujesz subskrypcję w cenie od 199₴ i stajesz się jednym ze 100 000 szczęściarzy, którzy otrzymają priorytetowy dostęp do platformy, jej możliwości i unikalnych korzyści",
-    "step2": "Uruchomienie projektu - początek 2026 roku. Każdy uczestnik otrzyma nieograniczony dostęp do wszystkich usług, serwisów i ofert bez ograniczeń i dodatkowych kosztów do 1 stycznia 2027",
+    "intro": "Z Azamaza kupujesz nie tylko subskrypcję, ale wygodę i oszczędności. Subskrypcja daje ci dostęp do najbardziej różnorodnych usług na maksymalnie korzystnych warunkach, a także możliwość kupowania towarów bez dodatkowych prowizji i dodatkowych kosztów",
+    "step1": "Wykupujesz subskrypcję w cenie od 199₴ i stajesz się jednym ze 100 000 szczęściarzy, którzy otrzymają pierwszeństwo dostępu do platformy, jej możliwości i unikalnych korzyści",
+    "step2": "Uruchomienie projektu - początek 2026 roku. Każdy uczestnik otrzyma bezlimitowy dostęp do wszystkich usług, serwisów i ofert bez ograniczeń do 1 stycznia 2027",
     "step3": "Wszyscy, którzy kupią subskrypcję wczesnego dostępu, gwarantowanie zostaną uczestnikami superlosowania cennych nagród (iPhone'y, tablety, telewizory itp.) od platformy Azamaza!"
   },
   "subscriptionBenefits": {

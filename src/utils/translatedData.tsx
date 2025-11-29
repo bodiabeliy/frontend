@@ -1,4 +1,5 @@
 import { TFunction } from 'i18next';
+import { convertPrice, formatPrice, type CurrencyCode } from './currency';
 import Benefit1 from "../../public/static/clock-fill.svg"
 import Benefit2 from "../../public/static/briefcase-fill.svg"
 import Benefit3 from "../../public/static/award-fill.svg"
@@ -36,18 +37,18 @@ import GemIcon from "../../public/static/gem.svg"
 import CommentIcon from "../../public/static/chat-text.svg"
 
 // Benefits list
-export const getBenefitList = (t: TFunction) => [
+export const getBenefitList = (t: TFunction, replaceInText?: (text: string) => string) => [
   {
     image: Benefit1,
-    position: t('benefits.benefit1'),
+    position: replaceInText ? replaceInText(t('benefits.benefit1')) : t('benefits.benefit1'),
   },
   {
     image: Benefit2,
-    position: t('benefits.benefit2'),
+    position: replaceInText ? replaceInText(t('benefits.benefit2')) : t('benefits.benefit2'),
   },
   {
     image: Benefit3,
-    position: t('benefits.benefit3'),
+    position: replaceInText ? replaceInText(t('benefits.benefit3')) : t('benefits.benefit3'),
   },
 ];
 
@@ -71,10 +72,10 @@ export const getServiceList3 = (t: TFunction) => [
 ];
 
 // How it works list
-export const getHowItWorksList = (t: TFunction) => [
+export const getHowItWorksList = (t: TFunction, replaceInText?: (text: string) => string) => [
   { 
     title: '1', 
-    description: t('howItWorks.step1'),
+    description: replaceInText ? replaceInText(t('howItWorks.step1')) : t('howItWorks.step1'),
     avatar: HowItWorks1,
     isEvenNumber: false
   },
@@ -148,92 +149,117 @@ export const getPartnersList = (t: TFunction) => [
   { description: t('partnersData.partner2'), icon:Partner2 },
 ];
 
-// Subscription plans list
-export const getSubscriptionPlans = (t: TFunction) => [
-  {
-    tier: "lite" as const,
-    title: "Azamaza",
-    subtitle: t('pricePage.priceAfterLaunch'),
-    price: t('pricePage.lite.price'),
-    currency: t('pricePage.lite.currency'),
-    originalPrice: t('pricePage.lite.originalPrice'),
-    description: t('pricePage.lite.description'),
-    buttonText: t('pricePage.lite.button'),
-    features: [
-      {
-        icon: FlameIcon,
-        text: t('pricePage.lite.feature1')
-      },
-      {
-        icon: PackageIcon,
-        text: t('pricePage.lite.feature2')
-      },
-      {
-        icon: EnvilopeIcon,
-        text: t('pricePage.lite.feature3')
-      },
-      {
-        icon: GlobeIcon,
-        text: t('pricePage.lite.feature4')
-      }
-    ],
-    accentColor: "#155DFC",
-    bgColor: "bg-white"
-  },
-  {
-    tier: "pro" as const,
-    title: "Azamaza",
-    subtitle: t('pricePage.priceAfterLaunch'),
-    price: t('pricePage.pro.price'),
-    currency: t('pricePage.pro.currency'),
-    originalPrice: t('pricePage.pro.originalPrice'),
-    description: t('pricePage.pro.description'),
-    buttonText: t('pricePage.pro.button'),
-    features: [
-      {
-        icon: FlameIcon,
-        text: t('pricePage.pro.feature1')
-      },
-      {
-        icon: PackageIcon,
-        text: t('pricePage.pro.feature2')
-      },
-      {
-        icon: HeadSetIcon,
-        text: t('pricePage.pro.feature3')
-      },
-      {
-        icon: LaptopIcon,
-        text: t('pricePage.pro.feature4')
-      }
-    ],
-    accentColor: "#8B5CF6",
-    bgColor: "bg-white"
-  },
-  {
-    tier: "elite" as const,
-    title: "Azamaza",
-    subtitle: t('pricePage.priceAfterLaunch'),
-    price: t('pricePage.elite.price'),
-    currency: t('pricePage.elite.currency'),
-    originalPrice: t('pricePage.elite.originalPrice'),
-    description: t('pricePage.elite.description'),
-    buttonText: t('pricePage.elite.button'),
-    features: [
-      {
-        icon: PackageIcon,
-        text: t('pricePage.elite.feature1')
-      },
-      {
-        icon: GemIcon,
-        text: t('pricePage.elite.feature2')
-      },
-      {
-        icon: CommentIcon,
-        text: t('pricePage.elite.feature3')
-      }
-    ],
-    accentColor: "#EC4899",
-    bgColor: "bg-white"
-  }
-];
+// Subscription plans list with dynamic currency conversion
+export const getSubscriptionPlans = (t: TFunction, locale: CurrencyCode = 'uk') => {
+  // Base prices in UAH
+  const basePrices = {
+    lite: { price: 199, originalPrice: 549 },
+    pro: { price: 499, originalPrice: 999 },
+    elite: { price: 1399, originalPrice: 1999 }
+  };
+
+  // Convert prices based on locale
+  const convertedPrices = {
+    lite: {
+      price: convertPrice(basePrices.lite.price, locale),
+      originalPrice: convertPrice(basePrices.lite.originalPrice, locale)
+    },
+    pro: {
+      price: convertPrice(basePrices.pro.price, locale),
+      originalPrice: convertPrice(basePrices.pro.originalPrice, locale)
+    },
+    elite: {
+      price: convertPrice(basePrices.elite.price, locale),
+      originalPrice: convertPrice(basePrices.elite.originalPrice, locale)
+    }
+  };
+
+  return [
+    {
+      tier: "lite" as const,
+      title: "Azamaza",
+      subtitle: t('pricePage.priceAfterLaunch'),
+      price: formatPrice(convertedPrices.lite.price, locale),
+      currency: '',
+      originalPrice: formatPrice(convertedPrices.lite.originalPrice, locale),
+      description: t('pricePage.lite.description'),
+      buttonText: t('pricePage.lite.button'),
+      features: [
+        {
+          icon: FlameIcon,
+          text: t('pricePage.lite.feature1')
+        },
+        {
+          icon: PackageIcon,
+          text: t('pricePage.lite.feature2')
+        },
+        {
+          icon: EnvilopeIcon,
+          text: t('pricePage.lite.feature3')
+        },
+        {
+          icon: GlobeIcon,
+          text: t('pricePage.lite.feature4')
+        }
+      ],
+      accentColor: "#155DFC",
+      bgColor: "bg-white"
+    },
+    {
+      tier: "pro" as const,
+      title: "Azamaza",
+      subtitle: t('pricePage.priceAfterLaunch'),
+      price: formatPrice(convertedPrices.pro.price, locale),
+      currency: '',
+      originalPrice: formatPrice(convertedPrices.pro.originalPrice, locale),
+      description: t('pricePage.pro.description'),
+      buttonText: t('pricePage.pro.button'),
+      features: [
+        {
+          icon: FlameIcon,
+          text: t('pricePage.pro.feature1')
+        },
+        {
+          icon: PackageIcon,
+          text: t('pricePage.pro.feature2')
+        },
+        {
+          icon: HeadSetIcon,
+          text: t('pricePage.pro.feature3')
+        },
+        {
+          icon: LaptopIcon,
+          text: t('pricePage.pro.feature4')
+        }
+      ],
+      accentColor: "#8B5CF6",
+      bgColor: "bg-white"
+    },
+    {
+      tier: "elite" as const,
+      title: "Azamaza",
+      subtitle: t('pricePage.priceAfterLaunch'),
+      price: formatPrice(convertedPrices.elite.price, locale),
+      currency: '',
+      originalPrice: formatPrice(convertedPrices.elite.originalPrice, locale),
+      description: t('pricePage.elite.description'),
+      buttonText: t('pricePage.elite.button'),
+      features: [
+        {
+          icon: PackageIcon,
+          text: t('pricePage.elite.feature1')
+        },
+        {
+          icon: GemIcon,
+          text: t('pricePage.elite.feature2')
+        },
+        {
+          icon: CommentIcon,
+          text: t('pricePage.elite.feature3')
+        }
+      ],
+      accentColor: "#EC4899",
+      bgColor: "bg-white"
+    }
+  ];
+};

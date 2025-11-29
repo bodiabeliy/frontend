@@ -22,7 +22,7 @@ const languages = [
 ];
 
 export const DropDownButton = (props:BtnDropDownProps) => {
-  const { onClick, closeDropDown, disabled, isDropDownOpen, type, sendData, selectedValue } = props;
+  const { onClick, closeDropDown, disabled, isDropDownOpen, type } = props;
   const { language, setLanguage } = useLanguage();
 
   // Get language info from current i18n language
@@ -31,16 +31,8 @@ export const DropDownButton = (props:BtnDropDownProps) => {
     return lang || languages[0]; // Default to Ukrainian
   }, [language]);
 
-  // Initialize with the correct flag based on current language or selectedValue
-  const getInitialLanguage = () => {
-    if (selectedValue) {
-      const lang = languages.find(l => l.code === selectedValue);
-      return lang || getCurrentLanguage();
-    }
-    return getCurrentLanguage();
-  };
-
-  const [currentLang, setCurrentLang] = useState(getInitialLanguage());
+  // Initialize with current language from context (not hardcoded)
+  const [currentLang, setCurrentLang] = useState(() => getCurrentLanguage());
 
   // Sync with i18n language changes
   useEffect(() => {
@@ -48,33 +40,15 @@ export const DropDownButton = (props:BtnDropDownProps) => {
     setCurrentLang(lang);
   }, [language, getCurrentLanguage]);
 
-  // Sync with selectedValue prop changes
-  useEffect(() => {
-    if (selectedValue) {
-      const lang = languages.find(l => l.code === selectedValue);
-      if (lang) {
-        setCurrentLang(lang);
-        // Also update i18n language
-        if (lang.locale !== language) {
-          setLanguage(lang.locale);
-        }
-      }
-    }
-  }, [selectedValue, language, setLanguage]);
-
   const selectLanguage = useCallback((code: string, flag: any, locale: Locale) => {
     const lang = languages.find(l => l.code === code);
     if (lang) {
       setCurrentLang(lang);
       // Update i18n language
       setLanguage(locale);
-      // Call parent callback if provided
-      if (sendData) {
-        sendData(code);
-      }
       closeDropDown();
     }
-  }, [setLanguage, sendData, closeDropDown]);
+  }, [setLanguage, closeDropDown]);
 
   return (
     <>

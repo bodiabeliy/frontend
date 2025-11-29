@@ -5,6 +5,20 @@ import { initReactI18next, useTranslation as useTranslationOrg } from 'react-i18
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { i18nConfig, type Locale } from './config';
 
+// Get initial language from localStorage or use default
+function getInitialLanguage(): string {
+  
+  // Check for detected locale (from IP detection)
+  const detectedLocale = localStorage.getItem('detectedLocale');
+  if (detectedLocale) {
+    console.log('🔄 i18next using detected locale:', detectedLocale);
+    return detectedLocale;
+  }
+  
+  console.log('🔄 i18next using default locale:', i18nConfig.defaultLocale);
+  return i18nConfig.defaultLocale;
+}
+
 // Initialize i18next for client-side
 i18next
   .use(initReactI18next)
@@ -17,7 +31,7 @@ i18next
   .init({
     supportedLngs: i18nConfig.locales,
     fallbackLng: i18nConfig.defaultLocale,
-    lng: undefined, // let detect the language on client side
+    lng: getInitialLanguage(), // Use dynamic initial language
     fallbackNS: 'common',
     defaultNS: 'common',
     ns: 'common',

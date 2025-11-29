@@ -16,7 +16,6 @@ export const NavigationManu = () => {
   const { t } = useTranslation(language, 'common');
   const [opened, setOpened] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("UKR")
 
 
   const OpenDropDown = useCallback(() => {
@@ -25,11 +24,6 @@ export const NavigationManu = () => {
 
   const CloseDropDown = useCallback(() => {
     setIsDropDownOpen(false);
-  }, []);
-
-  const handleDataFromChild = useCallback((value: string) => {
-    console.log("selected language", value);
-    setSelectedLanguage(value);
   }, []);
   
   return (
@@ -80,10 +74,8 @@ export const NavigationManu = () => {
               onClick={() => {
                 OpenDropDown();
               }}
-              sendData={handleDataFromChild}
               closeDropDown={CloseDropDown}
               isDropDownOpen={isDropDownOpen}
-              selectedValue={selectedLanguage}
               className={
                 " relative rounded-full p-2 max-h-[40px]"
               }
@@ -114,10 +106,8 @@ export const NavigationManu = () => {
               onClick={() => {
                 OpenDropDown();
               }}
-              sendData={handleDataFromChild}
               closeDropDown={CloseDropDown}
               isDropDownOpen={isDropDownOpen}
-              selectedValue={selectedLanguage}
               className="relative bg-lightBlue rounded-full px-3 py-2 flex items-center gap-2"
               text={"Select Language"}
             />

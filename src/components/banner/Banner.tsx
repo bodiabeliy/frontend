@@ -10,11 +10,13 @@ import BannerFigure from "@/../public/static/banner-figure.png"
 import { useState } from "react";
 import { useTranslation } from "@/i18n";
 import { useLanguage } from "../LanguageProvider";
+import { useCurrency } from "@/contexts/CurrencyContext";
 import { useRouter } from "next/navigation";
 
 const Banner = () => {
     const { language } = useLanguage();
     const { t } = useTranslation(language, 'common');
+    const { replaceInText } = useCurrency();
     const router = useRouter()
 
   return (
@@ -32,7 +34,7 @@ const Banner = () => {
             <div className="bannerContent serviceInfo lg:relative sm:text-xl lg:text-2xl sm:mt-4 lg:mt-2 sm:pl-[5px] lg:pl-0">
                 <p className="sm:font-bold lg:font-extrabold">{t('banner.subtitle')}</p> 
                 <p className="text-secondaryColor sm:font-bold lg:font-extrabold lg:leading-[32px]">{t('banner.description1')}</p> 
-                <p className="text-lg">{t('banner.description2')}</p>
+                <p className="text-lg">{replaceInText(t('banner.description2'))}</p>
             </div>
             <div className="actionBtnWrapper sm:mt-[5%] sm:pb-[75px] lg:pb-0 lg:mt-2 sm:mb-0 sm:mb-0 lg:mb-10 gap-4 flex sm:flex-col lg:flex-row sm:justify-center lg:justify-between">
                 <ActionButton

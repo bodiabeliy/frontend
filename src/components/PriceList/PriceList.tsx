@@ -9,6 +9,7 @@ import PriceCard from "../PriceCard/PriceCard";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
 import { getSubscriptionPlans } from "@/utils/translatedData";
+import type { CurrencyCode } from "@/utils/currency";
 
 import PriceFigure1 from "../../../public/static/pricefigure1.png"
 import PriceFigure2 from "../../../public/static/pricefigure2.png"
@@ -38,8 +39,8 @@ const PriceList = () => {
     centerPadding: "0px",
   };
 
-  // Get subscription plans with translations
-  const subscriptionPlans = getSubscriptionPlans(t);
+  // Get subscription plans with translations and currency conversion
+  const subscriptionPlans = getSubscriptionPlans(t, language as CurrencyCode);
 
   return (
     <>
@@ -88,7 +89,7 @@ const PriceList = () => {
                   </p>
                  {subscriptionPlans?.map((plan, index) => {
                     return (
-                      <div key={index} className="sm:mb-4 flex-1 min-w-[320px] max-w-[360px]">
+                      <div key={index} className="sm:mb-4 flex-1 min-w-[320px] max-w-[380px]">
                         <PriceCard
                           tier={plan.tier}
                           title={plan.title}
