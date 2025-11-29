@@ -25,9 +25,10 @@
     "howItWorksTitle": "¿Cómo funciona?"
   },
   "countdown": {
-    "title": "¡Apresúrate!",
+    "title": "¡Date prisa!",
     "subtitle": "El número de suscripciones promocionales es limitado",
     "remaining": "Restante",
+    "subscriptions": "suscripciones",
     "button": "Suscríbete ahora con descuento"
   },
   "subscription": {
@@ -151,13 +152,14 @@
     "mainSubtitle": "¡Suscríbete ahora y disfruta de descuentos hasta el 01.01.2027!",
     "mobileTitle": "Paquetes de suscripción de preventa",
     "priceAfterLaunch": "Precio después del lanzamiento",
+    "perYear": "/año",
     "readMore": "Leer más",
     "suitableFor": "Para quién es:",
     "lite": {
       "badge": "Lite",
       "price": "199",
       "currency": "UAH",
-      "originalPrice": "549 UAH",
+      "originalPrice": "1999 UAH",
       "button": "Comprar a precio promocional",
       "description": "Para aquellos que quieren probar el servicio con costos mínimos",
       "feature1": "Acceso a servicios verificados (restaurantes, hoteles, excursiones, etc.)",
@@ -169,7 +171,7 @@
       "badge": "Pro",
       "price": "499",
       "currency": "UAH",
-      "originalPrice": "999 UAH",
+      "originalPrice": "4999 UAH",
       "button": "Comprar a precio promocional",
       "description": "Mejor relación precio/características",
       "feature1": "Acceso completo a todos los servicios verificados",
@@ -181,7 +183,7 @@
       "badge": "Elite",
       "price": "1399",
       "currency": "UAH",
-      "originalPrice": "1999 UAH",
+      "originalPrice": "13999 UAH",
       "button": "Comprar a precio promocional",
       "description": "Para aquellos que quieren más y están dispuestos a apoyar el desarrollo de la plataforma",
       "feature1": "Artículos/pedidos ilimitados con descuentos",

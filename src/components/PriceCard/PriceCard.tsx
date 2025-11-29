@@ -88,7 +88,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
         </div>
         <div>
             <p className={`${textColor}`}>{subtitle}</p>
-            <p className={`${textColor} line-through`}>{originalPrice}</p>
+            <p className={`${textColor}`}>{originalPrice}{t('pricePage.perYear')}</p>
         </div>
        </div>
       </div>
@@ -126,7 +126,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
       <button 
         className="text-mainColor font-semibold text-center py-3 border-2 border-mainColor rounded-full mt-4 hover:bg-mainColor hover:text-white transition-all duration-300"
       >
-        Читати далі
+        {t('pricePage.readMore')}
       </button>
     </div>
   );

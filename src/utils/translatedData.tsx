@@ -153,9 +153,9 @@ export const getPartnersList = (t: TFunction) => [
 export const getSubscriptionPlans = (t: TFunction, locale: CurrencyCode = 'uk') => {
   // Base prices in UAH
   const basePrices = {
-    lite: { price: 199, originalPrice: 549 },
-    pro: { price: 499, originalPrice: 999 },
-    elite: { price: 1399, originalPrice: 1999 }
+    lite: { price: 199, originalPrice: 1999 },
+    pro: { price: 499, originalPrice: 4999 },
+    elite: { price: 1399, originalPrice: 13999 }
   };
 
   // Convert prices based on locale
