@@ -6,16 +6,21 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
+import { useSignup } from "@/contexts/SignupContext";
 
 export default function CreateAccount() {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
-  const [email, setEmail] = useState("");
-  const router = useRouter()
+  const { signupData, setEmail: setEmailContext } = useSignup();
+  const [email, setEmail] = useState(signupData.email || "");
+  const router = useRouter();
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Email:", email);
+    if (email) {
+      setEmailContext(email);
+      router.push('/create-password');
+    }
   };
 
   return (
@@ -77,7 +82,6 @@ export default function CreateAccount() {
             <div className="space-y-3 pt-2">
               <button
                 type="submit"
-                onClick={() => email && router.push('/create-password')}
                 className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm"
               >
                 {t('auth.createAccount.continueButton')}

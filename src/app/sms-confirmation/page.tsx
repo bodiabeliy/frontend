@@ -5,18 +5,29 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
+import { usePasswordRecovery } from "@/contexts/PasswordRecoveryContext";
+import { authService } from "@/services";
 
 export default function SmsConfirmation() {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
+  const { emailOrPhone, setVerificationCode: setVerificationCodeContext } = usePasswordRecovery();
   const [code, setCode] = useState(["", "", "", ""]);
-  const inputRefs = [
-    useRef<HTMLInputElement>(null),
-    useRef<HTMLInputElement>(null),
-    useRef<HTMLInputElement>(null),
-    useRef<HTMLInputElement>(null),
-  ];
-  const router = useRouter()
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const inputRef0 = useRef<HTMLInputElement>(null);
+  const inputRef1 = useRef<HTMLInputElement>(null);
+  const inputRef2 = useRef<HTMLInputElement>(null);
+  const inputRef3 = useRef<HTMLInputElement>(null);
+  const inputRefs = [inputRef0, inputRef1, inputRef2, inputRef3];
+  const router = useRouter();
+
+  useEffect(() => {
+    // Redirect to recovery password page if email/phone is not set
+    if (!emailOrPhone) {
+      router.push('/recovery-password');
+    }
+  }, [emailOrPhone, router]);
 
   const handleChange = (index: number, value: string) => {
     if (value.length > 1) {
@@ -61,16 +72,52 @@ export default function SmsConfirmation() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const fullCode = code.join("");
-    if (fullCode.length === 4) {
-      console.log("Code:", fullCode);
+    
+    if (fullCode.length !== 4) {
+      setError("Please enter a complete 4-digit code");
+      return;
+    }
+
+    if (!emailOrPhone) {
+      setError("Session expired. Please start over.");
+      router.push('/recovery-password');
+      return;
+    }
+
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const response = await authService.verifyResetCode({
+        email_or_phone: emailOrPhone,
+        code: fullCode,
+      });
+
+      if (response.success) {
+        // Store verification code in context
+        setVerificationCodeContext(fullCode);
+        
+        // Navigate to new password page
+        router.push('/new-password');
+      }
+    } catch (err: any) {
+      console.error('Verify code error:', err);
+      setError(
+        err.response?.data?.message || 
+        err.message || 
+        'Invalid or expired verification code. Please try again.'
+      );
+    } finally {
+      setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    inputRefs[0].current?.focus();
+    inputRef0.current?.focus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -96,6 +143,12 @@ export default function SmsConfirmation() {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm mb-4">
+                {error}
+              </div>
+            )}
+            
             <div className="flex justify-center gap-3 mb-8">
               {code.map((digit, index) => (
                 <input
@@ -116,11 +169,10 @@ export default function SmsConfirmation() {
             <div className="pt-2">
               <button
                 type="submit"
-                disabled={code.some((digit) => !digit)}
-                onClick={() =>router.push('/login')}
+                disabled={code.some((digit) => !digit) || isLoading}
                 className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t('auth.smsConfirmation.continueButton')}
+                {isLoading ? 'Verifying...' : t('auth.smsConfirmation.continueButton')}
               </button>
             </div>
           </form>

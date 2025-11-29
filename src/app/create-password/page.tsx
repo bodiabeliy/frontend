@@ -6,25 +6,29 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
+import { useSignup } from "@/contexts/SignupContext";
 
 export default function NewPassword() {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
-  const [password, setPassword] = useState("");
+  const { signupData, setPassword: setPasswordContext } = useSignup();
+  const [password, setPassword] = useState(signupData.password || "");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   
-  const router = useRouter()
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-    console.log("Password:", password);
+    if (password && password === confirmPassword) {
+      setPasswordContext(password);
+      router.push("/contact-info");
+    }
   };
 
   return (
@@ -135,7 +139,6 @@ export default function NewPassword() {
             <div className="pt-2">
               <button
                 type="submit"
-                onClick={() =>password&& password == confirmPassword && router.push("/contact-info")}
                 className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm"
               >
                 {t('auth.createPassword.continueButton')}

@@ -6,17 +6,52 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
+import { usePasswordRecovery } from "@/contexts/PasswordRecoveryContext";
+import { authService } from "@/services";
 
 export default function RecoveryPassword() {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
+  const { setEmailOrPhone: setEmailOrPhoneContext } = usePasswordRecovery();
   const [emailOrPhone, setEmailOrPhone] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const router = useRouter()
-  const handleSubmit = (e: React.FormEvent) => {
+  const router = useRouter();
+  
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Email or Phone:", emailOrPhone);
+    
+    if (!emailOrPhone) {
+      setError("Please enter your email or phone number");
+      return;
+    }
+
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const response = await authService.forgotPassword({
+        email_or_phone: emailOrPhone,
+      });
+
+      if (response.success) {
+        // Store email/phone in context
+        setEmailOrPhoneContext(emailOrPhone);
+        
+        // Navigate to SMS confirmation page
+        router.push("/sms-confirmation");
+      }
+    } catch (err: any) {
+      console.error('Forgot password error:', err);
+      setError(
+        err.response?.data?.message || 
+        err.message || 
+        'Failed to send verification code. Please try again.'
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -42,6 +77,12 @@ export default function RecoveryPassword() {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                {error}
+              </div>
+            )}
+            
             <div>
               <label htmlFor="emailOrPhone" className="block text-[12px] font-normal text-[#9CA3AF] mb-2">
                 {t('auth.recoveryPassword.inputLabel')}
@@ -81,10 +122,10 @@ export default function RecoveryPassword() {
             <div className="pt-2">
               <button
                 type="submit"
-                onClick={() =>emailOrPhone && router.push("/new-password")}
-                className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm"
+                disabled={isLoading}
+                className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t('auth.recoveryPassword.continueButton')}
+                {isLoading ? 'Sending...' : t('auth.recoveryPassword.continueButton')}
               </button>
             </div>
           </form>

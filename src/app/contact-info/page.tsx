@@ -12,6 +12,8 @@ import pol from "../../../public/static/pl.svg";
 import fra from "../../../public/static/fran.svg";
 import rus from "../../../public/static/rus.svg";
 import { useRouter } from "next/navigation";
+import { useSignup } from "@/contexts/SignupContext";
+import { authService } from "@/services";
 
 const countries = [
   { code: "+34", flag: spa, name: "Spain" },
@@ -25,18 +27,77 @@ const countries = [
 export default function ContactInfo() {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
+  const { signupData, clearSignupData } = useSignup();
   const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [nationality, setNationality] = useState("");
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [agreeTerms, setAgreeTerms] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const router = useRouter()
+  const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form data:", { firstName, nationality, phone: selectedCountry.code + phoneNumber });
+    
+    if (!agreeTerms) {
+      setError("Please agree to the terms and privacy policy");
+      return;
+    }
+
+    if (!firstName || !lastName || !nationality || !phoneNumber) {
+      setError("Please fill in all required fields");
+      return;
+    }
+
+    if (!signupData.email || !signupData.password) {
+      setError("Missing registration data. Please start from the beginning.");
+      router.push('/create-account');
+      return;
+    }
+
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const fullPhone = `${selectedCountry.code}${phoneNumber}`;
+      
+      const response = await authService.signup({
+        first_name: firstName,
+        last_name: lastName,
+        email: signupData.email,
+        password: signupData.password,
+        phone: fullPhone,
+        nationality: nationality,
+        user_type: 'USER',
+      });
+
+      if (response.success) {
+        // Store token if needed
+        if (response.data.token) {
+          localStorage.setItem('token', response.data.token);
+          localStorage.setItem('refresh_token', response.data.refresh_token);
+        }
+        
+        // Clear signup data from context
+        clearSignupData();
+        
+        // Navigate to login or dashboard
+        router.push('/login');
+      }
+    } catch (err: any) {
+      console.error('Signup error:', err);
+      setError(
+        err.response?.data?.message || 
+        err.message || 
+        'Failed to create account. Please try again.'
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -73,6 +134,12 @@ export default function ContactInfo() {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                {error}
+              </div>
+            )}
+            
             <div>
               <label htmlFor="firstName" className="block text-[12px] font-normal text-[#9CA3AF] mb-2">
                 {t('auth.contactInfo.nameLabel')}
@@ -82,12 +149,44 @@ export default function ContactInfo() {
                   id="firstName"
                   name="firstName"
                   type="text"
-                  autoComplete="name"
+                  autoComplete="given-name"
                   required
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                   className="appearance-none block w-full pl-5 pr-12 py-[14px] border border-[#D1D5DB] placeholder:text-[#9CA3AF] text-secondaryTextColor text-[14px] rounded-full focus:outline-none focus:ring-2 focus:ring-secondaryColor focus:border-transparent bg-white"
                   placeholder={t('auth.contactInfo.namePlaceholder')}
+                />
+                <div className="absolute inset-y-0 right-0 pr-5 flex items-center pointer-events-none">
+                  <svg
+                    className="h-5 w-5 text-[#9CA3AF]"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="lastName" className="block text-[12px] font-normal text-[#9CA3AF] mb-2">
+                Last Name
+              </label>
+              <div className="relative">
+                <input
+                  id="lastName"
+                  name="lastName"
+                  type="text"
+                  autoComplete="family-name"
+                  required
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  className="appearance-none block w-full pl-5 pr-12 py-[14px] border border-[#D1D5DB] placeholder:text-[#9CA3AF] text-secondaryTextColor text-[14px] rounded-full focus:outline-none focus:ring-2 focus:ring-secondaryColor focus:border-transparent bg-white"
+                  placeholder="Enter your last name"
                 />
                 <div className="absolute inset-y-0 right-0 pr-5 flex items-center pointer-events-none">
                   <svg
@@ -231,10 +330,10 @@ export default function ContactInfo() {
             <div className="pt-2">
               <button
                 type="submit"
-                onClick={() =>firstName && nationality &&phoneNumber && selectedCountry && agreeTerms && router.push("/login")}
-                className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm"
+                disabled={isLoading || !agreeTerms}
+                className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t('auth.contactInfo.createAccountButton')}
+                {isLoading ? 'Creating account...' : t('auth.contactInfo.createAccountButton')}
               </button>
             </div>
 

@@ -3,6 +3,8 @@
 import { Footer } from "@/components/Footer";
 import { NavigationManu } from "@/components/NavigationManu";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import { SignupProvider } from "@/contexts/SignupContext";
+import { PasswordRecoveryProvider } from "@/contexts/PasswordRecoveryContext";
 import "./globals.css";
 import { usePathname } from "next/navigation";
 
@@ -31,15 +33,19 @@ export default function RootLayout({
     <html style={{scrollBehavior:'smooth'}} lang="en">
       <body className={`app ${!isAuthPage?"bg-mainColor":""} text-white font-onset lg:w-full`}>
         <LanguageProvider>
-          {isAuthPage ? (
-            <>{children}</>
-          ) : (
-              <div>
-                <NavigationManu />
-                {children}
-                <Footer />
-              </div>
-          )}
+          <SignupProvider>
+            <PasswordRecoveryProvider>
+              {isAuthPage ? (
+                <>{children}</>
+              ) : (
+                  <div>
+                    <NavigationManu />
+                    {children}
+                    <Footer />
+                  </div>
+              )}
+            </PasswordRecoveryProvider>
+          </SignupProvider>
         </LanguageProvider>
       </body>
     </html>

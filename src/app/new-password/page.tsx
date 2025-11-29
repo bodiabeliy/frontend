@@ -2,27 +2,72 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
+import { usePasswordRecovery } from "@/contexts/PasswordRecoveryContext";
+import { authService } from "@/services";
 
 export default function NewPassword() {
   const { language } = useLanguage();
   const { t } = useTranslation(language, 'common');
+  const { emailOrPhone, clearRecoveryData } = usePasswordRecovery();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const router = useRouter()
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    // Redirect if email/phone is not set
+    if (!emailOrPhone) {
+      router.push('/recovery-password');
+    }
+  }, [emailOrPhone, router]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    
     if (password !== confirmPassword) {
-      alert("Passwords do not match!");
+      setError("Passwords do not match!");
       return;
     }
-    console.log("Password:", password);
+
+    if (!emailOrPhone) {
+      setError("Session expired. Please start over.");
+      router.push('/recovery-password');
+      return;
+    }
+
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const response = await authService.resetPassword({
+        email_or_phone: emailOrPhone,
+        new_password: password,
+        confirm_password: confirmPassword,
+      });
+
+      if (response.success) {
+        // Clear recovery data
+        clearRecoveryData();
+        
+        // Navigate to success page
+        router.push("/recovery-success");
+      }
+    } catch (err: any) {
+      console.error('Reset password error:', err);
+      setError(
+        err.response?.data?.message || 
+        err.message || 
+        'Failed to reset password. Please try again.'
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -48,6 +93,12 @@ export default function NewPassword() {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                {error}
+              </div>
+            )}
+            
             <div>
               <label htmlFor="password" className="block text-[12px] font-normal text-[#9CA3AF] mb-2">
                 {t('auth.newPassword.passwordLabel')}
@@ -61,8 +112,7 @@ export default function NewPassword() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  minLength={10}
-                  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{10,}"
+                  minLength={6}
                   className="appearance-none block w-full pl-5 pr-12 py-[14px] border border-[#D1D5DB] placeholder:text-[#9CA3AF] text-secondaryTextColor text-[14px] rounded-full focus:outline-none focus:ring-2 focus:ring-secondaryColor focus:border-transparent bg-white"
                   placeholder={t('auth.newPassword.passwordPlaceholder')}
                 />
@@ -133,10 +183,10 @@ export default function NewPassword() {
             <div className="pt-2">
               <button
                 type="submit"
-                onClick={() => password && password == confirmPassword && router.push("/sms-confirmation")}
-                className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm"
+                disabled={isLoading}
+                className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t('auth.newPassword.changePasswordButton')}
+                {isLoading ? 'Resetting...' : t('auth.newPassword.changePasswordButton')}
               </button>
             </div>
           </form>
