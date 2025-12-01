@@ -7,39 +7,50 @@ import { i18nConfig, type Locale } from './config';
 
 // Get initial language from localStorage or use default
 function getInitialLanguage(): string {
+  // Check if we're on the client side
+  if (typeof window === 'undefined') {
+    return i18nConfig.defaultLocale;
+  }
   
-  // Check for detected locale (from IP detection)
-  const detectedLocale = localStorage.getItem('detectedLocale');
-  if (detectedLocale) {
-    console.log('🔄 i18next using detected locale:', detectedLocale);
-    return detectedLocale;
+  try {
+    // Check for detected locale (from IP detection)
+    const detectedLocale = localStorage.getItem('detectedLocale');
+    if (detectedLocale) {
+      console.log('🔄 i18next using detected locale:', detectedLocale);
+      return detectedLocale;
+    }
+  } catch (error) {
+    // Silently fail if localStorage is not available
+    console.warn('localStorage not available:', error);
   }
   
   console.log('🔄 i18next using default locale:', i18nConfig.defaultLocale);
   return i18nConfig.defaultLocale;
 }
 
-// Initialize i18next for client-side
-i18next
-  .use(initReactI18next)
-  .use(
-    resourcesToBackend(
-      (language: string, namespace: string) =>
-        import(`../../public/locales/${language}/${namespace}.json`)
+// Only initialize i18next on the client side
+if (typeof window !== 'undefined') {
+  i18next
+    .use(initReactI18next)
+    .use(
+      resourcesToBackend(
+        (language: string, namespace: string) =>
+          import(`../../public/locales/${language}/${namespace}.json`)
+      )
     )
-  )
-  .init({
-    supportedLngs: i18nConfig.locales,
-    fallbackLng: i18nConfig.defaultLocale,
-    lng: getInitialLanguage(), // Use dynamic initial language
-    fallbackNS: 'common',
-    defaultNS: 'common',
-    ns: 'common',
-    preload: i18nConfig.locales,
-    interpolation: {
-      escapeValue: false,
-    },
-  });
+    .init({
+      supportedLngs: i18nConfig.locales,
+      fallbackLng: i18nConfig.defaultLocale,
+      lng: getInitialLanguage(), // Use dynamic initial language
+      fallbackNS: 'common',
+      defaultNS: 'common',
+      ns: 'common',
+      preload: i18nConfig.locales,
+      interpolation: {
+        escapeValue: false,
+      },
+    });
+}
 
 export function useTranslation(lng: Locale, ns?: string) {
   const ret = useTranslationOrg(ns);

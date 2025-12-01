@@ -15,6 +15,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: ReactNode }) {
   // Initialize with effective locale (user pref > detected > default)
   const [language, setLanguageState] = useState<Locale>(() => {
+    // Only access localStorage on client side
+    if (typeof window === 'undefined') {
+      return i18nConfig.defaultLocale;
+    }
     const effective = getEffectiveLocale();
     console.log('🎯 Initial language state:', effective || i18nConfig.defaultLocale);
     return effective || i18nConfig.defaultLocale;
