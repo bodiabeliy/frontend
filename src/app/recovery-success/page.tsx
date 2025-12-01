@@ -25,7 +25,7 @@ export default function RecoverySuccess() {
         />
       </div>
 
-      <div className="w-full lg:w-1/2 flex items-center justify-center px-6 lg:px-16 py-12">
+      <div className="w-full lg:w-1/2 flex items-center justify-center px-6 lg:px-16">
         <div className="w-full max-w-[420px]">
           <div className="text-center mb-10">
             {/* Success Icon */}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
+import { OAuthButtons } from "@/components/OAuthButtons";
 
 export default function Login() {
   const { language } = useLanguage();
@@ -147,6 +148,19 @@ export default function Login() {
                 {t('auth.login.forgotPassword')}
               </Link>
             </div>
+
+            {/* OAuth Divider */}
+            <div className="relative my-6">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-300"></div>
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-4 bg-white text-gray-500">Or continue with</span>
+              </div>
+            </div>
+
+            {/* OAuth Buttons */}
+            <OAuthButtons />
 
             <div className="flex items-start pt-2">
               <input

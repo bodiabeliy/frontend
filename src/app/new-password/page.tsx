@@ -81,7 +81,7 @@ export default function NewPassword() {
         />
       </div>
 
-      <div className="w-full lg:w-1/2 flex items-center justify-center px-6 lg:px-16 py-12">
+      <div className="w-full lg:w-1/2 flex items-center justify-center px-6 lg:px-16">
         <div className="w-full max-w-[420px]">
           <div className="text-center mb-10">
             <h1 className="text-[32px] lg:text-[36px] font-bold text-secondaryTextColor leading-tight mb-3">

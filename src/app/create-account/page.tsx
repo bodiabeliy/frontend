@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
 import { useSignup } from "@/contexts/SignupContext";
+import { OAuthButtons } from "@/components/OAuthButtons";
 
 export default function CreateAccount() {
   const { language } = useLanguage();
@@ -35,7 +36,7 @@ export default function CreateAccount() {
         />
       </div>
 
-      <div className="w-full lg:w-1/2 flex items-center justify-center px-6 lg:px-16 py-12">
+      <div className="w-full lg:w-1/2 flex items-center justify-center px-6 lg:px-16">
         <div className="w-full max-w-[420px]">
           <div className="text-center mb-10">
             <h1 className="text-[32px] lg:text-[36px] font-bold text-secondaryTextColor leading-tight mb-3">
@@ -95,6 +96,19 @@ export default function CreateAccount() {
                 {t('auth.createAccount.loginButton')}
               </button>
             </div>
+
+            {/* OAuth Divider */}
+            <div className="relative my-6">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-300"></div>
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-4 bg-white text-gray-500">Or continue with</span>
+              </div>
+            </div>
+
+            {/* OAuth Buttons */}
+            <OAuthButtons />
 
             <div className="pt-4">
               <p className="text-center text-[11px] text-[#9CA3AF] leading-relaxed">
