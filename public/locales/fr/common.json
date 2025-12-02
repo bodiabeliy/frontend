@@ -277,6 +277,18 @@
     "footer": {
       "allRights": "Tous droits réservés",
       "copyright": "Copyright 2025 - Azamaza.com"
+    },
+    "congratulation": {
+      "title": "FÉLICITATIONS!",
+      "subtitle": "VOUS ÊTES DEVENU L'UN DES 10 000 ABONNÉS CHANCEUX",
+      "description1": "Maintenant, vous pouvez profiter des réductions les plus avantageuses jusqu'au 01.01.2027!",
+      "mainButtonText": "À la page principale",
+      "secondButtonText": "Aller au profil",
+      "trustTitle": "Merci pour votre confiance!",
+      "trustDescription1": "Vous venez de devenir propriétaire d'un abonnement premium Azamaza — cela signifie qu'à partir du lancement du projet, vous aurez accès à toutes les fonctions, services et réductions sur la plateforme!",
+      "trustDescription2": "Nous sommes sincèrement reconnaissants de votre soutien au démarrage. Vous êtes l'un des premiers à avoir cru en notre idée, et c'est grâce à des personnes comme vous qu'Azamaza devient réalité.",
+      "trustDescription3": "Le jour du lancement, vous recevrez une notification par e-mail et serez le premier à utiliser toutes les fonctionnalités de la plateforme!",
+      "exclusiveTitle": "Et aussi — des offres exclusives uniquement pour les premiers abonnés"
     }
   }
 }

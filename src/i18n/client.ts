@@ -49,6 +49,8 @@ if (typeof window !== 'undefined') {
       interpolation: {
         escapeValue: false,
       },
+      // Force reload resources on every init to avoid cache issues
+      partialBundledLanguages: true,
     });
 }
 

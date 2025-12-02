@@ -34,7 +34,7 @@ export function OAuthButton({ provider }: OAuthButtonProps) {
   const config = providerConfig[provider];
 
   const handleClick = () => {
-    signIn(provider, { callbackUrl: '/' });
+    signIn(provider, { callbackUrl: '/congratulation' });
   };
 
   return (

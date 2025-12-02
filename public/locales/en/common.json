@@ -277,6 +277,18 @@
     "footer": {
       "allRights": "All rights reserved",
       "copyright": "Copyright 2025 - Azamaza.com"
+    },
+    "congratulation": {
+      "title": "CONGRATULATIONS!",
+      "subtitle": "YOU BECAME ONE OF 10,000 LUCKY SUBSCRIBERS",
+      "description1": "Now you can use the most profitable discounts until 01.01.2027!",
+      "mainButtonText": "To main page",
+      "secondButtonText": "Go to profile",
+      "trustTitle": "Thank you for your trust!",
+      "trustDescription1": "You have just become the owner of a premium Azamaza subscription — this means that from the moment the project launches, you will have access to all functions, services and discounts on the platform!",
+      "trustDescription2": "We are sincerely grateful for your support at the start. You are one of the first who believed in our idea, and it is thanks to people like you that Azamaza is becoming a reality.",
+      "trustDescription3": "On the launch day, you will receive a notification by email and will be the first to use all the features of the platform!",
+      "exclusiveTitle": "And also — exclusive offers only for early subscribers"
     }
   }
 }

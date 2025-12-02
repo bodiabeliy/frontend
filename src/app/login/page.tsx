@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTranslation } from "@/i18n";
 import { OAuthButtons } from "@/components/OAuthButtons";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
   const { language } = useLanguage();
@@ -15,6 +16,7 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [agreeTerms, setAgreeTerms] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -134,6 +136,7 @@ export default function Login() {
             <div className="pt-2">
               <button
                 type="submit"
+                onClick={ () => router.push("/congratulation")}
                 className="w-full py-[14px] px-6 border-none rounded-full text-[16px] font-semibold text-secondaryTextColor bg-secondaryColor hover:bg-[#FFE44D] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondaryColor transition-all shadow-sm"
               >
                 {t('auth.login.loginButton')}
