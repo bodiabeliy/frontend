@@ -1,4 +1,6 @@
 import NextAuth, {getServerSession} from 'next-auth';
+import type { Session } from 'next-auth';
+import type { AdapterUser } from 'next-auth/adapters';
 import GoogleProvider from 'next-auth/providers/google';
 import FacebookProvider from 'next-auth/providers/facebook';
 import CredentialsProvider from 'next-auth/providers/credentials';
@@ -63,7 +65,7 @@ export const authOptions = {
   ],
   adapter: MongoDBAdapter(clientPromise),
   callbacks: {
-    async session({ session, user }) {
+    async session({ session, user }: { session: Session; user: AdapterUser }) {
       if (session?.user) {
         session.user.id = user.id;
       }
