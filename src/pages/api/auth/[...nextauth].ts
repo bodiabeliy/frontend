@@ -1,11 +1,21 @@
 import NextAuth, {getServerSession} from 'next-auth';
-import type { Session } from 'next-auth';
-import type { AdapterUser } from 'next-auth/adapters';
 import GoogleProvider from 'next-auth/providers/google';
 import FacebookProvider from 'next-auth/providers/facebook';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter';
 import clientPromise from '@/lib/mongodb';
+
+// Extend NextAuth types
+declare module 'next-auth' {
+  interface Session {
+    user: {
+      id: string;
+      name?: string | null;
+      email?: string | null;
+      image?: string | null;
+    };
+  }
+}
 
 export const authOptions = {
   secret: process.env.AUTH_SECRET,
@@ -65,7 +75,7 @@ export const authOptions = {
   ],
   adapter: MongoDBAdapter(clientPromise),
   callbacks: {
-    async session({ session, user }: { session: Session; user: AdapterUser }) {
+    async session({ session, user }: any) {
       if (session?.user) {
         session.user.id = user.id;
       }
