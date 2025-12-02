@@ -23,7 +23,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen lg:max-w-[1440px] mx-auto flex items-center justify-center lg:justify-between bg-white">
+    <div className="min-h-screen lg:max-w-[1440px] mx-auto flex justify-center lg:justify-between bg-white">
       <div className="hidden lg:flex lg:w-1/2 relative h-screen">
         <Image
           src="/static/login.png"
@@ -155,7 +155,7 @@ export default function Login() {
                 <div className="w-full border-t border-gray-300"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-4 bg-white text-gray-500">Or continue with</span>
+                <span className="px-4 bg-white text-gray-500">{t('auth.login.orContinueWith')}</span>
               </div>
             </div>
 
@@ -184,10 +184,10 @@ export default function Login() {
             </div>
           </form>
 
-          <div className="text-center text-[11px] text-[#9CA3AF] mt-16">
+          {/* <div className="text-center text-[11px] text-[#9CA3AF] mt-16">
             <p className="mb-1">{t('auth.footer.allRights')}</p>
             <p>{t('auth.footer.copyright')}</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

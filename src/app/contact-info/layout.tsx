@@ -3,5 +3,6 @@ export default function ContactInfoLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <div className="m-0 p-0">{children}</div>;
 }
+

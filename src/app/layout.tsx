@@ -43,7 +43,7 @@ export default function RootLayout({
 
   return (
     <html style={{scrollBehavior:'smooth'}} lang="en">
-      <body className={`app ${!isAuthPage ? "bg-mainColor" : ""} text-white font-onset lg:w-full`}>
+      <body className={`app ${!isAuthPage ? "bg-mainColor text-white" : "m-0 p-0"} font-onset lg:w-full`}>
         <LanguageProvider>
           <CurrencyProvider>
             <SignupProvider>

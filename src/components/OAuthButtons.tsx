@@ -14,7 +14,6 @@ export function OAuthButton({ provider }: OAuthButtonProps) {
       icon: '/static/google-icon.svg',
       bgColor: 'bg-white',
       textColor: 'text-gray-700',
-      borderColor: 'border-gray-300',
     }
     // facebook: {
     //   name: 'Facebook',
@@ -42,7 +41,7 @@ export function OAuthButton({ provider }: OAuthButtonProps) {
     <button
       onClick={handleClick}
       type="button"
-      className={`py-3 px-4 border-2 ${config.borderColor} ${config.bgColor} ${config.textColor} rounded-full font-semibold flex items-center justify-center gap-3 hover:opacity-90 transition-all`}
+      className={`py-3 px-4 border-2 mx-auto ${config.bgColor} ${config.textColor} rounded-full font-semibold flex items-center justify-center gap-3 hover:opacity-90 transition-all`}
     >
       <Image
         src={config.icon}
@@ -57,7 +56,7 @@ export function OAuthButton({ provider }: OAuthButtonProps) {
 
 export function OAuthButtons() {
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 ">
       <OAuthButton provider="google" />
       {/* <OAuthButton provider="facebook" />
       <OAuthButton provider="apple" /> */}

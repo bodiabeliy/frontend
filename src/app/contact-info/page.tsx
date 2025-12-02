@@ -112,7 +112,7 @@ export default function ContactInfo() {
   }, []);
 
   return (
-    <div className="min-h-screen lg:max-w-[1440px] mx-auto flex items-center justify-center lg:justify-between bg-white">
+    <div className="min-h-screen lg:max-w-[1440px] mx-auto flex justify-center lg:justify-between bg-white">
       <div className="hidden lg:flex lg:w-1/2 relative h-screen">
         <Image
           src="/static/contactinfo.png"
@@ -359,10 +359,10 @@ export default function ContactInfo() {
             </div>
           </form>
 
-          <div className="text-center text-[11px] text-[#9CA3AF] mt-16">
+          {/* <div className="text-center text-[11px] text-[#9CA3AF] mt-16">
             <p className="mb-1">{t('auth.footer.allRights')}</p>
             <p>{t('auth.footer.copyright')}</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
