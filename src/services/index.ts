@@ -1,8 +1,11 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: process.env.AZAMAZA_API,
+  baseURL: "https://azamaza-backend.onrender.com", //for test
   responseType: 'json',
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
 export interface SignupRequest {
